@@ -35,6 +35,6 @@ rmSync(targetRegistry, { recursive: true, force: true });
 cpSync(upstreamRegistry, targetRegistry, { recursive: true });
 
 console.log(
-  "  registry.json is NOT modified (Option A: only your custom/overridden items).",
+  "  registry.json is NOT modified (registry is limited to custom/overridden components only).",
 );
 console.log("Sync complete.");

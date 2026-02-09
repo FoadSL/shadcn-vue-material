@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Filters registry.json to Option A: only custom + overridden items.
+ * Filters registry.json to only custom and overridden items.
  *
  * Keeps:
  * - "index", "style", "utils" (required for CLI / registry deps)
  * - Any item whose files all point to custom/registry/ (custom or overridden)
  *
- * Use after switching to Option A or if registry.json was accidentally restored to full.
+ * Use if registry.json was accidentally restored to a full catalog and you need to shrink it back.
  *
  * Usage: node scripts/filter-registry-custom-only.js
  */
