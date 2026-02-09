@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 /* Material Design tokens + utilities (local package) */
-@import "../../../packages/material-design-css/index.css";
+@import "../../../../packages/material-design-css/index.css";
 
 @import "./themes.css";
 @import "./fonts.css";
