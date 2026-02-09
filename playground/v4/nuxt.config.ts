@@ -20,6 +20,8 @@ export default defineNuxtConfig({
     },
   ],
   fonts: {
+    // Use only Google provider to avoid fonts.bunny.net timeout (e.g. offline/firewall)
+    provider: 'google',
     defaults: {
       weights: [400, 500, 600, 700],
     },
