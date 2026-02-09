@@ -1,0 +1,138 @@
+/**
+ * Typography Utility Classes for TailwindCSS v4
+ * Using @utility directive for proper Tailwind integration
+ */
+
+/* Display */
+@utility display-large {
+  font-family: var(--font-display-large);
+  font-size: var(--text-display-large);
+  letter-spacing: var(--tracking-display-large);
+  line-height: var(--leading-display-large);
+  font-weight: var(--font-weight-display-large);
+}
+
+@utility display-medium {
+  font-family: var(--font-display-medium);
+  font-size: var(--text-display-medium);
+  letter-spacing: var(--tracking-display-medium);
+  line-height: var(--leading-display-medium);
+  font-weight: var(--font-weight-display-medium);
+}
+
+@utility display-small {
+  font-family: var(--font-display-small);
+  font-size: var(--text-display-small);
+  letter-spacing: var(--tracking-display-small);
+  line-height: var(--leading-display-small);
+  font-weight: var(--font-weight-display-small);
+}
+
+/* Headline */
+@utility headline-large {
+  font-family: var(--font-headline-large);
+  font-size: var(--text-headline-large);
+  letter-spacing: var(--tracking-headline-large);
+  line-height: var(--leading-headline-large);
+  font-weight: var(--font-weight-headline-large);
+}
+
+@utility headline-medium {
+  font-family: var(--font-headline-medium);
+  font-size: var(--text-headline-medium);
+  letter-spacing: var(--tracking-headline-medium);
+  line-height: var(--leading-headline-medium);
+  font-weight: var(--font-weight-headline-medium);
+}
+
+@utility headline-small {
+  font-family: var(--font-headline-small);
+  font-size: var(--text-headline-small);
+  letter-spacing: var(--tracking-headline-small);
+  line-height: var(--leading-headline-small);
+  font-weight: var(--font-weight-headline-small);
+}
+
+/* Title */
+@utility title-large {
+  font-family: var(--font-title-large);
+  font-size: var(--text-title-large);
+  letter-spacing: var(--tracking-title-large);
+  line-height: var(--leading-title-large);
+  font-weight: var(--font-weight-title-large);
+}
+
+@utility title-medium {
+  font-family: var(--font-title-medium);
+  font-size: var(--text-title-medium);
+  letter-spacing: var(--tracking-title-medium);
+  line-height: var(--leading-title-medium);
+  font-weight: var(--font-weight-title-medium);
+}
+
+@utility title-small {
+  font-family: var(--font-title-small);
+  font-size: var(--text-title-small);
+  letter-spacing: var(--tracking-title-small);
+  line-height: var(--leading-title-small);
+  font-weight: var(--font-weight-title-small);
+}
+
+/* Body */
+@utility body-large {
+  font-family: var(--font-body-large);
+  font-size: var(--text-body-large);
+  letter-spacing: var(--tracking-body-large);
+  line-height: var(--leading-body-large);
+  font-weight: var(--font-weight-body-large);
+}
+
+@utility body-medium {
+  font-family: var(--font-body-medium);
+  font-size: var(--text-body-medium);
+  letter-spacing: var(--tracking-body-medium);
+  line-height: var(--leading-body-medium);
+  font-weight: var(--font-weight-body-medium);
+}
+
+@utility body-small {
+  font-family: var(--font-body-small);
+  font-size: var(--text-body-small);
+  letter-spacing: var(--tracking-body-small);
+  line-height: var(--leading-body-small);
+  font-weight: var(--font-weight-body-small);
+}
+
+/* Label */
+@utility label-large {
+  font-family: var(--font-label-large);
+  font-size: var(--text-label-large);
+  letter-spacing: var(--tracking-label-large);
+  line-height: var(--leading-label-large);
+  font-weight: var(--font-weight-label-large);
+}
+
+@utility label-medium {
+  font-family: var(--font-label-medium);
+  font-size: var(--text-label-medium);
+  letter-spacing: var(--tracking-label-medium);
+  line-height: var(--leading-label-medium);
+  font-weight: var(--font-weight-label-medium);
+}
+
+@utility label-small {
+  font-family: var(--font-label-small);
+  font-size: var(--text-label-small);
+  letter-spacing: var(--tracking-label-small);
+  line-height: var(--leading-label-small);
+  font-weight: var(--font-weight-label-small);
+}
+
+/* Compatibility with typography- prefix */
+@utility typography-label-large {
+  font-family: var(--font-label-large);
+  font-size: var(--text-label-large);
+  letter-spacing: var(--tracking-label-large);
+  line-height: var(--leading-label-large);
+  font-weight: var(--font-weight-label-large);
+}

@@ -1,0 +1,21 @@
+{
+  "name": "my-shadcn-registry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JavaScript registry synced with shadcn-vue. Serves components in JS instead of TS.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:js": "node scripts/build.js --js",
+    "sync": "node scripts/sync-from-upstream.js",
+    "convert:source:js": "node scripts/convert-source-to-js.js",
+    "detype:vue": "node scripts/detype-vue-sfc.js",
+    "serve:public": "node scripts/serve-public.js"
+  },
+  "devDependencies": {
+    "@unovue/detypes": "^0.8.5",
+    "@vue/compiler-sfc": "^3.5.27",
+    "shadcn-vue": "latest"
+  },
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
+}

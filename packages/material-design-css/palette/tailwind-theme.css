@@ -1,0 +1,121 @@
+/**
+ * Material Design 3 Palette Tokens for TailwindCSS v4
+ * Tonal Palette (0-100) based on primary color
+ * 
+ * These can be configured via --md-config-palette-* variables.
+ * Usage: bg-primary-90, text-primary-10, etc.
+ */
+
+@theme inline {
+  /* Primary Tonal Palette */
+  --color-primary-0: var(--md-config-palette-primary-0, #000000);
+  --color-primary-5: var(--md-config-palette-primary-5, #0a0f2e);
+  --color-primary-10: var(--md-config-palette-primary-10, #00166f);
+  --color-primary-15: var(--md-config-palette-primary-15, #0f1f7a);
+  --color-primary-20: var(--md-config-palette-primary-20, #1a2985);
+  --color-primary-25: var(--md-config-palette-primary-25, #253390);
+  --color-primary-30: var(--md-config-palette-primary-30, #324ec2);
+  --color-primary-35: var(--md-config-palette-primary-35, #3d58cd);
+  --color-primary-40: var(--md-config-palette-primary-40, #4862d6);
+  --color-primary-50: var(--md-config-palette-primary-50, #607cf0);
+  --color-primary-60: var(--md-config-palette-primary-60, #7b95ff);
+  --color-primary-70: var(--md-config-palette-primary-70, #9db0ff);
+  --color-primary-80: var(--md-config-palette-primary-80, #bdcaff);
+  --color-primary-90: var(--md-config-palette-primary-90, #dfe5ff);
+  --color-primary-95: var(--md-config-palette-primary-95, #f0f1ff);
+  --color-primary-98: var(--md-config-palette-primary-98, #f9f9ff);
+  --color-primary-99: var(--md-config-palette-primary-99, #fcfcff);
+  --color-primary-100: var(--md-config-palette-primary-100, #ffffff);
+
+  /* Secondary Tonal Palette */
+  --color-secondary-0: var(--md-config-palette-secondary-0, #000000);
+  --color-secondary-5: var(--md-config-palette-secondary-5, #2b0a14);
+  --color-secondary-10: var(--md-config-palette-secondary-10, #3d0f1e);
+  --color-secondary-15: var(--md-config-palette-secondary-15, #4e1428);
+  --color-secondary-20: var(--md-config-palette-secondary-20, #601932);
+  --color-secondary-25: var(--md-config-palette-secondary-25, #72203c);
+  --color-secondary-30: var(--md-config-palette-secondary-30, #852847);
+  --color-secondary-35: var(--md-config-palette-secondary-35, #982a28);
+  --color-secondary-40: var(--md-config-palette-secondary-40, #ab325a);
+  --color-secondary-50: var(--md-config-palette-secondary-50, #d04e78);
+  --color-secondary-60: var(--md-config-palette-secondary-60, #ff91bf);
+  --color-secondary-70: var(--md-config-palette-secondary-70, #ffb685);
+  --color-secondary-80: var(--md-config-palette-secondary-80, #ffcdb2);
+  --color-secondary-90: var(--md-config-palette-secondary-90, #ffdad9);
+  --color-secondary-95: var(--md-config-palette-secondary-95, #ffecec);
+  --color-secondary-98: var(--md-config-palette-secondary-98, #fff5f5);
+  --color-secondary-99: var(--md-config-palette-secondary-99, #fffbfb);
+  --color-secondary-100: var(--md-config-palette-secondary-100, #ffffff);
+
+  /* Tertiary Tonal Palette */
+  --color-tertiary-0: var(--md-config-palette-tertiary-0, #000000);
+  --color-tertiary-5: var(--md-config-palette-tertiary-5, #001a17);
+  --color-tertiary-10: var(--md-config-palette-tertiary-10, #002824);
+  --color-tertiary-15: var(--md-config-palette-tertiary-15, #003631);
+  --color-tertiary-20: var(--md-config-palette-tertiary-20, #004a45);
+  --color-tertiary-25: var(--md-config-palette-tertiary-25, #005d57);
+  --color-tertiary-30: var(--md-config-palette-tertiary-30, #006667);
+  --color-tertiary-35: var(--md-config-palette-tertiary-35, #007a75);
+  --color-tertiary-40: var(--md-config-palette-tertiary-40, #009384);
+  --color-tertiary-50: var(--md-config-palette-tertiary-50, #2ec9bf);
+  --color-tertiary-60: var(--md-config-palette-tertiary-60, #61fcf2);
+  --color-tertiary-70: var(--md-config-palette-tertiary-70, #7dfff5);
+  --color-tertiary-80: var(--md-config-palette-tertiary-80, #99fff8);
+  --color-tertiary-90: var(--md-config-palette-tertiary-90, #aafffa);
+  --color-tertiary-95: var(--md-config-palette-tertiary-95, #d0fffc);
+  --color-tertiary-98: var(--md-config-palette-tertiary-98, #e8fffd);
+  --color-tertiary-99: var(--md-config-palette-tertiary-99, #f4fffe);
+  --color-tertiary-100: var(--md-config-palette-tertiary-100, #ffffff);
+
+  /* Neutral Tonal Palette (Surface) */
+  --color-neutral-0: var(--md-config-palette-neutral-0, #000000);
+  --color-neutral-5: var(--md-config-palette-neutral-5, #0a0a0a);
+  --color-neutral-10: var(--md-config-palette-neutral-10, #0d0d0d);
+  --color-neutral-15: var(--md-config-palette-neutral-15, #1a1a1a);
+  --color-neutral-20: var(--md-config-palette-neutral-20, #1f1f1f);
+  --color-neutral-25: var(--md-config-palette-neutral-25, #282828);
+  --color-neutral-30: var(--md-config-palette-neutral-30, #333333);
+  --color-neutral-35: var(--md-config-palette-neutral-35, #404040);
+  --color-neutral-40: var(--md-config-palette-neutral-40, #4d4d4d);
+  --color-neutral-50: var(--md-config-palette-neutral-50, #666666);
+  --color-neutral-60: var(--md-config-palette-neutral-60, #808080);
+  --color-neutral-70: var(--md-config-palette-neutral-70, #999999);
+  --color-neutral-80: var(--md-config-palette-neutral-80, #cccccc);
+  --color-neutral-85: var(--md-config-palette-neutral-85, #e5e5e5);
+  --color-neutral-90: var(--md-config-palette-neutral-90, #ebebeb);
+  --color-neutral-95: var(--md-config-palette-neutral-95, #f5f5f5);
+  --color-neutral-98: var(--md-config-palette-neutral-98, #fafafa);
+  --color-neutral-99: var(--md-config-palette-neutral-99, #fdfdfd);
+  --color-neutral-100: var(--md-config-palette-neutral-100, #ffffff);
+
+  /* Neutral Variant Tonal Palette */
+  --color-neutral-variant-0: var(--md-config-palette-neutral-variant-0, #000000);
+  --color-neutral-variant-10: var(--md-config-palette-neutral-variant-10, #1a1b21);
+  --color-neutral-variant-20: var(--md-config-palette-neutral-variant-20, #2f3039);
+  --color-neutral-variant-25: var(--md-config-palette-neutral-variant-25, #333439);
+  --color-neutral-variant-30: var(--md-config-palette-neutral-variant-30, #454854);
+  --color-neutral-variant-40: var(--md-config-palette-neutral-variant-40, #5d606c);
+  --color-neutral-variant-50: var(--md-config-palette-neutral-variant-50, #737683);
+  --color-neutral-variant-60: var(--md-config-palette-neutral-variant-60, #8d8f9b);
+  --color-neutral-variant-70: var(--md-config-palette-neutral-variant-70, #aeb1be);
+  --color-neutral-variant-80: var(--md-config-palette-neutral-variant-80, #c7cad7);
+  --color-neutral-variant-90: var(--md-config-palette-neutral-variant-90, #dbdffa);
+  --color-neutral-variant-95: var(--md-config-palette-neutral-variant-95, #e9ebf5);
+  --color-neutral-variant-99: var(--md-config-palette-neutral-variant-99, #f5f6fa);
+  --color-neutral-variant-100: var(--md-config-palette-neutral-variant-100, #ffffff);
+
+  /* Error Tonal Palette */
+  --color-error-0: var(--md-config-palette-error-0, #000000);
+  --color-error-10: var(--md-config-palette-error-10, #410002);
+  --color-error-20: var(--md-config-palette-error-20, #690005);
+  --color-error-30: var(--md-config-palette-error-30, #79000a);
+  --color-error-40: var(--md-config-palette-error-40, #ba1a1a);
+  --color-error-50: var(--md-config-palette-error-50, #f24251);
+  --color-error-60: var(--md-config-palette-error-60, #ff5449);
+  --color-error-70: var(--md-config-palette-error-70, #ff897d);
+  --color-error-80: var(--md-config-palette-error-80, #ffb4ab);
+  --color-error-90: var(--md-config-palette-error-90, #ffecee);
+  --color-error-95: var(--md-config-palette-error-95, #fff5f5);
+  --color-error-99: var(--md-config-palette-error-99, #fffbfb);
+  --color-error-100: var(--md-config-palette-error-100, #ffffff);
+}

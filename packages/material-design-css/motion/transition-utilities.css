@@ -1,0 +1,143 @@
+/**
+ * Transition Utility Classes for TailwindCSS v4
+ * Using @utility directive for proper Tailwind integration
+ */
+
+/* Button Transition - Emphasized + Short3 (Material Design 3 Standard) */
+@utility transition-button {
+  transition-property: all;
+
+  transition-timing-function: var(--ease-emphasized);
+  transition-duration: var(--duration-short3, 150ms);
+}
+
+/* Base Easing Transitions */
+@utility transition-emphasized {
+  transition-property: all;
+
+  transition-timing-function: var(--ease-emphasized);
+  transition-duration: var(--duration-medium2, 300ms);
+}
+
+@utility transition-emphasized-decelerate {
+  transition-property: all;
+
+  transition-timing-function: var(--ease-emphasized-decelerate);
+  transition-duration: var(--duration-medium2, 300ms);
+}
+
+@utility transition-emphasized-accelerate {
+  transition-property: all;
+
+  transition-timing-function: var(--ease-emphasized-accelerate);
+  transition-duration: var(--duration-medium2, 300ms);
+}
+
+@utility transition-standard {
+  transition-property: all;
+
+  transition-timing-function: var(--ease-standard);
+  transition-duration: var(--duration-short4, 200ms);
+}
+
+@utility transition-standard-decelerate {
+  transition-property: all;
+
+  transition-timing-function: var(--ease-standard-decelerate);
+  transition-duration: var(--duration-short4, 200ms);
+}
+
+@utility transition-standard-accelerate {
+  transition-property: all;
+
+  transition-timing-function: var(--ease-standard-accelerate);
+  transition-duration: var(--duration-short4, 200ms);
+}
+
+/* Expressive Spatial Transitions */
+@utility transition-easing-expressive-fast-spatial {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-expressive-fast-spatial);
+  transition-duration: var(--duration-expressive-fast-spatial, 350ms);
+}
+
+@utility transition-easing-expressive-default-spatial {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-expressive-default-spatial);
+  transition-duration: var(--duration-expressive-default-spatial, 500ms);
+}
+
+@utility transition-easing-expressive-slow-spatial {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-expressive-slow-spatial);
+  transition-duration: var(--duration-expressive-slow-spatial, 650ms);
+}
+
+/* Expressive Effects Transitions */
+@utility transition-easing-expressive-fast-effects {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-expressive-fast-effects);
+  transition-duration: var(--duration-expressive-fast-effects, 150ms);
+}
+
+@utility transition-easing-expressive-default-effects {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-expressive-default-effects);
+  transition-duration: var(--duration-expressive-default-effects, 200ms);
+}
+
+@utility transition-easing-expressive-slow-effects {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-expressive-slow-effects);
+  transition-duration: var(--duration-expressive-slow-effects, 300ms);
+}
+
+/* Standard Spatial Transitions */
+@utility transition-easing-standard-fast-spatial {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-standard-fast-spatial);
+  transition-duration: var(--duration-standard-fast-spatial, 350ms);
+}
+
+@utility transition-easing-standard-default-spatial {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-standard-default-spatial);
+  transition-duration: var(--duration-standard-default-spatial, 500ms);
+}
+
+@utility transition-easing-standard-slow-spatial {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-standard-slow-spatial);
+  transition-duration: var(--duration-standard-slow-spatial, 750ms);
+}
+
+/* Standard Effects Transitions */
+@utility transition-easing-standard-fast-effects {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-standard-fast-effects);
+  transition-duration: var(--duration-standard-fast-effects, 150ms);
+}
+
+@utility transition-easing-standard-default-effects {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-standard-default-effects);
+  transition-duration: var(--duration-standard-default-effects, 200ms);
+}
+
+@utility transition-easing-standard-slow-effects {
+  transition-property: all;
+
+  transition-timing-function: var(--easing-standard-slow-effects);
+  transition-duration: var(--duration-standard-slow-effects, 300ms);
+}

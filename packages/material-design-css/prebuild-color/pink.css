@@ -1,0 +1,62 @@
+/**
+ * Pink Color Scheme Preset
+ * Import this file to apply a pink primary color theme
+ */
+@layer material-design-system.color.variable {
+  :root {
+    --md-sys-color-primary-palette-key-color: light-dark(#ab616d, #ab616d);
+    --md-sys-color-secondary-palette-key-color: light-dark(#906e72, #906e72);
+    --md-sys-color-tertiary-palette-key-color: light-dark(#947047, #947047);
+    --md-sys-color-neutral-palette-key-color: light-dark(#817475, #817475);
+    --md-sys-color-neutral-variant-palette-key-color: light-dark(#847374, #847374);
+    --md-sys-color-background: light-dark(#fff8f7, #1a1112);
+    --md-sys-color-on-background: light-dark(#22191a, #f0dedf);
+    --md-sys-color-surface: light-dark(#fff8f7, #1a1112);
+    --md-sys-color-surface-dim: light-dark(#e7d6d7, #1a1112);
+    --md-sys-color-surface-bright: light-dark(#fff8f7, #413738);
+    --md-sys-color-surface-container-lowest: light-dark(#ffffff, #140c0d);
+    --md-sys-color-surface-container-low: light-dark(#fff0f1, #22191a);
+    --md-sys-color-surface-container: light-dark(#fbeaeb, #261d1e);
+    --md-sys-color-surface-container-high: light-dark(#f6e4e5, #312829);
+    --md-sys-color-surface-container-highest: light-dark(#f0dedf, #3d3233);
+    --md-sys-color-on-surface: light-dark(#22191a, #f0dedf);
+    --md-sys-color-surface-variant: light-dark(#f3dddf, #524345);
+    --md-sys-color-on-surface-variant: light-dark(#524345, #d7c1c3);
+    --md-sys-color-inverse-surface: light-dark(#382e2f, #f0dedf);
+    --md-sys-color-inverse-on-surface: light-dark(#feeded, #382e2f);
+    --md-sys-color-outline: light-dark(#847374, #9f8c8e);
+    --md-sys-color-outline-variant: light-dark(#d7c1c3, #524345);
+    --md-sys-color-shadow: light-dark(#000000, #000000);
+    --md-sys-color-scrim: light-dark(#000000, #000000);
+    --md-sys-color-surface-tint: light-dark(#8e4955, #ffb2bc);
+    --md-sys-color-primary: light-dark(#8e4955, #ffb2bc);
+    --md-sys-color-on-primary: light-dark(#ffffff, #561d29);
+    --md-sys-color-primary-container: light-dark(#ffd9dd, #72333e);
+    --md-sys-color-on-primary-container: light-dark(#72333e, #ffd9dd);
+    --md-sys-color-inverse-primary: light-dark(#ffb2bc, #8e4955);
+    --md-sys-color-secondary: light-dark(#76565a, #e5bdc1);
+    --md-sys-color-on-secondary: light-dark(#ffffff, #43292d);
+    --md-sys-color-secondary-container: light-dark(#ffd9dd, #5c3f43);
+    --md-sys-color-on-secondary-container: light-dark(#5c3f43, #ffd9dd);
+    --md-sys-color-tertiary: light-dark(#795831, #eabf8f);
+    --md-sys-color-on-tertiary: light-dark(#ffffff, #452b07);
+    --md-sys-color-tertiary-container: light-dark(#ffddb9, #5e411c);
+    --md-sys-color-on-tertiary-container: light-dark(#5e411c, #ffddb9);
+    --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
+    --md-sys-color-on-error: light-dark(#ffffff, #690005);
+    --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
+    --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
+    --md-sys-color-primary-fixed: light-dark(#ffd9dd, #ffd9dd);
+    --md-sys-color-primary-fixed-dim: light-dark(#ffb2bc, #ffb2bc);
+    --md-sys-color-on-primary-fixed: light-dark(#3b0714, #3b0714);
+    --md-sys-color-on-primary-fixed-variant: light-dark(#72333e, #72333e);
+    --md-sys-color-secondary-fixed: light-dark(#ffd9dd, #ffd9dd);
+    --md-sys-color-secondary-fixed-dim: light-dark(#e5bdc1, #e5bdc1);
+    --md-sys-color-on-secondary-fixed: light-dark(#2c1518, #2c1518);
+    --md-sys-color-on-secondary-fixed-variant: light-dark(#5c3f43, #5c3f43);
+    --md-sys-color-tertiary-fixed: light-dark(#ffddb9, #ffddb9);
+    --md-sys-color-tertiary-fixed-dim: light-dark(#eabf8f, #eabf8f);
+    --md-sys-color-on-tertiary-fixed: light-dark(#2b1700, #2b1700);
+    --md-sys-color-on-tertiary-fixed-variant: light-dark(#5e411c, #5e411c);
+  }
+}

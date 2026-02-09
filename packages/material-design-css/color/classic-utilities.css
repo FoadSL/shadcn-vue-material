@@ -1,0 +1,239 @@
+/**
+ * Material Design 3 Classic Utility Classes
+ * For use without TailwindCSS (standalone CSS)
+ * 
+ * Based on configurable design system colors
+ */
+
+@layer material-design-system.color {
+  :root {
+    /* Primary */
+    --_color-primary: var(--md-sys-color-primary);
+    --_color-on-primary: var(--md-sys-color-on-primary);
+    --_color-primary-container: var(--md-sys-color-primary-container);
+    --_color-on-primary-container: var(--md-sys-color-on-primary-container);
+    --_color-inverse-primary: var(--md-sys-color-inverse-primary);
+
+    /* Secondary */
+    --_color-secondary: var(--md-sys-color-secondary);
+    --_color-on-secondary: var(--md-sys-color-on-secondary);
+    --_color-secondary-container: var(--md-sys-color-secondary-container);
+    --_color-on-secondary-container: var(--md-sys-color-on-secondary-container);
+
+    /* Tertiary */
+    --_color-tertiary: var(--md-sys-color-tertiary);
+    --_color-on-tertiary: var(--md-sys-color-on-tertiary);
+    --_color-tertiary-container: var(--md-sys-color-tertiary-container);
+    --_color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+
+    /* Error */
+    --_color-error: var(--md-sys-color-error);
+    --_color-on-error: var(--md-sys-color-on-error);
+    --_color-error-container: var(--md-sys-color-error-container);
+    --_color-on-error-container: var(--md-sys-color-on-error-container);
+
+    /* Info */
+    --_color-info: var(--md-sys-color-info);
+    --_color-on-info: var(--md-sys-color-on-info);
+    --_color-info-container: var(--md-sys-color-info-container);
+    --_color-on-info-container: var(--md-sys-color-on-info-container);
+
+    /* Success */
+    --_color-success: var(--md-sys-color-success);
+    --_color-on-success: var(--md-sys-color-on-success);
+    --_color-success-container: var(--md-sys-color-success-container);
+    --_color-on-success-container: var(--md-sys-color-on-success-container);
+
+    /* Warning */
+    --_color-warning: var(--md-sys-color-warning);
+    --_color-on-warning: var(--md-sys-color-on-warning);
+    --_color-warning-container: var(--md-sys-color-warning-container);
+    --_color-on-warning-container: var(--md-sys-color-on-warning-container);
+
+    /* Surface */
+    --_color-surface: var(--md-sys-color-surface);
+    --_color-on-surface: var(--md-sys-color-on-surface);
+    --_color-surface-dim: var(--md-sys-color-surface-dim);
+    --_color-surface-bright: var(--md-sys-color-surface-bright);
+    --_color-surface-container: var(--md-sys-color-surface-container);
+    --_color-surface-container-low: var(--md-sys-color-surface-container-low);
+    --_color-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+    --_color-surface-container-high: var(--md-sys-color-surface-container-high);
+    --_color-surface-container-highest: var(--md-sys-color-surface-container-highest);
+    --_color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+    --_color-surface-tint: var(--md-sys-color-surface-tint);
+    --_color-inverse-surface: var(--md-sys-color-inverse-surface);
+    --_color-inverse-on-surface: var(--md-sys-color-inverse-on-surface);
+
+    /* Outline */
+    --_color-outline: var(--md-sys-color-outline);
+    --_color-outline-variant: var(--md-sys-color-outline-variant);
+
+    /* Scrim & Shadow */
+    --_color-scrim: var(--md-sys-color-scrim);
+    --_color-shadow: var(--md-sys-color-shadow);
+    --_color-glow: var(--md-sys-color-glow);
+  }
+}
+
+@layer material-design-system.utilities.classic {
+  /* Surface */
+  .surface {
+    background: var(--_color-surface);
+  }
+  .surface-dim {
+    background: var(--_color-surface-dim);
+  }
+  .surface-bright {
+    background: var(--_color-surface-bright);
+  }
+  .surface-container-lowest {
+    background: var(--_color-surface-container-lowest);
+  }
+  .surface-container-low {
+    background: var(--_color-surface-container-low);
+  }
+  .surface-container {
+    background: var(--_color-surface-container);
+  }
+  .surface-container-high {
+    background: var(--_color-surface-container-high);
+  }
+  .surface-container-highest {
+    background: var(--_color-surface-container-highest);
+  }
+  .on-surface {
+    color: var(--_color-on-surface);
+  }
+  .on-surface-variant {
+    color: var(--_color-on-surface-variant);
+  }
+  .inverse-surface {
+    background: var(--_color-inverse-surface);
+  }
+  .inverse-on-surface {
+    color: var(--_color-inverse-on-surface);
+  }
+  .surface-tint {
+    background: var(--_color-surface-tint);
+  }
+
+  /* Outline */
+  .outline {
+    outline-color: var(--_color-outline);
+    border-color: var(--_color-outline);
+  }
+  .outline-variant {
+    outline-color: var(--_color-outline-variant);
+    border-color: var(--_color-outline-variant);
+  }
+
+  /* Shadow & Scrim */
+  .shadow {
+    background: var(--_color-shadow);
+  }
+  .scrim {
+    background: var(--_color-scrim);
+  }
+
+  /* Primary */
+  .primary {
+    background: var(--_color-primary);
+  }
+  .on-primary {
+    color: var(--_color-on-primary);
+  }
+  .primary-container {
+    background: var(--_color-primary-container);
+  }
+  .on-primary-container {
+    color: var(--_color-on-primary-container);
+  }
+  .inverse-primary {
+    background: var(--_color-inverse-primary);
+  }
+
+  /* Secondary */
+  .secondary {
+    background: var(--_color-secondary);
+  }
+  .on-secondary {
+    color: var(--_color-on-secondary);
+  }
+  .secondary-container {
+    background: var(--_color-secondary-container);
+  }
+  .on-secondary-container {
+    color: var(--_color-on-secondary-container);
+  }
+
+  /* Tertiary */
+  .tertiary {
+    background: var(--_color-tertiary);
+  }
+  .on-tertiary {
+    color: var(--_color-on-tertiary);
+  }
+  .tertiary-container {
+    background: var(--_color-tertiary-container);
+  }
+  .on-tertiary-container {
+    color: var(--_color-on-tertiary-container);
+  }
+
+  /* Error */
+  .error {
+    background: var(--_color-error);
+  }
+  .on-error {
+    color: var(--_color-on-error);
+  }
+  .error-container {
+    background: var(--_color-error-container);
+  }
+  .on-error-container {
+    color: var(--_color-on-error-container);
+  }
+
+  /* Info */
+  .info {
+    background: var(--_color-info);
+  }
+  .on-info {
+    color: var(--_color-on-info);
+  }
+  .info-container {
+    background: var(--_color-info-container);
+  }
+  .on-info-container {
+    color: var(--_color-on-info-container);
+  }
+
+  /* Success */
+  .success {
+    background: var(--_color-success);
+  }
+  .on-success {
+    color: var(--_color-on-success);
+  }
+  .success-container {
+    background: var(--_color-success-container);
+  }
+  .on-success-container {
+    color: var(--_color-on-success-container);
+  }
+
+  /* Warning */
+  .warning {
+    background: var(--_color-warning);
+  }
+  .on-warning {
+    color: var(--_color-on-warning);
+  }
+  .warning-container {
+    background: var(--_color-warning-container);
+  }
+  .on-warning-container {
+    color: var(--_color-on-warning-container);
+  }
+}

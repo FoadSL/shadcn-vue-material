@@ -1,0 +1,17 @@
+<script setup>
+import { reactiveOmit } from "@vueuse/core"
+import { TagsInputItemText, useForwardProps } from "reka-ui"
+import { cn } from "@/lib/utils"
+
+const props = defineProps()
+
+const delegatedProps = reactiveOmit(props, "class")
+
+const forwardedProps = useForwardProps(delegatedProps)
+</script>
+
+<template>
+  <TagsInputItemText v-bind="forwardedProps" :class="cn('py-0.5 px-2 text-sm rounded bg-transparent', props.class)">
+    <slot />
+  </TagsInputItemText>
+</template>

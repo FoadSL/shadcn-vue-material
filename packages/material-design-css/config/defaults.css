@@ -1,0 +1,785 @@
+/**
+ * Material Design 3 - Default Configuration
+ *
+ * This file contains all default token values.
+ * Override these by setting the --md-sys-* and --md-ref-* variables
+ * BEFORE importing this package.
+ *
+ * Example:
+ * :root {
+ *   --md-sys-color-primary: #your-color;
+ *   --md-ref-typeface-brand: "Your Font", sans-serif;
+ * }
+ * @import "@vira/material-design-css";
+ */
+
+@layer md-config {
+  :root {
+    /* ============================================
+     * Reference Tokens (Base values)
+     * Override these to change the foundation
+     * ============================================ */
+
+    /* Typeface References */
+    --md-ref-typeface-brand: var(--md-config-typeface-brand, "Roboto", sans-serif);
+    --md-ref-typeface-plain: var(--md-config-typeface-plain, "Roboto", sans-serif);
+    --md-ref-typeface-weight-regular: var(--md-config-typeface-weight-regular, 400);
+    --md-ref-typeface-weight-medium: var(--md-config-typeface-weight-medium, 500);
+    --md-ref-typeface-weight-bold: var(--md-config-typeface-weight-bold, 700);
+
+    /* ============================================
+     * System Color Tokens - Light Mode Defaults
+     * ============================================ */
+
+    /* Primary */
+    --md-sys-color-primary-light: var(--md-config-color-primary-light, #607cf0);
+    --md-sys-color-on-primary-light: var(--md-config-color-on-primary-light, #ffffff);
+    --md-sys-color-primary-container-light: var(--md-config-color-primary-container-light, #edebf5);
+    --md-sys-color-on-primary-container-light: var(
+      --md-config-color-on-primary-container-light,
+      #203cb0
+    );
+    --md-sys-color-primary-fixed: var(--md-config-color-primary-fixed, #dfe5ff);
+    --md-sys-color-primary-fixed-dim: var(--md-config-color-primary-fixed-dim, #9db0ff);
+    --md-sys-color-on-primary-fixed: var(--md-config-color-on-primary-fixed, #00166f);
+    --md-sys-color-on-primary-fixed-variant: var(
+      --md-config-color-on-primary-fixed-variant,
+      #324ec2
+    );
+    --md-sys-color-inverse-primary-light: var(--md-config-color-inverse-primary-light, #bdcaff);
+
+    /* Secondary */
+    --md-sys-color-secondary-light: var(--md-config-color-secondary-light, #ff91bf);
+    --md-sys-color-on-secondary-light: var(--md-config-color-on-secondary-light, #ffffff);
+    --md-sys-color-secondary-container-light: var(
+      --md-config-color-secondary-container-light,
+      #ffecec
+    );
+    --md-sys-color-on-secondary-container-light: var(
+      --md-config-color-on-secondary-container-light,
+      #e87775
+    );
+    --md-sys-color-secondary-fixed: var(--md-config-color-secondary-fixed, #ffdad9);
+    --md-sys-color-secondary-fixed-dim: var(--md-config-color-secondary-fixed-dim, #ffb685);
+    --md-sys-color-on-secondary-fixed: var(--md-config-color-on-secondary-fixed, #000000);
+    --md-sys-color-on-secondary-fixed-variant: var(
+      --md-config-color-on-secondary-fixed-variant,
+      #982a28
+    );
+    --md-sys-color-inverse-secondary-light: var(--md-config-color-inverse-secondary-light, #ffb685);
+
+    /* Tertiary */
+    --md-sys-color-tertiary-light: var(--md-config-color-tertiary-light, #2ec9bf);
+    --md-sys-color-on-tertiary-light: var(--md-config-color-on-tertiary-light, #ffffff);
+    --md-sys-color-tertiary-container-light: var(
+      --md-config-color-tertiary-container-light,
+      #aafffa
+    );
+    --md-sys-color-on-tertiary-container-light: var(
+      --md-config-color-on-tertiary-container-light,
+      #000000
+    );
+    --md-sys-color-tertiary-fixed: var(--md-config-color-tertiary-fixed, #aafffa);
+    --md-sys-color-tertiary-fixed-dim: var(--md-config-color-tertiary-fixed-dim, #61fcf2);
+    --md-sys-color-on-tertiary-fixed: var(--md-config-color-on-tertiary-fixed, #000000);
+    --md-sys-color-on-tertiary-fixed-variant: var(
+      --md-config-color-on-tertiary-fixed-variant,
+      #006667
+    );
+    --md-sys-color-inverse-tertiary-light: var(--md-config-color-inverse-tertiary-light, #61fcf2);
+
+    /* Error */
+    --md-sys-color-error-light: var(--md-config-color-error-light, #f24251);
+    --md-sys-color-on-error-light: var(--md-config-color-on-error-light, #ffffff);
+    --md-sys-color-error-container-light: var(--md-config-color-error-container-light, #ffecee);
+    --md-sys-color-on-error-container-light: var(
+      --md-config-color-on-error-container-light,
+      #e0303f
+    );
+
+    /* Info (Extended) */
+    --md-sys-color-info-light: var(--md-config-color-info-light, #0086d1);
+    --md-sys-color-on-info-light: var(--md-config-color-on-info-light, #ffffff);
+    --md-sys-color-info-container-light: var(--md-config-color-info-container-light, #e5f3ff);
+    --md-sys-color-on-info-container-light: var(--md-config-color-on-info-container-light, #00659e);
+
+    /* Success (Extended) */
+    --md-sys-color-success-light: var(--md-config-color-success-light, #189731);
+    --md-sys-color-on-success-light: var(--md-config-color-on-success-light, #ffffff);
+    --md-sys-color-success-container-light: var(--md-config-color-success-container-light, #f2fff5);
+    --md-sys-color-on-success-container-light: var(
+      --md-config-color-on-success-container-light,
+      #007e1b
+    );
+
+    /* Warning (Extended) */
+    --md-sys-color-warning-light: var(--md-config-color-warning-light, #ff9432);
+    --md-sys-color-on-warning-light: var(--md-config-color-on-warning-light, #ffffff);
+    --md-sys-color-warning-container-light: var(--md-config-color-warning-container-light, #fff3e0);
+    --md-sys-color-on-warning-container-light: var(
+      --md-config-color-on-warning-container-light,
+      #d05700
+    );
+
+    /* Surface - Light Mode */
+    --md-sys-color-surface-light: var(--md-config-color-surface-light, #f5f5f5);
+    --md-sys-color-on-surface-light: var(--md-config-color-on-surface-light, #333333);
+    --md-sys-color-surface-dim-light: var(--md-config-color-surface-dim-light, #e5e5e5);
+    --md-sys-color-surface-bright-light: var(--md-config-color-surface-bright-light, #fdfdfd);
+    --md-sys-color-surface-container-light: var(--md-config-color-surface-container-light, #ebebeb);
+    --md-sys-color-surface-container-low-light: var(
+      --md-config-color-surface-container-low-light,
+      #f5f5f5
+    );
+    --md-sys-color-surface-container-lowest-light: var(
+      --md-config-color-surface-container-lowest-light,
+      #ffffff
+    );
+    --md-sys-color-surface-container-high-light: var(
+      --md-config-color-surface-container-high-light,
+      #cccccc
+    );
+    --md-sys-color-surface-container-highest-light: var(
+      --md-config-color-surface-container-highest-light,
+      #e9ebf5
+    );
+    --md-sys-color-on-surface-variant-light: var(
+      --md-config-color-on-surface-variant-light,
+      #737683
+    );
+    --md-sys-color-on-surface-variant-low-light: var(
+      --md-config-color-on-surface-variant-low-light,
+      #c7cad7
+    );
+    --md-sys-color-surface-tint-light: var(--md-config-color-surface-tint-light, #f5f6fa);
+    --md-sys-color-inverse-surface-light: var(--md-config-color-inverse-surface-light, #1f1f1f);
+    --md-sys-color-inverse-on-surface-light: var(
+      --md-config-color-inverse-on-surface-light,
+      #fdfdfd
+    );
+
+    /* Outline - Light Mode */
+    --md-sys-color-outline-light: var(--md-config-color-outline-light, #cccccc);
+    --md-sys-color-outline-variant-light: var(--md-config-color-outline-variant-light, #dbdffa);
+
+    /* Scrim & Shadow - Light Mode */
+    --md-sys-color-scrim-light: var(--md-config-color-scrim-light, #000000);
+    --md-sys-color-shadow-light: var(--md-config-color-shadow-light, rgba(0, 0, 0, 0.1));
+    --md-sys-color-glow: var(--md-config-color-glow, #476beb);
+
+    /* State Colors - Light Mode */
+    --md-sys-color-state-hovered-soft-light: var(
+      --md-config-color-state-hovered-soft-light,
+      rgba(0, 0, 0, 0.05)
+    );
+    --md-sys-color-state-pressed-soft-light: var(
+      --md-config-color-state-pressed-soft-light,
+      rgba(0, 0, 0, 0.08)
+    );
+    --md-sys-color-state-hovered-strong-light: var(
+      --md-config-color-state-hovered-strong-light,
+      rgba(0, 0, 0, 0.1)
+    );
+    --md-sys-color-state-pressed-strong-light: var(
+      --md-config-color-state-pressed-strong-light,
+      rgba(0, 0, 0, 0.12)
+    );
+    --md-sys-color-state-disabled-soft-light: var(
+      --md-config-color-state-disabled-soft-light,
+      #f2f2f2
+    );
+    --md-sys-color-state-disabled-strong-light: var(
+      --md-config-color-state-disabled-strong-light,
+      #c7c7c7
+    );
+
+    /* ============================================
+     * System Color Tokens - Dark Mode Defaults
+     * ============================================ */
+
+    /* Primary */
+    --md-sys-color-primary-dark: var(--md-config-color-primary-dark, #7b95ff);
+    --md-sys-color-on-primary-dark: var(--md-config-color-on-primary-dark, #ffffff);
+    --md-sys-color-primary-container-dark: var(--md-config-color-primary-container-dark, #001050);
+    --md-sys-color-on-primary-container-dark: var(
+      --md-config-color-on-primary-container-dark,
+      #dfe5ff
+    );
+    --md-sys-color-inverse-primary-dark: var(--md-config-color-inverse-primary-dark, #4662d6);
+
+    /* Secondary */
+    --md-sys-color-secondary-dark: var(--md-config-color-secondary-dark, #ff91bf);
+    --md-sys-color-on-secondary-dark: var(--md-config-color-on-secondary-dark, #ffffff);
+    --md-sys-color-secondary-container-dark: var(
+      --md-config-color-secondary-container-dark,
+      #ffdad9
+    );
+    --md-sys-color-on-secondary-container-dark: var(
+      --md-config-color-on-secondary-container-dark,
+      #e87775
+    );
+    --md-sys-color-inverse-secondary-dark: var(--md-config-color-inverse-secondary-dark, #954442);
+
+    /* Tertiary */
+    --md-sys-color-tertiary-dark: var(--md-config-color-tertiary-dark, #61fcf2);
+    --md-sys-color-on-tertiary-dark: var(--md-config-color-on-tertiary-dark, #004a45);
+    --md-sys-color-tertiary-container-dark: var(--md-config-color-tertiary-container-dark, #aafffa);
+    --md-sys-color-on-tertiary-container-dark: var(
+      --md-config-color-on-tertiary-container-dark,
+      #000000
+    );
+    --md-sys-color-inverse-tertiary-dark: var(--md-config-color-inverse-tertiary-dark, #009384);
+
+    /* Error */
+    --md-sys-color-error-dark: var(--md-config-color-error-dark, #f24251);
+    --md-sys-color-on-error-dark: var(--md-config-color-on-error-dark, #ffffff);
+    --md-sys-color-error-container-dark: var(--md-config-color-error-container-dark, #79000a);
+    --md-sys-color-on-error-container-dark: var(--md-config-color-on-error-container-dark, #ffecee);
+
+    /* Info (Extended) */
+    --md-sys-color-info-dark: var(--md-config-color-info-dark, #0086d1);
+    --md-sys-color-on-info-dark: var(--md-config-color-on-info-dark, #ffffff);
+    --md-sys-color-info-container-dark: var(--md-config-color-info-container-dark, #00111b);
+    --md-sys-color-on-info-container-dark: var(--md-config-color-on-info-container-dark, #e5f3ff);
+
+    /* Success (Extended) */
+    --md-sys-color-success-dark: var(--md-config-color-success-dark, #2aa943);
+    --md-sys-color-on-success-dark: var(--md-config-color-on-success-dark, #ffffff);
+    --md-sys-color-success-container-dark: var(--md-config-color-success-container-dark, #001504);
+    --md-sys-color-on-success-container-dark: var(
+      --md-config-color-on-success-container-dark,
+      #dfffe4
+    );
+
+    /* Warning (Extended) */
+    --md-sys-color-warning-dark: var(--md-config-color-warning-dark, #ff9432);
+    --md-sys-color-on-warning-dark: var(--md-config-color-on-warning-dark, #ffffff);
+    --md-sys-color-warning-container-dark: var(--md-config-color-warning-container-dark, #221100);
+    --md-sys-color-on-warning-container-dark: var(
+      --md-config-color-on-warning-container-dark,
+      #fff3e0
+    );
+
+    /* Surface - Dark Mode */
+    --md-sys-color-surface-dark: var(--md-config-color-surface-dark, #0d0d0d);
+    --md-sys-color-on-surface-dark: var(--md-config-color-on-surface-dark, #fdfdfd);
+    --md-sys-color-surface-dim-dark: var(--md-config-color-surface-dim-dark, #0a0a0a);
+    --md-sys-color-surface-bright-dark: var(--md-config-color-surface-bright-dark, #1f1f1f);
+    --md-sys-color-surface-container-dark: var(--md-config-color-surface-container-dark, #333333);
+    --md-sys-color-surface-container-low-dark: var(
+      --md-config-color-surface-container-low-dark,
+      #282828
+    );
+    --md-sys-color-surface-container-lowest-dark: var(
+      --md-config-color-surface-container-lowest-dark,
+      #1f1f1f
+    );
+    --md-sys-color-surface-container-high-dark: var(
+      --md-config-color-surface-container-high-dark,
+      #404040
+    );
+    --md-sys-color-surface-container-highest-dark: var(
+      --md-config-color-surface-container-highest-dark,
+      #333333
+    );
+    --md-sys-color-on-surface-variant-dark: var(--md-config-color-on-surface-variant-dark, #aeb1be);
+    --md-sys-color-on-surface-variant-low-dark: var(
+      --md-config-color-on-surface-variant-low-dark,
+      #737683
+    );
+    --md-sys-color-surface-tint-dark: var(--md-config-color-surface-tint-dark, #0d0d0d);
+    --md-sys-color-inverse-surface-dark: var(--md-config-color-inverse-surface-dark, #f5f5f5);
+    --md-sys-color-inverse-on-surface-dark: var(--md-config-color-inverse-on-surface-dark, #262626);
+
+    /* Outline - Dark Mode */
+    --md-sys-color-outline-dark: var(--md-config-color-outline-dark, #454854);
+    --md-sys-color-outline-variant-dark: var(--md-config-color-outline-variant-dark, #333439);
+
+    /* Scrim & Shadow - Dark Mode */
+    --md-sys-color-scrim-dark: var(--md-config-color-scrim-dark, #1f1f1f);
+    --md-sys-color-shadow-dark: var(--md-config-color-shadow-dark, rgba(255, 255, 255, 0.1));
+
+    /* State Colors - Dark Mode */
+    --md-sys-color-state-hovered-soft-dark: var(
+      --md-config-color-state-hovered-soft-dark,
+      rgba(255, 255, 255, 0.05)
+    );
+    --md-sys-color-state-pressed-soft-dark: var(
+      --md-config-color-state-pressed-soft-dark,
+      rgba(255, 255, 255, 0.08)
+    );
+    --md-sys-color-state-hovered-strong-dark: var(
+      --md-config-color-state-hovered-strong-dark,
+      rgba(255, 255, 255, 0.1)
+    );
+    --md-sys-color-state-pressed-strong-dark: var(
+      --md-config-color-state-pressed-strong-dark,
+      rgba(255, 255, 255, 0.12)
+    );
+    --md-sys-color-state-disabled-soft-dark: var(
+      --md-config-color-state-disabled-soft-dark,
+      #373737
+    );
+    --md-sys-color-state-disabled-strong-dark: var(
+      --md-config-color-state-disabled-strong-dark,
+      #474646
+    );
+
+    /* ============================================
+     * Custom Hue Colors (Same for both modes)
+     * ============================================ */
+    --md-sys-color-hue-1: var(--md-config-color-hue-1, #fcd435);
+    --md-sys-color-hue-2: var(--md-config-color-hue-2, #e586d4);
+    --md-sys-color-hue-3: var(--md-config-color-hue-3, #995d00);
+    --md-sys-color-hue-4: var(--md-config-color-hue-4, #725a4a);
+    --md-sys-color-hue-5: var(--md-config-color-hue-5, #008d8d);
+    --md-sys-color-hue-6: var(--md-config-color-hue-6, #fdeeca);
+    --md-sys-color-hue-7: var(--md-config-color-hue-7, #696b00);
+    --md-sys-color-hue-8: var(--md-config-color-hue-8, #98a0a7);
+    --md-sys-color-hue-9: var(--md-config-color-hue-9, #5e6e6f);
+
+    /* ============================================
+     * Shape Tokens
+     * ============================================ */
+    --md-sys-shape-corner-value-none: var(--md-config-shape-none, 0px);
+    --md-sys-shape-corner-value-extra-small: var(--md-config-shape-extra-small, 4px);
+    --md-sys-shape-corner-value-small: var(--md-config-shape-small, 8px);
+    --md-sys-shape-corner-value-medium: var(--md-config-shape-medium, 12px);
+    --md-sys-shape-corner-value-large: var(--md-config-shape-large, 16px);
+    --md-sys-shape-corner-value-large-increased: var(--md-config-shape-large-increased, 20px);
+    --md-sys-shape-corner-value-extra-large: var(--md-config-shape-extra-large, 28px);
+    --md-sys-shape-corner-value-extra-large-increased: var(
+      --md-config-shape-extra-large-increased,
+      32px
+    );
+    --md-sys-shape-corner-value-extra-extra-large: var(--md-config-shape-extra-extra-large, 48px);
+
+    /* ============================================
+     * Motion Tokens - Easing
+     * ============================================ */
+    --md-sys-motion-easing-emphasized: var(
+      --md-config-motion-easing-emphasized,
+      cubic-bezier(0.2, 0, 0, 1)
+    );
+    --md-sys-motion-easing-emphasized-decelerate: var(
+      --md-config-motion-easing-emphasized-decelerate,
+      cubic-bezier(0.05, 0.7, 0.1, 1)
+    );
+    --md-sys-motion-easing-emphasized-accelerate: var(
+      --md-config-motion-easing-emphasized-accelerate,
+      cubic-bezier(0.3, 0, 0.8, 0.15)
+    );
+    --md-sys-motion-easing-standard: var(
+      --md-config-motion-easing-standard,
+      cubic-bezier(0.2, 0, 0, 1)
+    );
+    --md-sys-motion-easing-standard-decelerate: var(
+      --md-config-motion-easing-standard-decelerate,
+      cubic-bezier(0, 0, 0, 1)
+    );
+    --md-sys-motion-easing-standard-accelerate: var(
+      --md-config-motion-easing-standard-accelerate,
+      cubic-bezier(0.3, 0, 1, 1)
+    );
+
+    /* Expressive Easings */
+    --md-sys-motion-easing-expressive-fast-spatial: var(
+      --md-config-motion-easing-expressive-fast-spatial,
+      cubic-bezier(0.42, 1.67, 0.21, 0.9)
+    );
+    --md-sys-motion-easing-expressive-default-spatial: var(
+      --md-config-motion-easing-expressive-default-spatial,
+      cubic-bezier(0.38, 1.21, 0.22, 1)
+    );
+    --md-sys-motion-easing-expressive-slow-spatial: var(
+      --md-config-motion-easing-expressive-slow-spatial,
+      cubic-bezier(0.39, 1.29, 0.35, 0.98)
+    );
+    --md-sys-motion-easing-expressive-fast-effects: var(
+      --md-config-motion-easing-expressive-fast-effects,
+      cubic-bezier(0.31, 0.94, 0.34, 1)
+    );
+    --md-sys-motion-easing-expressive-default-effects: var(
+      --md-config-motion-easing-expressive-default-effects,
+      cubic-bezier(0.34, 0.8, 0.34, 1)
+    );
+    --md-sys-motion-easing-expressive-slow-effects: var(
+      --md-config-motion-easing-expressive-slow-effects,
+      cubic-bezier(0.34, 0.88, 0.34, 1)
+    );
+
+    /* Standard Spatial/Effects */
+    --md-sys-motion-easing-standard-fast-spatial: var(
+      --md-config-motion-easing-standard-fast-spatial,
+      cubic-bezier(0.27, 1.06, 0.18, 1)
+    );
+    --md-sys-motion-easing-standard-default-spatial: var(
+      --md-config-motion-easing-standard-default-spatial,
+      cubic-bezier(0.27, 1.06, 0.18, 1)
+    );
+    --md-sys-motion-easing-standard-slow-spatial: var(
+      --md-config-motion-easing-standard-slow-spatial,
+      cubic-bezier(0.27, 1.06, 0.18, 1)
+    );
+    --md-sys-motion-easing-standard-fast-effects: var(
+      --md-config-motion-easing-standard-fast-effects,
+      cubic-bezier(0.31, 0.94, 0.34, 1)
+    );
+    --md-sys-motion-easing-standard-default-effects: var(
+      --md-config-motion-easing-standard-default-effects,
+      cubic-bezier(0.34, 0.8, 0.34, 1)
+    );
+    --md-sys-motion-easing-standard-slow-effects: var(
+      --md-config-motion-easing-standard-slow-effects,
+      cubic-bezier(0.34, 0.88, 0.34, 1)
+    );
+
+    /* ============================================
+     * Motion Tokens - Duration
+     * ============================================ */
+    --md-sys-motion-duration-short1: var(--md-config-motion-duration-short1, 50ms);
+    --md-sys-motion-duration-short2: var(--md-config-motion-duration-short2, 100ms);
+    --md-sys-motion-duration-short3: var(--md-config-motion-duration-short3, 150ms);
+    --md-sys-motion-duration-short4: var(--md-config-motion-duration-short4, 200ms);
+    --md-sys-motion-duration-medium1: var(--md-config-motion-duration-medium1, 250ms);
+    --md-sys-motion-duration-medium2: var(--md-config-motion-duration-medium2, 300ms);
+    --md-sys-motion-duration-medium3: var(--md-config-motion-duration-medium3, 350ms);
+    --md-sys-motion-duration-medium4: var(--md-config-motion-duration-medium4, 400ms);
+    --md-sys-motion-duration-long1: var(--md-config-motion-duration-long1, 450ms);
+    --md-sys-motion-duration-long2: var(--md-config-motion-duration-long2, 500ms);
+    --md-sys-motion-duration-long3: var(--md-config-motion-duration-long3, 550ms);
+    --md-sys-motion-duration-long4: var(--md-config-motion-duration-long4, 600ms);
+    --md-sys-motion-duration-extra-long1: var(--md-config-motion-duration-extra-long1, 700ms);
+    --md-sys-motion-duration-extra-long2: var(--md-config-motion-duration-extra-long2, 800ms);
+    --md-sys-motion-duration-extra-long3: var(--md-config-motion-duration-extra-long3, 900ms);
+    --md-sys-motion-duration-extra-long4: var(--md-config-motion-duration-extra-long4, 1000ms);
+
+    /* Expressive Durations */
+    --md-sys-motion-duration-expressive-fast-spatial: var(
+      --md-config-motion-duration-expressive-fast-spatial,
+      350ms
+    );
+    --md-sys-motion-duration-expressive-default-spatial: var(
+      --md-config-motion-duration-expressive-default-spatial,
+      500ms
+    );
+    --md-sys-motion-duration-expressive-slow-spatial: var(
+      --md-config-motion-duration-expressive-slow-spatial,
+      650ms
+    );
+    --md-sys-motion-duration-expressive-fast-effects: var(
+      --md-config-motion-duration-expressive-fast-effects,
+      150ms
+    );
+    --md-sys-motion-duration-expressive-default-effects: var(
+      --md-config-motion-duration-expressive-default-effects,
+      200ms
+    );
+    --md-sys-motion-duration-expressive-slow-effects: var(
+      --md-config-motion-duration-expressive-slow-effects,
+      300ms
+    );
+
+    /* Standard Durations */
+    --md-sys-motion-duration-standard-fast-spatial: var(
+      --md-config-motion-duration-standard-fast-spatial,
+      350ms
+    );
+    --md-sys-motion-duration-standard-default-spatial: var(
+      --md-config-motion-duration-standard-default-spatial,
+      500ms
+    );
+    --md-sys-motion-duration-standard-slow-spatial: var(
+      --md-config-motion-duration-standard-slow-spatial,
+      750ms
+    );
+    --md-sys-motion-duration-standard-fast-effects: var(
+      --md-config-motion-duration-standard-fast-effects,
+      150ms
+    );
+    --md-sys-motion-duration-standard-default-effects: var(
+      --md-config-motion-duration-standard-default-effects,
+      200ms
+    );
+    --md-sys-motion-duration-standard-slow-effects: var(
+      --md-config-motion-duration-standard-slow-effects,
+      300ms
+    );
+
+    /* ============================================
+     * Typography Tokens
+     * ============================================ */
+
+    /* Display Large */
+    --md-sys-typescale-display-large-font: var(
+      --md-config-typescale-display-large-font,
+      var(--md-ref-typeface-brand)
+    );
+    --md-sys-typescale-display-large-size: var(--md-config-typescale-display-large-size, 57px);
+    --md-sys-typescale-display-large-tracking: var(
+      --md-config-typescale-display-large-tracking,
+      -1px
+    );
+    --md-sys-typescale-display-large-line-height: var(
+      --md-config-typescale-display-large-line-height,
+      64px
+    );
+    --md-sys-typescale-display-large-weight: var(--md-config-typescale-display-large-weight, 875);
+
+    /* Display Medium */
+    --md-sys-typescale-display-medium-font: var(
+      --md-config-typescale-display-medium-font,
+      var(--md-ref-typeface-brand)
+    );
+    --md-sys-typescale-display-medium-size: var(--md-config-typescale-display-medium-size, 45px);
+    --md-sys-typescale-display-medium-tracking: var(
+      --md-config-typescale-display-medium-tracking,
+      -1px
+    );
+    --md-sys-typescale-display-medium-line-height: var(
+      --md-config-typescale-display-medium-line-height,
+      52px
+    );
+    --md-sys-typescale-display-medium-weight: var(--md-config-typescale-display-medium-weight, 900);
+
+    /* Display Small */
+    --md-sys-typescale-display-small-font: var(
+      --md-config-typescale-display-small-font,
+      var(--md-ref-typeface-brand)
+    );
+    --md-sys-typescale-display-small-size: var(--md-config-typescale-display-small-size, 36px);
+    --md-sys-typescale-display-small-tracking: var(
+      --md-config-typescale-display-small-tracking,
+      -1px
+    );
+    --md-sys-typescale-display-small-line-height: var(
+      --md-config-typescale-display-small-line-height,
+      44px
+    );
+    --md-sys-typescale-display-small-weight: var(--md-config-typescale-display-small-weight, 800);
+
+    /* Headline Large */
+    --md-sys-typescale-headline-large-font: var(
+      --md-config-typescale-headline-large-font,
+      var(--md-ref-typeface-brand)
+    );
+    --md-sys-typescale-headline-large-size: var(--md-config-typescale-headline-large-size, 32px);
+    --md-sys-typescale-headline-large-tracking: var(
+      --md-config-typescale-headline-large-tracking,
+      -1.5px
+    );
+    --md-sys-typescale-headline-large-line-height: var(
+      --md-config-typescale-headline-large-line-height,
+      28px
+    );
+    --md-sys-typescale-headline-large-weight: var(--md-config-typescale-headline-large-weight, 700);
+
+    /* Headline Medium */
+    --md-sys-typescale-headline-medium-font: var(
+      --md-config-typescale-headline-medium-font,
+      var(--md-ref-typeface-brand)
+    );
+    --md-sys-typescale-headline-medium-size: var(--md-config-typescale-headline-medium-size, 28px);
+    --md-sys-typescale-headline-medium-tracking: var(
+      --md-config-typescale-headline-medium-tracking,
+      -1px
+    );
+    --md-sys-typescale-headline-medium-line-height: var(
+      --md-config-typescale-headline-medium-line-height,
+      36px
+    );
+    --md-sys-typescale-headline-medium-weight: var(
+      --md-config-typescale-headline-medium-weight,
+      700
+    );
+
+    /* Headline Small */
+    --md-sys-typescale-headline-small-font: var(
+      --md-config-typescale-headline-small-font,
+      var(--md-ref-typeface-brand)
+    );
+    --md-sys-typescale-headline-small-size: var(--md-config-typescale-headline-small-size, 24px);
+    --md-sys-typescale-headline-small-tracking: var(
+      --md-config-typescale-headline-small-tracking,
+      -0.5px
+    );
+    --md-sys-typescale-headline-small-line-height: var(
+      --md-config-typescale-headline-small-line-height,
+      32px
+    );
+    --md-sys-typescale-headline-small-weight: var(--md-config-typescale-headline-small-weight, 800);
+
+    /* Title Large */
+    --md-sys-typescale-title-large-font: var(
+      --md-config-typescale-title-large-font,
+      var(--md-ref-typeface-brand)
+    );
+    --md-sys-typescale-title-large-size: var(--md-config-typescale-title-large-size, 20px);
+    --md-sys-typescale-title-large-tracking: var(
+      --md-config-typescale-title-large-tracking,
+      -0.5px
+    );
+    --md-sys-typescale-title-large-line-height: var(
+      --md-config-typescale-title-large-line-height,
+      28px
+    );
+    --md-sys-typescale-title-large-weight: var(--md-config-typescale-title-large-weight, 700);
+
+    /* Title Medium */
+    --md-sys-typescale-title-medium-font: var(
+      --md-config-typescale-title-medium-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-title-medium-size: var(--md-config-typescale-title-medium-size, 16px);
+    --md-sys-typescale-title-medium-tracking: var(
+      --md-config-typescale-title-medium-tracking,
+      0.4px
+    );
+    --md-sys-typescale-title-medium-line-height: var(
+      --md-config-typescale-title-medium-line-height,
+      24px
+    );
+    --md-sys-typescale-title-medium-weight: var(--md-config-typescale-title-medium-weight, 600);
+
+    /* Title Small */
+    --md-sys-typescale-title-small-font: var(
+      --md-config-typescale-title-small-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-title-small-size: var(--md-config-typescale-title-small-size, 14px);
+    --md-sys-typescale-title-small-tracking: var(
+      --md-config-typescale-title-small-tracking,
+      -0.4px
+    );
+    --md-sys-typescale-title-small-line-height: var(
+      --md-config-typescale-title-small-line-height,
+      20px
+    );
+    --md-sys-typescale-title-small-weight: var(--md-config-typescale-title-small-weight, 600);
+
+    /* Body Large */
+    --md-sys-typescale-body-large-font: var(
+      --md-config-typescale-body-large-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-body-large-size: var(--md-config-typescale-body-large-size, 16px);
+    --md-sys-typescale-body-large-tracking: var(--md-config-typescale-body-large-tracking, 0px);
+    --md-sys-typescale-body-large-line-height: var(
+      --md-config-typescale-body-large-line-height,
+      32px
+    );
+    --md-sys-typescale-body-large-weight: var(--md-config-typescale-body-large-weight, 400);
+
+    /* Body Medium */
+    --md-sys-typescale-body-medium-font: var(
+      --md-config-typescale-body-medium-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-body-medium-size: var(--md-config-typescale-body-medium-size, 14px);
+    --md-sys-typescale-body-medium-tracking: var(--md-config-typescale-body-medium-tracking, 0px);
+    --md-sys-typescale-body-medium-line-height: var(
+      --md-config-typescale-body-medium-line-height,
+      28px
+    );
+    --md-sys-typescale-body-medium-weight: var(--md-config-typescale-body-medium-weight, 400);
+
+    /* Body Small */
+    --md-sys-typescale-body-small-font: var(
+      --md-config-typescale-body-small-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-body-small-size: var(--md-config-typescale-body-small-size, 12px);
+    --md-sys-typescale-body-small-tracking: var(--md-config-typescale-body-small-tracking, -0.2px);
+    --md-sys-typescale-body-small-line-height: var(
+      --md-config-typescale-body-small-line-height,
+      20px
+    );
+    --md-sys-typescale-body-small-weight: var(--md-config-typescale-body-small-weight, 400);
+
+    /* Label Large */
+    --md-sys-typescale-label-large-font: var(
+      --md-config-typescale-label-large-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-label-large-size: var(--md-config-typescale-label-large-size, 14px);
+    --md-sys-typescale-label-large-tracking: var(--md-config-typescale-label-large-tracking, 0px);
+    --md-sys-typescale-label-large-line-height: var(
+      --md-config-typescale-label-large-line-height,
+      20px
+    );
+    --md-sys-typescale-label-large-weight: var(--md-config-typescale-label-large-weight, 600);
+
+    /* Label Medium */
+    --md-sys-typescale-label-medium-font: var(
+      --md-config-typescale-label-medium-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-label-medium-size: var(--md-config-typescale-label-medium-size, 12px);
+    --md-sys-typescale-label-medium-tracking: var(--md-config-typescale-label-medium-tracking, 0px);
+    --md-sys-typescale-label-medium-line-height: var(
+      --md-config-typescale-label-medium-line-height,
+      16px
+    );
+    --md-sys-typescale-label-medium-weight: var(--md-config-typescale-label-medium-weight, 600);
+
+    /* Label Small */
+    --md-sys-typescale-label-small-font: var(
+      --md-config-typescale-label-small-font,
+      var(--md-ref-typeface-plain)
+    );
+    --md-sys-typescale-label-small-size: var(--md-config-typescale-label-small-size, 11px);
+    --md-sys-typescale-label-small-tracking: var(--md-config-typescale-label-small-tracking, 0px);
+    --md-sys-typescale-label-small-line-height: var(
+      --md-config-typescale-label-small-line-height,
+      16px
+    );
+    --md-sys-typescale-label-small-weight: var(--md-config-typescale-label-small-weight, 600);
+
+    /* ============================================
+     * Elevation Tokens
+     * ============================================ */
+    --md-sys-elevation-level0: var(--md-config-elevation-level0, none);
+    --md-sys-elevation-level1: var(
+      --md-config-elevation-level1,
+      0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+      0px 1px 3px 1px rgba(0, 0, 0, 0.15)
+    );
+    --md-sys-elevation-level2: var(
+      --md-config-elevation-level2,
+      0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+      0px 2px 6px 2px rgba(0, 0, 0, 0.15)
+    );
+    --md-sys-elevation-level3: var(
+      --md-config-elevation-level3,
+      0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+      0px 4px 8px 3px rgba(0, 0, 0, 0.15)
+    );
+    --md-sys-elevation-level4: var(
+      --md-config-elevation-level4,
+      0px 2px 3px 0px rgba(0, 0, 0, 0.3),
+      0px 6px 10px 4px rgba(0, 0, 0, 0.15)
+    );
+    --md-sys-elevation-level5: var(
+      --md-config-elevation-level5,
+      0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+      0px 8px 12px 6px rgba(0, 0, 0, 0.15)
+    );
+
+    /* ============================================
+     * State Layer Tokens
+     * MD3 State Opacity Values
+     * ============================================ */
+    --md-sys-state-hover-opacity: var(--md-config-state-hover-opacity, 0.08);
+    --md-sys-state-focus-opacity: var(--md-config-state-focus-opacity, 0.1);
+    --md-sys-state-pressed-opacity: var(--md-config-state-pressed-opacity, 0.1);
+    --md-sys-state-dragged-opacity: var(--md-config-state-dragged-opacity, 0.16);
+    --md-sys-state-disabled-opacity: var(--md-config-state-disabled-opacity, 0.38);
+    --md-sys-state-disabled-container-opacity: var(
+      --md-config-state-disabled-container-opacity,
+      0.12
+    );
+    --md-sys-state-hover-opacity-high: var(--md-config-state-hover-opacity-high, 0.1);
+    --md-sys-state-focus-opacity-high: var(--md-config-state-focus-opacity-high, 0.12);
+    --md-sys-state-pressed-opacity-high: var(--md-config-state-pressed-opacity-high, 0.12);
+  }
+}

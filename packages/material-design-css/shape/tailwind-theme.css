@@ -1,0 +1,20 @@
+/**
+ * Material Design 3 Shape Tokens for TailwindCSS v4
+ * Border Radius Values
+ * 
+ * Configurable via --md-config-shape-* variables.
+ * Usage: rounded-none, rounded-small, rounded-medium, rounded-large, etc.
+ */
+
+@theme inline {
+  --radius-none: var(--md-sys-shape-corner-value-none, 0px);
+  --radius-extra-small: var(--md-sys-shape-corner-value-extra-small, 4px);
+  --radius-small: var(--md-sys-shape-corner-value-small, 8px);
+  --radius-medium: var(--md-sys-shape-corner-value-medium, 12px);
+  --radius-large: var(--md-sys-shape-corner-value-large, 16px);
+  --radius-large-increased: var(--md-sys-shape-corner-value-large-increased, 20px);
+  --radius-extra-large: var(--md-sys-shape-corner-value-extra-large, 28px);
+  --radius-extra-large-increased: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+  --radius-extra-extra-large: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+  --radius-full: 9999px;
+}

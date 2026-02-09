@@ -1,0 +1,111 @@
+/**
+ * Material Design 3 Color Tokens for TailwindCSS v4
+ * 
+ * These tokens read from the configurable --md-sys-* variables.
+ * Configure by setting --md-config-* variables before importing.
+ * 
+ * Usage: bg-primary, text-on-primary, border-outline, etc.
+ */
+
+@theme inline {
+  /* Primary Colors */
+  --color-primary: var(--md-sys-color-primary);
+  --color-on-primary: var(--md-sys-color-on-primary);
+  --color-primary-container: var(--md-sys-color-primary-container);
+  --color-on-primary-container: var(--md-sys-color-on-primary-container);
+  --color-primary-fixed: var(--md-sys-color-primary-fixed);
+  --color-primary-fixed-dim: var(--md-sys-color-primary-fixed-dim);
+  --color-on-primary-fixed: var(--md-sys-color-on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--md-sys-color-on-primary-fixed-variant);
+  --color-inverse-primary: var(--md-sys-color-inverse-primary);
+
+  /* Secondary Colors */
+  --color-secondary: var(--md-sys-color-secondary);
+  --color-on-secondary: var(--md-sys-color-on-secondary);
+  --color-secondary-container: var(--md-sys-color-secondary-container);
+  --color-on-secondary-container: var(--md-sys-color-on-secondary-container);
+  --color-secondary-fixed: var(--md-sys-color-secondary-fixed);
+  --color-secondary-fixed-dim: var(--md-sys-color-secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--md-sys-color-on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--md-sys-color-on-secondary-fixed-variant);
+  --color-inverse-secondary: var(--md-sys-color-inverse-secondary);
+
+  /* Tertiary Colors */
+  --color-tertiary: var(--md-sys-color-tertiary);
+  --color-on-tertiary: var(--md-sys-color-on-tertiary);
+  --color-tertiary-container: var(--md-sys-color-tertiary-container);
+  --color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+  --color-tertiary-fixed: var(--md-sys-color-tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--md-sys-color-tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--md-sys-color-on-tertiary-fixed-variant);
+  --color-inverse-tertiary: var(--md-sys-color-inverse-tertiary);
+
+  /* Error Colors */
+  --color-error: var(--md-sys-color-error);
+  --color-on-error: var(--md-sys-color-on-error);
+  --color-error-container: var(--md-sys-color-error-container);
+  --color-on-error-container: var(--md-sys-color-on-error-container);
+
+  /* Info Colors (Extended) */
+  --color-info: var(--md-sys-color-info);
+  --color-on-info: var(--md-sys-color-on-info);
+  --color-info-container: var(--md-sys-color-info-container);
+  --color-on-info-container: var(--md-sys-color-on-info-container);
+
+  /* Success Colors (Extended) */
+  --color-success: var(--md-sys-color-success);
+  --color-on-success: var(--md-sys-color-on-success);
+  --color-success-container: var(--md-sys-color-success-container);
+  --color-on-success-container: var(--md-sys-color-on-success-container);
+
+  /* Warning Colors (Extended) */
+  --color-warning: var(--md-sys-color-warning);
+  --color-on-warning: var(--md-sys-color-on-warning);
+  --color-warning-container: var(--md-sys-color-warning-container);
+  --color-on-warning-container: var(--md-sys-color-on-warning-container);
+
+  /* Surface Colors */
+  --color-surface: var(--md-sys-color-surface);
+  --color-on-surface: var(--md-sys-color-on-surface);
+  --color-surface-dim: var(--md-sys-color-surface-dim);
+  --color-surface-bright: var(--md-sys-color-surface-bright);
+  --color-surface-container: var(--md-sys-color-surface-container);
+  --color-surface-container-low: var(--md-sys-color-surface-container-low);
+  --color-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+  --color-surface-container-high: var(--md-sys-color-surface-container-high);
+  --color-surface-container-highest: var(--md-sys-color-surface-container-highest);
+  --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+  --color-on-surface-variant-low: var(--md-sys-color-on-surface-variant-low);
+  --color-surface-tint: var(--md-sys-color-surface-tint);
+  --color-inverse-surface: var(--md-sys-color-inverse-surface);
+  --color-inverse-on-surface: var(--md-sys-color-inverse-on-surface);
+
+  /* Outline Colors */
+  --color-outline: var(--md-sys-color-outline);
+  --color-outline-variant: var(--md-sys-color-outline-variant);
+
+  /* Scrim & Shadow */
+  --color-scrim: var(--md-sys-color-scrim);
+  --color-shadow: var(--md-sys-color-shadow);
+  --color-glow: var(--md-sys-color-glow);
+
+  /* Custom Hue Colors */
+  --color-hue-1: var(--md-sys-color-hue-1);
+  --color-hue-2: var(--md-sys-color-hue-2);
+  --color-hue-3: var(--md-sys-color-hue-3);
+  --color-hue-4: var(--md-sys-color-hue-4);
+  --color-hue-5: var(--md-sys-color-hue-5);
+  --color-hue-6: var(--md-sys-color-hue-6);
+  --color-hue-7: var(--md-sys-color-hue-7);
+  --color-hue-8: var(--md-sys-color-hue-8);
+  --color-hue-9: var(--md-sys-color-hue-9);
+
+  /* State Colors */
+  --color-state-hovered-soft: var(--md-sys-color-state-hovered-soft);
+  --color-state-pressed-soft: var(--md-sys-color-state-pressed-soft);
+  --color-state-hovered-strong: var(--md-sys-color-state-hovered-strong);
+  --color-state-pressed-strong: var(--md-sys-color-state-pressed-strong);
+  --color-state-disabled-soft: var(--md-sys-color-state-disabled-soft);
+  --color-state-disabled-strong: var(--md-sys-color-state-disabled-strong);
+}

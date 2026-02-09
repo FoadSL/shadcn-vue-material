@@ -1,0 +1,77 @@
+/**
+ * Material Design 3 State Layer Tokens for TailwindCSS v4
+ * 
+ * State layers are semi-transparent overlays that communicate interactivity.
+ * They appear on top of components during interactive states.
+ * 
+ * MD3 State Layer Opacity Values:
+ * - Hover: 8% opacity
+ * - Focus: 10% opacity (12% for high emphasis)
+ * - Press: 10% opacity (12% for high emphasis)
+ * - Drag: 16% opacity
+ * - Disabled: Component uses 38% opacity, container uses 12%
+ * 
+ * Configurable via --md-config-state-* variables.
+ */
+
+@theme inline {
+  /* State Layer Opacity Values */
+  --state-hover-opacity: var(--md-sys-state-hover-opacity, 0.08);
+  --state-focus-opacity: var(--md-sys-state-focus-opacity, 0.1);
+  --state-pressed-opacity: var(--md-sys-state-pressed-opacity, 0.1);
+  --state-dragged-opacity: var(--md-sys-state-dragged-opacity, 0.16);
+  --state-disabled-opacity: var(--md-sys-state-disabled-opacity, 0.38);
+  --state-disabled-container-opacity: var(--md-sys-state-disabled-container-opacity, 0.12);
+
+  /* High Emphasis State Opacities */
+  --state-hover-opacity-high: var(--md-sys-state-hover-opacity-high, 0.1);
+  --state-focus-opacity-high: var(--md-sys-state-focus-opacity-high, 0.12);
+  --state-pressed-opacity-high: var(--md-sys-state-pressed-opacity-high, 0.12);
+}
+
+@layer base {
+  :root {
+    /* State layer color variables - Light Mode */
+    --md-sys-state-layer-primary: var(--md-config-state-layer-primary, var(--color-primary));
+    --md-sys-state-layer-on-primary: var(
+      --md-config-state-layer-on-primary,
+      var(--color-on-primary)
+    );
+    --md-sys-state-layer-secondary: var(--md-config-state-layer-secondary, var(--color-secondary));
+    --md-sys-state-layer-on-secondary: var(
+      --md-config-state-layer-on-secondary,
+      var(--color-on-secondary)
+    );
+    --md-sys-state-layer-tertiary: var(--md-config-state-layer-tertiary, var(--color-tertiary));
+    --md-sys-state-layer-on-tertiary: var(
+      --md-config-state-layer-on-tertiary,
+      var(--color-on-tertiary)
+    );
+    --md-sys-state-layer-error: var(--md-config-state-layer-error, var(--color-error));
+    --md-sys-state-layer-on-error: var(--md-config-state-layer-on-error, var(--color-on-error));
+    --md-sys-state-layer-on-surface: var(
+      --md-config-state-layer-on-surface,
+      var(--color-on-surface)
+    );
+    --md-sys-state-layer-on-surface-variant: var(
+      --md-config-state-layer-on-surface-variant,
+      var(--color-on-surface-variant)
+    );
+    --md-sys-state-layer-on-primary-container: var(
+      --md-config-state-layer-on-primary-container,
+      var(--color-on-primary-container)
+    );
+    --md-sys-state-layer-on-secondary-container: var(
+      --md-config-state-layer-on-secondary-container,
+      var(--color-on-secondary-container)
+    );
+    --md-sys-state-layer-on-tertiary-container: var(
+      --md-config-state-layer-on-tertiary-container,
+      var(--color-on-tertiary-container)
+    );
+    --md-sys-state-layer-on-error-container: var(
+      --md-config-state-layer-on-error-container,
+      var(--color-on-error-container)
+    );
+  }
+}

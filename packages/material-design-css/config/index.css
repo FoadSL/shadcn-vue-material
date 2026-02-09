@@ -1,0 +1,9 @@
+/**
+ * Material Design 3 - Configuration Entry Point
+ * 
+ * This file loads all configuration defaults.
+ * Import your custom configuration BEFORE this file to override values.
+ */
+
+@import "./defaults.css";
+@import "./resolver.css";

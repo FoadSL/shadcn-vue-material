@@ -1,0 +1,81 @@
+/**
+ * Animation Utility Classes
+ * Usage: animation-easing-expressive-fast-spatial, etc.
+ */
+
+@layer utilities {
+  /* Expressive Spatial Animations */
+  .animation-easing-expressive-fast-spatial {
+    animation-timing-function: var(--easing-expressive-fast-spatial);
+    animation-duration: var(--duration-expressive-fast-spatial, 350ms);
+  }
+
+  .animation-easing-expressive-default-spatial {
+    animation-timing-function: var(--easing-expressive-default-spatial);
+    animation-duration: var(--duration-expressive-default-spatial, 500ms);
+  }
+
+  .animation-easing-expressive-slow-spatial {
+    animation-timing-function: var(--easing-expressive-slow-spatial);
+    animation-duration: var(--duration-expressive-slow-spatial, 650ms);
+  }
+
+  /* Expressive Effects Animations */
+  .animation-easing-expressive-fast-effects {
+    animation-timing-function: var(--easing-expressive-fast-effects);
+    animation-duration: var(--duration-expressive-fast-effects, 150ms);
+  }
+
+  .animation-easing-expressive-default-effects {
+    animation-timing-function: var(--easing-expressive-default-effects);
+    animation-duration: var(--duration-expressive-default-effects, 200ms);
+  }
+
+  .animation-easing-expressive-slow-effects {
+    animation-timing-function: var(--easing-expressive-slow-effects);
+    animation-duration: var(--duration-expressive-slow-effects, 300ms);
+  }
+
+  /* Standard Spatial Animations */
+  .animation-easing-standard-fast-spatial {
+    animation-timing-function: var(--easing-standard-fast-spatial);
+    animation-duration: var(--duration-standard-fast-spatial, 350ms);
+  }
+
+  .animation-easing-standard-default-spatial {
+    animation-timing-function: var(--easing-standard-default-spatial);
+    animation-duration: var(--duration-standard-default-spatial, 500ms);
+  }
+
+  .animation-easing-standard-slow-spatial {
+    animation-timing-function: var(--easing-standard-slow-spatial);
+    animation-duration: var(--duration-standard-slow-spatial, 750ms);
+  }
+
+  /* Standard Effects Animations */
+  .animation-easing-standard-fast-effects {
+    animation-timing-function: var(--easing-standard-fast-effects);
+    animation-duration: var(--duration-standard-fast-effects, 150ms);
+  }
+
+  .animation-easing-standard-default-effects {
+    animation-timing-function: var(--easing-standard-default-effects);
+    animation-duration: var(--duration-standard-default-effects, 200ms);
+  }
+
+  .animation-easing-standard-slow-effects {
+    animation-timing-function: var(--easing-standard-slow-effects);
+    animation-duration: var(--duration-standard-slow-effects, 300ms);
+  }
+
+  /* Base Easing Animations */
+  .animation-emphasized {
+    animation-timing-function: var(--ease-emphasized);
+    animation-duration: var(--duration-medium2, 300ms);
+  }
+
+  .animation-standard {
+    animation-timing-function: var(--ease-standard);
+    animation-duration: var(--duration-short4, 200ms);
+  }
+}

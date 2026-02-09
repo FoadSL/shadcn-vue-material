@@ -1,0 +1,239 @@
+/**
+ * Material Design 3 State Layer Utility Classes
+ * 
+ * State layers provide visual feedback for interactive states.
+ * Apply these classes to interactive elements to get proper MD3 state feedback.
+ * 
+ * Usage:
+ * - .state-layer-primary     (for elements with primary color backgrounds)
+ * - .state-layer-on-primary  (for elements ON primary colored backgrounds)
+ * - .state-layer-on-surface  (for elements on surface backgrounds)
+ * 
+ * States automatically applied:
+ * - :hover    - 8% opacity overlay
+ * - :focus    - 10% opacity overlay  
+ * - :active   - 10% opacity overlay (press)
+ * - :disabled - 38% opacity for content, 12% for container
+ */
+
+/* Base state layer mixin using ::before pseudo-element */
+.state-layer-primary,
+.state-layer-on-primary,
+.state-layer-secondary,
+.state-layer-on-secondary,
+.state-layer-tertiary,
+.state-layer-on-tertiary,
+.state-layer-error,
+.state-layer-on-error,
+.state-layer-on-surface,
+.state-layer-on-surface-variant,
+.state-layer-on-primary-container,
+.state-layer-on-secondary-container,
+.state-layer-on-tertiary-container,
+.state-layer-on-error-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.state-layer-primary::before,
+.state-layer-on-primary::before,
+.state-layer-secondary::before,
+.state-layer-on-secondary::before,
+.state-layer-tertiary::before,
+.state-layer-on-tertiary::before,
+.state-layer-error::before,
+.state-layer-on-error::before,
+.state-layer-on-surface::before,
+.state-layer-on-surface-variant::before,
+.state-layer-on-primary-container::before,
+.state-layer-on-secondary-container::before,
+.state-layer-on-tertiary-container::before,
+.state-layer-on-error-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: inherit;
+}
+
+/* Primary state layer (on primary backgrounds) */
+.state-layer-primary::before {
+  background-color: var(--md-sys-state-layer-primary, var(--color-primary));
+}
+
+/* On Primary state layer (elements with primary bg) */
+.state-layer-on-primary::before {
+  background-color: var(--md-sys-state-layer-on-primary, var(--color-on-primary));
+}
+
+/* Secondary state layer */
+.state-layer-secondary::before {
+  background-color: var(--md-sys-state-layer-secondary, var(--color-secondary));
+}
+
+/* On Secondary state layer */
+.state-layer-on-secondary::before {
+  background-color: var(--md-sys-state-layer-on-secondary, var(--color-on-secondary));
+}
+
+/* Tertiary state layer */
+.state-layer-tertiary::before {
+  background-color: var(--md-sys-state-layer-tertiary, var(--color-tertiary));
+}
+
+/* On Tertiary state layer */
+.state-layer-on-tertiary::before {
+  background-color: var(--md-sys-state-layer-on-tertiary, var(--color-on-tertiary));
+}
+
+/* Error state layer */
+.state-layer-error::before {
+  background-color: var(--md-sys-state-layer-error, var(--color-error));
+}
+
+/* On Error state layer */
+.state-layer-on-error::before {
+  background-color: var(--md-sys-state-layer-on-error, var(--color-on-error));
+}
+
+/* On Surface state layer */
+.state-layer-on-surface::before {
+  background-color: var(--md-sys-state-layer-on-surface, var(--color-on-surface));
+}
+
+/* On Surface Variant state layer */
+.state-layer-on-surface-variant::before {
+  background-color: var(--md-sys-state-layer-on-surface-variant, var(--color-on-surface-variant));
+}
+
+/* Container state layers */
+.state-layer-on-primary-container::before {
+  background-color: var(
+    --md-sys-state-layer-on-primary-container,
+    var(--color-on-primary-container)
+  );
+}
+
+.state-layer-on-secondary-container::before {
+  background-color: var(
+    --md-sys-state-layer-on-secondary-container,
+    var(--color-on-secondary-container)
+  );
+}
+
+.state-layer-on-tertiary-container::before {
+  background-color: var(
+    --md-sys-state-layer-on-tertiary-container,
+    var(--color-on-tertiary-container)
+  );
+}
+
+.state-layer-on-error-container::before {
+  background-color: var(--md-sys-state-layer-on-error-container, var(--color-on-error-container));
+}
+
+/* Hover state - 8% opacity */
+.state-layer-primary:hover::before,
+.state-layer-on-primary:hover::before,
+.state-layer-secondary:hover::before,
+.state-layer-on-secondary:hover::before,
+.state-layer-tertiary:hover::before,
+.state-layer-on-tertiary:hover::before,
+.state-layer-error:hover::before,
+.state-layer-on-error:hover::before,
+.state-layer-on-surface:hover::before,
+.state-layer-on-surface-variant:hover::before,
+.state-layer-on-primary-container:hover::before,
+.state-layer-on-secondary-container:hover::before,
+.state-layer-on-tertiary-container:hover::before,
+.state-layer-on-error-container:hover::before {
+  opacity: var(--state-hover-opacity, 0.08);
+}
+
+/* Focus state - 10% opacity */
+.state-layer-primary:focus::before,
+.state-layer-on-primary:focus::before,
+.state-layer-secondary:focus::before,
+.state-layer-on-secondary:focus::before,
+.state-layer-tertiary:focus::before,
+.state-layer-on-tertiary:focus::before,
+.state-layer-error:focus::before,
+.state-layer-on-error:focus::before,
+.state-layer-on-surface:focus::before,
+.state-layer-on-surface-variant:focus::before,
+.state-layer-on-primary-container:focus::before,
+.state-layer-on-secondary-container:focus::before,
+.state-layer-on-tertiary-container:focus::before,
+.state-layer-on-error-container:focus::before {
+  opacity: var(--state-focus-opacity, 0.1);
+}
+
+/* Focus-visible state - 10% opacity */
+.state-layer-primary:focus-visible::before,
+.state-layer-on-primary:focus-visible::before,
+.state-layer-secondary:focus-visible::before,
+.state-layer-on-secondary:focus-visible::before,
+.state-layer-tertiary:focus-visible::before,
+.state-layer-on-tertiary:focus-visible::before,
+.state-layer-error:focus-visible::before,
+.state-layer-on-error:focus-visible::before,
+.state-layer-on-surface:focus-visible::before,
+.state-layer-on-surface-variant:focus-visible::before,
+.state-layer-on-primary-container:focus-visible::before,
+.state-layer-on-secondary-container:focus-visible::before,
+.state-layer-on-tertiary-container:focus-visible::before,
+.state-layer-on-error-container:focus-visible::before {
+  opacity: var(--state-focus-opacity, 0.1);
+}
+
+/* Pressed/Active state - 10% opacity */
+.state-layer-primary:active::before,
+.state-layer-on-primary:active::before,
+.state-layer-secondary:active::before,
+.state-layer-on-secondary:active::before,
+.state-layer-tertiary:active::before,
+.state-layer-on-tertiary:active::before,
+.state-layer-error:active::before,
+.state-layer-on-error:active::before,
+.state-layer-on-surface:active::before,
+.state-layer-on-surface-variant:active::before,
+.state-layer-on-primary-container:active::before,
+.state-layer-on-secondary-container:active::before,
+.state-layer-on-tertiary-container:active::before,
+.state-layer-on-error-container:active::before {
+  opacity: var(--state-pressed-opacity, 0.1);
+}
+
+/* Disabled state utilities */
+.state-disabled {
+  opacity: var(--state-disabled-opacity, 0.38);
+  pointer-events: none;
+}
+
+.state-disabled-container {
+  opacity: var(--state-disabled-container-opacity, 0.12);
+  pointer-events: none;
+}
+
+/* Dragged state - 16% opacity */
+.state-dragged::before {
+  opacity: var(--state-dragged-opacity, 0.16) !important;
+}
+
+/* High emphasis state layers (for more prominent feedback) */
+.state-layer-high.state-layer-primary:hover::before,
+.state-layer-high.state-layer-on-primary:hover::before,
+.state-layer-high.state-layer-on-surface:hover::before {
+  opacity: var(--state-hover-opacity-high, 0.1);
+}
+
+.state-layer-high.state-layer-primary:focus::before,
+.state-layer-high.state-layer-on-primary:focus::before,
+.state-layer-high.state-layer-on-surface:focus::before,
+.state-layer-high.state-layer-primary:active::before,
+.state-layer-high.state-layer-on-primary:active::before,
+.state-layer-high.state-layer-on-surface:active::before {
+  opacity: var(--state-focus-opacity-high, 0.12);
+}

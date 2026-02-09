@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Design CSS - Playground</title>
+    <style>
+      /* Import configuration first */
+      :root {
+        --md-config-typeface-brand: "Inter", "Roboto", system-ui, sans-serif;
+        --md-config-typeface-plain: "Inter", "Roboto", system-ui, sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="./preset.css" />
+    <link rel="stylesheet" href="./color/bg-utilities.css" />
+    <link rel="stylesheet" href="./color/text-utilities.css" />
+    <link rel="stylesheet" href="./shape/shape-utilities.css" />
+    <link rel="stylesheet" href="./typography/typography-utilities.css" />
+    <link rel="stylesheet" href="./elevation/elevation-utilities.css" />
+    <link rel="stylesheet" href="./state-layer/state-layer-utilities.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--md-ref-typeface-plain, "Roboto", sans-serif);
+        background-color: var(--color-surface);
+        color: var(--color-on-surface);
+        padding: 2rem;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        margin: 2rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-outline-variant);
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+
+      .color-swatch {
+        padding: 1rem;
+        border-radius: var(--radius-medium, 12px);
+        text-align: center;
+        font-size: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.2s ease;
+      }
+
+      .button-primary {
+        background-color: var(--color-primary);
+        color: var(--color-on-primary);
+      }
+
+      .button-secondary {
+        background-color: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+
+      .button-tertiary {
+        background-color: var(--color-tertiary-container);
+        color: var(--color-on-tertiary-container);
+      }
+
+      .card {
+        padding: 1.5rem;
+        border-radius: var(--radius-large, 16px);
+        margin-bottom: 1rem;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;
+        background: var(--color-surface-container);
+        border: 1px solid var(--color-outline);
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        color: var(--color-on-surface);
+      }
+
+      .elevation-demo {
+        width: 100px;
+        height: 100px;
+        background: var(--color-surface-container-lowest);
+        border-radius: var(--radius-medium);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .state-demo {
+        padding: 1rem 2rem;
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+        border-radius: var(--radius-medium);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .typography-demo > * {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="document.documentElement.classList.toggle('dark')">
+      Toggle Dark Mode
+    </button>
+
+    <div class="container">
+      <h1 class="display-small">Material Design CSS Playground</h1>
+
+      <!-- Colors Section -->
+      <section class="section">
+        <h2 class="headline-medium">Colors</h2>
+
+        <h3 class="title-medium" style="margin: 1rem 0">Primary</h3>
+        <div class="grid">
+          <div class="color-swatch bg-primary text-on-primary">Primary</div>
+          <div
+            class="color-swatch bg-on-primary text-primary"
+            style="border: 1px solid var(--color-outline)"
+          >
+            On Primary
+          </div>
+          <div class="color-swatch bg-primary-container text-on-primary-container">
+            Primary Container
+          </div>
+          <div class="color-swatch bg-on-primary-container text-primary-container">
+            On Primary Container
+          </div>
+        </div>
+
+        <h3 class="title-medium" style="margin: 1rem 0">Secondary</h3>
+        <div class="grid">
+          <div class="color-swatch bg-secondary text-on-secondary">Secondary</div>
+          <div
+            class="color-swatch bg-on-secondary text-secondary"
+            style="border: 1px solid var(--color-outline)"
+          >
+            On Secondary
+          </div>
+          <div class="color-swatch bg-secondary-container text-on-secondary-container">
+            Secondary Container
+          </div>
+          <div class="color-swatch bg-on-secondary-container text-secondary-container">
+            On Secondary Container
+          </div>
+        </div>
+
+        <h3 class="title-medium" style="margin: 1rem 0">Tertiary</h3>
+        <div class="grid">
+          <div class="color-swatch bg-tertiary text-on-tertiary">Tertiary</div>
+          <div
+            class="color-swatch bg-on-tertiary text-tertiary"
+            style="border: 1px solid var(--color-outline)"
+          >
+            On Tertiary
+          </div>
+          <div class="color-swatch bg-tertiary-container text-on-tertiary-container">
+            Tertiary Container
+          </div>
+          <div class="color-swatch bg-on-tertiary-container text-tertiary-container">
+            On Tertiary Container
+          </div>
+        </div>
+
+        <h3 class="title-medium" style="margin: 1rem 0">Error / Info / Success / Warning</h3>
+        <div class="grid">
+          <div class="color-swatch bg-error text-on-error">Error</div>
+          <div class="color-swatch bg-error-container text-on-error-container">Error Container</div>
+          <div class="color-swatch bg-info text-on-info">Info</div>
+          <div class="color-swatch bg-info-container text-on-info-container">Info Container</div>
+          <div class="color-swatch bg-success text-on-success">Success</div>
+          <div class="color-swatch bg-success-container text-on-success-container">
+            Success Container
+          </div>
+          <div class="color-swatch bg-warning text-on-warning">Warning</div>
+          <div class="color-swatch bg-warning-container text-on-warning-container">
+            Warning Container
+          </div>
+        </div>
+
+        <h3 class="title-medium" style="margin: 1rem 0">Surface</h3>
+        <div class="grid">
+          <div
+            class="color-swatch bg-surface text-on-surface"
+            style="border: 1px solid var(--color-outline)"
+          >
+            Surface
+          </div>
+          <div class="color-swatch bg-surface-dim text-on-surface">Surface Dim</div>
+          <div
+            class="color-swatch bg-surface-bright text-on-surface"
+            style="border: 1px solid var(--color-outline)"
+          >
+            Surface Bright
+          </div>
+          <div class="color-swatch bg-surface-container text-on-surface">Container</div>
+          <div class="color-swatch bg-surface-container-low text-on-surface">Container Low</div>
+          <div
+            class="color-swatch bg-surface-container-lowest text-on-surface"
+            style="border: 1px solid var(--color-outline)"
+          >
+            Container Lowest
+          </div>
+          <div class="color-swatch bg-surface-container-high text-on-surface">Container High</div>
+          <div class="color-swatch bg-surface-container-highest text-on-surface">
+            Container Highest
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography Section -->
+      <section class="section">
+        <h2 class="headline-medium">Typography</h2>
+        <div class="typography-demo">
+          <p class="display-large">Display Large</p>
+          <p class="display-medium">Display Medium</p>
+          <p class="display-small">Display Small</p>
+          <p class="headline-large">Headline Large</p>
+          <p class="headline-medium">Headline Medium</p>
+          <p class="headline-small">Headline Small</p>
+          <p class="title-large">Title Large</p>
+          <p class="title-medium">Title Medium</p>
+          <p class="title-small">Title Small</p>
+          <p class="body-large">Body Large - Lorem ipsum dolor sit amet</p>
+          <p class="body-medium">Body Medium - Lorem ipsum dolor sit amet</p>
+          <p class="body-small">Body Small - Lorem ipsum dolor sit amet</p>
+          <p class="label-large">Label Large</p>
+          <p class="label-medium">Label Medium</p>
+          <p class="label-small">Label Small</p>
+        </div>
+      </section>
+
+      <!-- Shape Section -->
+      <section class="section">
+        <h2 class="headline-medium">Shape (Border Radius)</h2>
+        <div class="flex-row">
+          <div class="color-swatch shape-none bg-primary-container text-on-primary-container">
+            None
+          </div>
+          <div
+            class="color-swatch shape-extra-small bg-primary-container text-on-primary-container"
+          >
+            Extra Small
+          </div>
+          <div class="color-swatch shape-small bg-primary-container text-on-primary-container">
+            Small
+          </div>
+          <div class="color-swatch shape-medium bg-primary-container text-on-primary-container">
+            Medium
+          </div>
+          <div class="color-swatch shape-large bg-primary-container text-on-primary-container">
+            Large
+          </div>
+          <div
+            class="color-swatch shape-extra-large bg-primary-container text-on-primary-container"
+          >
+            Extra Large
+          </div>
+          <div
+            class="color-swatch shape-full bg-primary-container text-on-primary-container"
+            style="padding: 1rem 2rem"
+          >
+            Full
+          </div>
+        </div>
+      </section>
+
+      <!-- Elevation Section -->
+      <section class="section">
+        <h2 class="headline-medium">Elevation (Shadows)</h2>
+        <div class="flex-row">
+          <div class="elevation-demo elevation-0">Level 0</div>
+          <div class="elevation-demo elevation-1">Level 1</div>
+          <div class="elevation-demo elevation-2">Level 2</div>
+          <div class="elevation-demo elevation-3">Level 3</div>
+          <div class="elevation-demo elevation-4">Level 4</div>
+          <div class="elevation-demo elevation-5">Level 5</div>
+        </div>
+      </section>
+
+      <!-- State Layer Section -->
+      <section class="section">
+        <h2 class="headline-medium">State Layers</h2>
+        <p class="body-medium" style="margin-bottom: 1rem">
+          Hover over buttons to see state layers in action
+        </p>
+        <div class="flex-row">
+          <button class="state-demo state-layer-primary">Primary State Layer</button>
+          <button class="state-demo state-layer-secondary bg-secondary text-on-secondary">
+            Secondary State Layer
+          </button>
+          <button class="state-demo state-layer-on-surface bg-surface-container text-on-surface">
+            On Surface State Layer
+          </button>
+        </div>
+      </section>
+
+      <!-- Buttons Section -->
+      <section class="section">
+        <h2 class="headline-medium">Buttons (Combined)</h2>
+        <div class="flex-row">
+          <button class="button button-primary elevation-1 state-layer-on-primary">
+            Filled Button
+          </button>
+          <button class="button button-secondary elevation-0 state-layer-on-secondary-container">
+            Tonal Button
+          </button>
+          <button class="button button-tertiary elevation-0 state-layer-on-tertiary-container">
+            Tertiary Button
+          </button>
+        </div>
+      </section>
+
+      <!-- Cards Section -->
+      <section class="section">
+        <h2 class="headline-medium">Cards with Elevation</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))">
+          <div class="card elevation-0 bg-surface-container-lowest">
+            <h3 class="title-medium">Elevated Card (Level 0)</h3>
+            <p class="body-medium text-on-surface-variant">Surface Container Lowest</p>
+          </div>
+          <div class="card elevation-1 bg-surface-container-low">
+            <h3 class="title-medium">Elevated Card (Level 1)</h3>
+            <p class="body-medium text-on-surface-variant">Surface Container Low</p>
+          </div>
+          <div class="card elevation-2 bg-surface-container">
+            <h3 class="title-medium">Elevated Card (Level 2)</h3>
+            <p class="body-medium text-on-surface-variant">Surface Container</p>
+          </div>
+          <div class="card elevation-3 bg-surface-container-high">
+            <h3 class="title-medium">Elevated Card (Level 3)</h3>
+            <p class="body-medium text-on-surface-variant">Surface Container High</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Custom Hues Section -->
+      <section class="section">
+        <h2 class="headline-medium">Custom Hue Colors</h2>
+        <div class="grid">
+          <div class="color-swatch bg-hue-1" style="color: #000">Hue 1</div>
+          <div class="color-swatch bg-hue-2" style="color: #000">Hue 2</div>
+          <div class="color-swatch bg-hue-3" style="color: #fff">Hue 3</div>
+          <div class="color-swatch bg-hue-4" style="color: #fff">Hue 4</div>
+          <div class="color-swatch bg-hue-5" style="color: #fff">Hue 5</div>
+          <div class="color-swatch bg-hue-6" style="color: #000">Hue 6</div>
+          <div class="color-swatch bg-hue-7" style="color: #fff">Hue 7</div>
+          <div class="color-swatch bg-hue-8" style="color: #000">Hue 8</div>
+          <div class="color-swatch bg-hue-9" style="color: #fff">Hue 9</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

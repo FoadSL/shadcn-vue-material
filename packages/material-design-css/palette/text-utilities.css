@@ -1,0 +1,316 @@
+/**
+ * Palette Text Color Utility Classes
+ * Usage: text-primary-10, text-secondary-50, text-neutral-30, etc.
+ */
+
+/* Primary Palette */
+.text-primary-0 {
+  color: var(--color-primary-0);
+}
+.text-primary-5 {
+  color: var(--color-primary-5);
+}
+.text-primary-10 {
+  color: var(--color-primary-10);
+}
+.text-primary-15 {
+  color: var(--color-primary-15);
+}
+.text-primary-20 {
+  color: var(--color-primary-20);
+}
+.text-primary-25 {
+  color: var(--color-primary-25);
+}
+.text-primary-30 {
+  color: var(--color-primary-30);
+}
+.text-primary-35 {
+  color: var(--color-primary-35);
+}
+.text-primary-40 {
+  color: var(--color-primary-40);
+}
+.text-primary-50 {
+  color: var(--color-primary-50);
+}
+.text-primary-60 {
+  color: var(--color-primary-60);
+}
+.text-primary-70 {
+  color: var(--color-primary-70);
+}
+.text-primary-80 {
+  color: var(--color-primary-80);
+}
+.text-primary-90 {
+  color: var(--color-primary-90);
+}
+.text-primary-95 {
+  color: var(--color-primary-95);
+}
+.text-primary-98 {
+  color: var(--color-primary-98);
+}
+.text-primary-99 {
+  color: var(--color-primary-99);
+}
+.text-primary-100 {
+  color: var(--color-primary-100);
+}
+
+/* Secondary Palette */
+.text-secondary-0 {
+  color: var(--color-secondary-0);
+}
+.text-secondary-5 {
+  color: var(--color-secondary-5);
+}
+.text-secondary-10 {
+  color: var(--color-secondary-10);
+}
+.text-secondary-15 {
+  color: var(--color-secondary-15);
+}
+.text-secondary-20 {
+  color: var(--color-secondary-20);
+}
+.text-secondary-25 {
+  color: var(--color-secondary-25);
+}
+.text-secondary-30 {
+  color: var(--color-secondary-30);
+}
+.text-secondary-35 {
+  color: var(--color-secondary-35);
+}
+.text-secondary-40 {
+  color: var(--color-secondary-40);
+}
+.text-secondary-50 {
+  color: var(--color-secondary-50);
+}
+.text-secondary-60 {
+  color: var(--color-secondary-60);
+}
+.text-secondary-70 {
+  color: var(--color-secondary-70);
+}
+.text-secondary-80 {
+  color: var(--color-secondary-80);
+}
+.text-secondary-90 {
+  color: var(--color-secondary-90);
+}
+.text-secondary-95 {
+  color: var(--color-secondary-95);
+}
+.text-secondary-98 {
+  color: var(--color-secondary-98);
+}
+.text-secondary-99 {
+  color: var(--color-secondary-99);
+}
+.text-secondary-100 {
+  color: var(--color-secondary-100);
+}
+
+/* Tertiary Palette */
+.text-tertiary-0 {
+  color: var(--color-tertiary-0);
+}
+.text-tertiary-5 {
+  color: var(--color-tertiary-5);
+}
+.text-tertiary-10 {
+  color: var(--color-tertiary-10);
+}
+.text-tertiary-15 {
+  color: var(--color-tertiary-15);
+}
+.text-tertiary-20 {
+  color: var(--color-tertiary-20);
+}
+.text-tertiary-25 {
+  color: var(--color-tertiary-25);
+}
+.text-tertiary-30 {
+  color: var(--color-tertiary-30);
+}
+.text-tertiary-35 {
+  color: var(--color-tertiary-35);
+}
+.text-tertiary-40 {
+  color: var(--color-tertiary-40);
+}
+.text-tertiary-50 {
+  color: var(--color-tertiary-50);
+}
+.text-tertiary-60 {
+  color: var(--color-tertiary-60);
+}
+.text-tertiary-70 {
+  color: var(--color-tertiary-70);
+}
+.text-tertiary-80 {
+  color: var(--color-tertiary-80);
+}
+.text-tertiary-90 {
+  color: var(--color-tertiary-90);
+}
+.text-tertiary-95 {
+  color: var(--color-tertiary-95);
+}
+.text-tertiary-98 {
+  color: var(--color-tertiary-98);
+}
+.text-tertiary-99 {
+  color: var(--color-tertiary-99);
+}
+.text-tertiary-100 {
+  color: var(--color-tertiary-100);
+}
+
+/* Neutral Palette */
+.text-neutral-0 {
+  color: var(--color-neutral-0);
+}
+.text-neutral-5 {
+  color: var(--color-neutral-5);
+}
+.text-neutral-10 {
+  color: var(--color-neutral-10);
+}
+.text-neutral-15 {
+  color: var(--color-neutral-15);
+}
+.text-neutral-20 {
+  color: var(--color-neutral-20);
+}
+.text-neutral-25 {
+  color: var(--color-neutral-25);
+}
+.text-neutral-30 {
+  color: var(--color-neutral-30);
+}
+.text-neutral-35 {
+  color: var(--color-neutral-35);
+}
+.text-neutral-40 {
+  color: var(--color-neutral-40);
+}
+.text-neutral-50 {
+  color: var(--color-neutral-50);
+}
+.text-neutral-60 {
+  color: var(--color-neutral-60);
+}
+.text-neutral-70 {
+  color: var(--color-neutral-70);
+}
+.text-neutral-80 {
+  color: var(--color-neutral-80);
+}
+.text-neutral-85 {
+  color: var(--color-neutral-85);
+}
+.text-neutral-90 {
+  color: var(--color-neutral-90);
+}
+.text-neutral-95 {
+  color: var(--color-neutral-95);
+}
+.text-neutral-98 {
+  color: var(--color-neutral-98);
+}
+.text-neutral-99 {
+  color: var(--color-neutral-99);
+}
+.text-neutral-100 {
+  color: var(--color-neutral-100);
+}
+
+/* Neutral Variant Palette */
+.text-neutral-variant-0 {
+  color: var(--color-neutral-variant-0);
+}
+.text-neutral-variant-10 {
+  color: var(--color-neutral-variant-10);
+}
+.text-neutral-variant-20 {
+  color: var(--color-neutral-variant-20);
+}
+.text-neutral-variant-25 {
+  color: var(--color-neutral-variant-25);
+}
+.text-neutral-variant-30 {
+  color: var(--color-neutral-variant-30);
+}
+.text-neutral-variant-40 {
+  color: var(--color-neutral-variant-40);
+}
+.text-neutral-variant-50 {
+  color: var(--color-neutral-variant-50);
+}
+.text-neutral-variant-60 {
+  color: var(--color-neutral-variant-60);
+}
+.text-neutral-variant-70 {
+  color: var(--color-neutral-variant-70);
+}
+.text-neutral-variant-80 {
+  color: var(--color-neutral-variant-80);
+}
+.text-neutral-variant-90 {
+  color: var(--color-neutral-variant-90);
+}
+.text-neutral-variant-95 {
+  color: var(--color-neutral-variant-95);
+}
+.text-neutral-variant-99 {
+  color: var(--color-neutral-variant-99);
+}
+.text-neutral-variant-100 {
+  color: var(--color-neutral-variant-100);
+}
+
+/* Error Palette */
+.text-error-0 {
+  color: var(--color-error-0);
+}
+.text-error-10 {
+  color: var(--color-error-10);
+}
+.text-error-20 {
+  color: var(--color-error-20);
+}
+.text-error-30 {
+  color: var(--color-error-30);
+}
+.text-error-40 {
+  color: var(--color-error-40);
+}
+.text-error-50 {
+  color: var(--color-error-50);
+}
+.text-error-60 {
+  color: var(--color-error-60);
+}
+.text-error-70 {
+  color: var(--color-error-70);
+}
+.text-error-80 {
+  color: var(--color-error-80);
+}
+.text-error-90 {
+  color: var(--color-error-90);
+}
+.text-error-95 {
+  color: var(--color-error-95);
+}
+.text-error-99 {
+  color: var(--color-error-99);
+}
+.text-error-100 {
+  color: var(--color-error-100);
+}

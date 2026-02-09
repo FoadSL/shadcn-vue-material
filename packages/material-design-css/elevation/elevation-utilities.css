@@ -1,0 +1,121 @@
+/**
+ * Material Design 3 Elevation Utility Classes
+ * 
+ * Usage: elevation-0, elevation-1, elevation-2, etc.
+ * 
+ * MD3 Elevation Levels:
+ * - Level 0: 0dp (flat, no shadow)
+ * - Level 1: 1dp (subtle shadow)
+ * - Level 2: 3dp (low shadow)
+ * - Level 3: 6dp (medium shadow)
+ * - Level 4: 8dp (high shadow)
+ * - Level 5: 12dp (highest shadow)
+ */
+/**
+ * Material Design 3 Elevation Utility Classes
+ * 
+ * Usage: elevation-0, elevation-1, elevation-2, etc.
+ * 
+ * MD3 Elevation Levels:
+ * - Level 0: 0dp (flat, no shadow)
+ * - Level 1: 1dp (subtle shadow)
+ * - Level 2: 3dp (low shadow)
+ * - Level 3: 6dp (medium shadow)
+ * - Level 4: 8dp (high shadow)
+ * - Level 5: 12dp (highest shadow)
+ */
+
+/* Elevation utilities (TailwindCSS v4 @utility) */
+@utility elevation-0 {
+  box-shadow: var(--shadow-elevation-0, none);
+}
+
+@utility elevation-1 {
+  box-shadow: var(
+    --shadow-elevation-1,
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15)
+  );
+}
+
+@utility elevation-2 {
+  box-shadow: var(
+    --shadow-elevation-2,
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15)
+  );
+}
+
+@utility elevation-3 {
+  box-shadow: var(
+    --shadow-elevation-3,
+    0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15)
+  );
+}
+
+@utility elevation-4 {
+  box-shadow: var(
+    --shadow-elevation-4,
+    0px 2px 3px 0px rgba(0, 0, 0, 0.3),
+    0px 6px 10px 4px rgba(0, 0, 0, 0.15)
+  );
+}
+
+@utility elevation-5 {
+  box-shadow: var(
+    --shadow-elevation-5,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.3),
+    0px 8px 12px 6px rgba(0, 0, 0, 0.15)
+  );
+}
+
+/* Hover elevation transitions */
+@utility elevation-hover-1 {
+  @variant hover {
+    box-shadow: var(--shadow-elevation-1);
+  }
+}
+
+@utility elevation-hover-2 {
+  @variant hover {
+    box-shadow: var(--shadow-elevation-2);
+  }
+}
+
+@utility elevation-hover-3 {
+  @variant hover {
+    box-shadow: var(--shadow-elevation-3);
+  }
+}
+
+@utility elevation-hover-4 {
+  @variant hover {
+    box-shadow: var(--shadow-elevation-4);
+  }
+}
+
+@utility elevation-hover-5 {
+  @variant hover {
+    box-shadow: var(--shadow-elevation-5);
+  }
+}
+
+/* Active/Press elevation transitions */
+@utility elevation-active-0 {
+  @variant active {
+    box-shadow: var(--shadow-elevation-0);
+  }
+}
+
+@utility elevation-active-1 {
+  @variant active {
+    box-shadow: var(--shadow-elevation-1);
+  }
+}
+
+@utility elevation-active-2 {
+  @variant active {
+    box-shadow: var(--shadow-elevation-2);
+  }
+}

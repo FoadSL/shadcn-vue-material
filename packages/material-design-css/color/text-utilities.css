@@ -1,0 +1,233 @@
+/**
+ * Text Color Utility Classes
+ * Usage: text-on-surface, text-primary, text-error, etc.
+ */
+
+/* Primary */
+.text-primary {
+  color: var(--color-primary);
+}
+.text-on-primary {
+  color: var(--color-on-primary);
+}
+.text-primary-container {
+  color: var(--color-primary-container);
+}
+.text-on-primary-container {
+  color: var(--color-on-primary-container);
+}
+.text-primary-fixed {
+  color: var(--color-primary-fixed);
+}
+.text-primary-fixed-dim {
+  color: var(--color-primary-fixed-dim);
+}
+.text-on-primary-fixed {
+  color: var(--color-on-primary-fixed);
+}
+.text-on-primary-fixed-variant {
+  color: var(--color-on-primary-fixed-variant);
+}
+.text-inverse-primary {
+  color: var(--color-inverse-primary);
+}
+
+/* Secondary */
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-on-secondary {
+  color: var(--color-on-secondary);
+}
+.text-secondary-container {
+  color: var(--color-secondary-container);
+}
+.text-on-secondary-container {
+  color: var(--color-on-secondary-container);
+}
+.text-secondary-fixed {
+  color: var(--color-secondary-fixed);
+}
+.text-secondary-fixed-dim {
+  color: var(--color-secondary-fixed-dim);
+}
+.text-on-secondary-fixed {
+  color: var(--color-on-secondary-fixed);
+}
+.text-on-secondary-fixed-variant {
+  color: var(--color-on-secondary-fixed-variant);
+}
+.text-inverse-secondary {
+  color: var(--color-inverse-secondary);
+}
+
+/* Tertiary */
+.text-tertiary {
+  color: var(--color-tertiary);
+}
+.text-on-tertiary {
+  color: var(--color-on-tertiary);
+}
+.text-tertiary-container {
+  color: var(--color-tertiary-container);
+}
+.text-on-tertiary-container {
+  color: var(--color-on-tertiary-container);
+}
+.text-tertiary-fixed {
+  color: var(--color-tertiary-fixed);
+}
+.text-tertiary-fixed-dim {
+  color: var(--color-tertiary-fixed-dim);
+}
+.text-on-tertiary-fixed {
+  color: var(--color-on-tertiary-fixed);
+}
+.text-on-tertiary-fixed-variant {
+  color: var(--color-on-tertiary-fixed-variant);
+}
+.text-inverse-tertiary {
+  color: var(--color-inverse-tertiary);
+}
+
+/* Error */
+.text-error {
+  color: var(--color-error);
+}
+.text-on-error {
+  color: var(--color-on-error);
+}
+.text-error-container {
+  color: var(--color-error-container);
+}
+.text-on-error-container {
+  color: var(--color-on-error-container);
+}
+
+/* Info */
+.text-info {
+  color: var(--color-info);
+}
+.text-on-info {
+  color: var(--color-on-info);
+}
+.text-info-container {
+  color: var(--color-info-container);
+}
+.text-on-info-container {
+  color: var(--color-on-info-container);
+}
+
+/* Success */
+.text-success {
+  color: var(--color-success);
+}
+.text-on-success {
+  color: var(--color-on-success);
+}
+.text-success-container {
+  color: var(--color-success-container);
+}
+.text-on-success-container {
+  color: var(--color-on-success-container);
+}
+
+/* Warning */
+.text-warning {
+  color: var(--color-warning);
+}
+.text-on-warning {
+  color: var(--color-on-warning);
+}
+.text-warning-container {
+  color: var(--color-warning-container);
+}
+.text-on-warning-container {
+  color: var(--color-on-warning-container);
+}
+
+/* Surface */
+.text-surface {
+  color: var(--color-surface);
+}
+.text-on-surface {
+  color: var(--color-on-surface);
+}
+.text-surface-dim {
+  color: var(--color-surface-dim);
+}
+.text-surface-bright {
+  color: var(--color-surface-bright);
+}
+.text-surface-container {
+  color: var(--color-surface-container);
+}
+.text-surface-container-low {
+  color: var(--color-surface-container-low);
+}
+.text-surface-container-lowest {
+  color: var(--color-surface-container-lowest);
+}
+.text-surface-container-high {
+  color: var(--color-surface-container-high);
+}
+.text-surface-container-highest {
+  color: var(--color-surface-container-highest);
+}
+.text-on-surface-variant {
+  color: var(--color-on-surface-variant);
+}
+.text-on-surface-variant-low {
+  color: var(--color-on-surface-variant-low);
+}
+.text-surface-tint {
+  color: var(--color-surface-tint);
+}
+.text-inverse-surface {
+  color: var(--color-inverse-surface);
+}
+.text-inverse-on-surface {
+  color: var(--color-inverse-on-surface);
+}
+
+/* Outline */
+.text-outline {
+  color: var(--color-outline);
+}
+.text-outline-variant {
+  color: var(--color-outline-variant);
+}
+
+/* Glow */
+.text-glow {
+  color: var(--color-glow);
+}
+
+/* Custom Hues */
+.text-hue-1 {
+  color: var(--color-hue-1);
+}
+.text-hue-2 {
+  color: var(--color-hue-2);
+}
+.text-hue-3 {
+  color: var(--color-hue-3);
+}
+.text-hue-4 {
+  color: var(--color-hue-4);
+}
+.text-hue-5 {
+  color: var(--color-hue-5);
+}
+.text-hue-6 {
+  color: var(--color-hue-6);
+}
+.text-hue-7 {
+  color: var(--color-hue-7);
+}
+.text-hue-8 {
+  color: var(--color-hue-8);
+}
+.text-hue-9 {
+  color: var(--color-hue-9);
+}

@@ -1,0 +1,123 @@
+/**
+ * @vira/material-design-css - A Configurable Material Design 3 CSS Library
+ * 
+ * Main Entry Point for TailwindCSS v4
+ * 
+ * Configuration:
+ * Set --md-config-* variables BEFORE importing this file to customize:
+ * 
+ * :root {
+ *   --md-config-color-primary-light: #your-color;
+ *   --md-config-typeface-brand: "Your Font", sans-serif;
+ * }
+ * @import "@vira/material-design-css";
+ * 
+ * Or import modules individually:
+ * @import "@vira/material-design-css/config";
+ * @import "@vira/material-design-css/color/tailwind-theme.css";
+ */
+
+@layer theme, md-config, md-resolver, base, components, utilities;
+
+/* Load configuration (defaults + resolver) */
+@import "./config/index.css";
+
+/* ============================================
+ * Color Tokens
+ * bg-primary, text-on-primary, etc.
+ * ============================================ */
+@import "./color/tailwind-theme.css";
+@import "./color/bg-utilities.css";
+@import "./color/text-utilities.css";
+
+/* ============================================
+ * Palette Tokens
+ * bg-primary-90, text-primary-10, etc.
+ * ============================================ */
+@import "./palette/tailwind-theme.css";
+
+/* ============================================
+ * Shape Tokens
+ * rounded-medium, rounded-large, etc.
+ * ============================================ */
+@import "./shape/tailwind-theme.css";
+
+/* ============================================
+ * Typography Tokens
+ * font-display-large, text-body-medium, etc.
+ * ============================================ */
+@import "./typography/tailwind-theme.css";
+
+/* ============================================
+ * Typography Utilities
+ * display-large, body-medium, label-small, etc.
+ * ============================================ */
+@import "./typography/tailwind-utilities.css";
+
+/* ============================================
+ * Motion Tokens
+ * ease-emphasized, duration-medium1, etc.
+ * ============================================ */
+@import "./motion/tailwind-theme.css";
+
+/* ============================================
+ * Transition Utilities
+ * transition-button, transition-emphasized, etc.
+ * ============================================ */
+@import "./motion/transition-utilities.css";
+
+/* ============================================
+ * Animation Utilities
+ * animation-emphasized, animation-standard, etc.
+ * ============================================ */
+@import "./motion/animation-utilities.css";
+
+/* ============================================
+ * Elevation Tokens
+ * elevation-0, elevation-1, elevation-2, etc.
+ * ============================================ */
+@import "./elevation/tailwind-theme.css";
+@import "./elevation/elevation-utilities.css";
+
+/* ============================================
+ * State Layer Tokens
+ * state-layer-primary, state-layer-on-surface, etc.
+ * ============================================ */
+@import "./state-layer/tailwind-theme.css";
+@import "./state-layer/state-layer-utilities.css";
+
+/* ============================================
+ * Base Styles
+ * ============================================ */
+@layer base {
+  :root:not(.dark) {
+    color-scheme: light;
+  }
+
+  :root.dark,
+  .dark {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-outline;
+  }
+
+  body {
+    @apply bg-surface text-on-surface;
+    font-family: var(--font-body-medium, "Roboto", sans-serif);
+    font-size: var(--text-body-medium, 14px);
+    line-height: var(--leading-body-medium, 20px);
+    letter-spacing: var(--tracking-body-medium, 0.25px);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+  }
+}

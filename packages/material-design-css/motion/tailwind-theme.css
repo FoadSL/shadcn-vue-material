@@ -1,0 +1,135 @@
+/**
+ * Material Design 3 Motion Tokens for TailwindCSS v4
+ * Easing & Duration Values
+ * 
+ * Configurable via --md-config-motion-* variables.
+ * Usage: ease-emphasized, duration-[var(--duration-medium1)]
+ */
+
+@theme inline {
+  /* Standard Easings */
+  --ease-emphasized: var(--md-sys-motion-easing-emphasized, cubic-bezier(0.2, 0, 0, 1));
+  --ease-emphasized-decelerate: var(
+    --md-sys-motion-easing-emphasized-decelerate,
+    cubic-bezier(0.05, 0.7, 0.1, 1)
+  );
+  --ease-emphasized-accelerate: var(
+    --md-sys-motion-easing-emphasized-accelerate,
+    cubic-bezier(0.3, 0, 0.8, 0.15)
+  );
+  --ease-standard: var(--md-sys-motion-easing-standard, cubic-bezier(0.2, 0, 0, 1));
+  --ease-standard-decelerate: var(
+    --md-sys-motion-easing-standard-decelerate,
+    cubic-bezier(0, 0, 0, 1)
+  );
+  --ease-standard-accelerate: var(
+    --md-sys-motion-easing-standard-accelerate,
+    cubic-bezier(0.3, 0, 1, 1)
+  );
+
+  /* Expressive Easings */
+  --easing-expressive-fast-spatial: var(
+    --md-sys-motion-easing-expressive-fast-spatial,
+    cubic-bezier(0.42, 1.67, 0.21, 0.9)
+  );
+  --easing-expressive-default-spatial: var(
+    --md-sys-motion-easing-expressive-default-spatial,
+    cubic-bezier(0.38, 1.21, 0.22, 1)
+  );
+  --easing-expressive-slow-spatial: var(
+    --md-sys-motion-easing-expressive-slow-spatial,
+    cubic-bezier(0.39, 1.29, 0.35, 0.98)
+  );
+  --easing-expressive-fast-effects: var(
+    --md-sys-motion-easing-expressive-fast-effects,
+    cubic-bezier(0.31, 0.94, 0.34, 1)
+  );
+  --easing-expressive-default-effects: var(
+    --md-sys-motion-easing-expressive-default-effects,
+    cubic-bezier(0.34, 0.8, 0.34, 1)
+  );
+  --easing-expressive-slow-effects: var(
+    --md-sys-motion-easing-expressive-slow-effects,
+    cubic-bezier(0.34, 0.88, 0.34, 1)
+  );
+
+  /* Standard Spatial/Effects */
+  --easing-standard-fast-spatial: var(
+    --md-sys-motion-easing-standard-fast-spatial,
+    cubic-bezier(0.27, 1.06, 0.18, 1)
+  );
+  --easing-standard-default-spatial: var(
+    --md-sys-motion-easing-standard-default-spatial,
+    cubic-bezier(0.27, 1.06, 0.18, 1)
+  );
+  --easing-standard-slow-spatial: var(
+    --md-sys-motion-easing-standard-slow-spatial,
+    cubic-bezier(0.27, 1.06, 0.18, 1)
+  );
+  --easing-standard-fast-effects: var(
+    --md-sys-motion-easing-standard-fast-effects,
+    cubic-bezier(0.31, 0.94, 0.34, 1)
+  );
+  --easing-standard-default-effects: var(
+    --md-sys-motion-easing-standard-default-effects,
+    cubic-bezier(0.34, 0.8, 0.34, 1)
+  );
+  --easing-standard-slow-effects: var(
+    --md-sys-motion-easing-standard-slow-effects,
+    cubic-bezier(0.34, 0.88, 0.34, 1)
+  );
+}
+
+@theme static {
+  /* Short Durations */
+  --duration-short1: var(--md-sys-motion-duration-short1, 50ms);
+  --duration-short2: var(--md-sys-motion-duration-short2, 100ms);
+  --duration-short3: var(--md-sys-motion-duration-short3, 150ms);
+  --duration-short4: var(--md-sys-motion-duration-short4, 200ms);
+
+  /* Medium Durations */
+  --duration-medium1: var(--md-sys-motion-duration-medium1, 250ms);
+  --duration-medium2: var(--md-sys-motion-duration-medium2, 300ms);
+  --duration-medium3: var(--md-sys-motion-duration-medium3, 350ms);
+  --duration-medium4: var(--md-sys-motion-duration-medium4, 400ms);
+
+  /* Long Durations */
+  --duration-long1: var(--md-sys-motion-duration-long1, 450ms);
+  --duration-long2: var(--md-sys-motion-duration-long2, 500ms);
+  --duration-long3: var(--md-sys-motion-duration-long3, 550ms);
+  --duration-long4: var(--md-sys-motion-duration-long4, 600ms);
+
+  /* Extra Long Durations */
+  --duration-extra-long1: var(--md-sys-motion-duration-extra-long1, 700ms);
+  --duration-extra-long2: var(--md-sys-motion-duration-extra-long2, 800ms);
+  --duration-extra-long3: var(--md-sys-motion-duration-extra-long3, 900ms);
+  --duration-extra-long4: var(--md-sys-motion-duration-extra-long4, 1000ms);
+
+  /* Expressive Durations */
+  --duration-expressive-fast-spatial: var(--md-sys-motion-duration-expressive-fast-spatial, 350ms);
+  --duration-expressive-default-spatial: var(
+    --md-sys-motion-duration-expressive-default-spatial,
+    500ms
+  );
+  --duration-expressive-slow-spatial: var(--md-sys-motion-duration-expressive-slow-spatial, 650ms);
+  --duration-expressive-fast-effects: var(--md-sys-motion-duration-expressive-fast-effects, 150ms);
+  --duration-expressive-default-effects: var(
+    --md-sys-motion-duration-expressive-default-effects,
+    200ms
+  );
+  --duration-expressive-slow-effects: var(--md-sys-motion-duration-expressive-slow-effects, 300ms);
+
+  /* Standard Durations */
+  --duration-standard-fast-spatial: var(--md-sys-motion-duration-standard-fast-spatial, 350ms);
+  --duration-standard-default-spatial: var(
+    --md-sys-motion-duration-standard-default-spatial,
+    500ms
+  );
+  --duration-standard-slow-spatial: var(--md-sys-motion-duration-standard-slow-spatial, 750ms);
+  --duration-standard-fast-effects: var(--md-sys-motion-duration-standard-fast-effects, 150ms);
+  --duration-standard-default-effects: var(
+    --md-sys-motion-duration-standard-default-effects,
+    200ms
+  );
+  --duration-standard-slow-effects: var(--md-sys-motion-duration-standard-slow-effects, 300ms);
+}

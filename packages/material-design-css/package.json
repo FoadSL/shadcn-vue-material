@@ -1,0 +1,71 @@
+{
+  "name": "@vira/material-design-css",
+  "version": "1.0.0",
+  "description": "A configurable CSS library for Material Design 3 Tokens, supports TailwindCSS v4",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.css",
+  "exports": {
+    ".": "./index.css",
+    "./index.css": "./index.css",
+    "./preset.css": "./preset.css",
+    "./config": "./config/index.css",
+    "./config/index.css": "./config/index.css",
+    "./config/defaults.css": "./config/defaults.css",
+    "./config/resolver.css": "./config/resolver.css",
+    "./color/tailwind-theme.css": "./color/tailwind-theme.css",
+    "./color/bg-utilities.css": "./color/bg-utilities.css",
+    "./color/text-utilities.css": "./color/text-utilities.css",
+    "./color/classic-utilities.css": "./color/classic-utilities.css",
+    "./palette/tailwind-theme.css": "./palette/tailwind-theme.css",
+    "./palette/bg-utilities.css": "./palette/bg-utilities.css",
+    "./palette/text-utilities.css": "./palette/text-utilities.css",
+    "./shape/tailwind-theme.css": "./shape/tailwind-theme.css",
+    "./shape/shape-utilities.css": "./shape/shape-utilities.css",
+    "./typography/tailwind-theme.css": "./typography/tailwind-theme.css",
+    "./typography/tailwind-utilities.css": "./typography/tailwind-utilities.css",
+    "./typography/typography-utilities.css": "./typography/typography-utilities.css",
+    "./motion/tailwind-theme.css": "./motion/tailwind-theme.css",
+    "./motion/transition-utilities.css": "./motion/transition-utilities.css",
+    "./motion/animation-utilities.css": "./motion/animation-utilities.css",
+    "./elevation/tailwind-theme.css": "./elevation/tailwind-theme.css",
+    "./elevation/elevation-utilities.css": "./elevation/elevation-utilities.css",
+    "./state-layer/tailwind-theme.css": "./state-layer/tailwind-theme.css",
+    "./state-layer/state-layer-utilities.css": "./state-layer/state-layer-utilities.css",
+    "./prebuild-color/blue.css": "./prebuild-color/blue.css",
+    "./prebuild-color/green.css": "./prebuild-color/green.css",
+    "./prebuild-color/pink.css": "./prebuild-color/pink.css",
+    "./prebuild-color/yellow.css": "./prebuild-color/yellow.css",
+    "./prebuild-color/light-green.css": "./prebuild-color/light-green.css"
+  },
+  "files": [
+    "index.css",
+    "preset.css",
+    "playground.html",
+    "config",
+    "color",
+    "palette",
+    "shape",
+    "typography",
+    "motion",
+    "elevation",
+    "state-layer",
+    "prebuild-color"
+  ],
+  "keywords": [
+    "css",
+    "material-design",
+    "material-design-3",
+    "tailwindcss",
+    "design-tokens",
+    "configurable"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  }
+}
