@@ -2,510 +2,510 @@ import type { Registry } from "shadcn-vue/schema"
 
 export const charts: Registry["items"] = [
   {
-    name: "ChartAreaAxes",
-    type: "registry:block",
-    files: [
+    "name": "ChartAreaAxes",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartAreaAxes.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartAreaAxes.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-area",
-    ],
+      "chart-area"
+    ]
   },
   {
-    name: "ChartAreaGradient",
-    type: "registry:block",
-    files: [
+    "name": "ChartAreaGradient",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartAreaGradient.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartAreaGradient.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-area",
-    ],
+      "chart-area"
+    ]
   },
   {
-    name: "ChartAreaIcons",
-    type: "registry:block",
-    files: [
+    "name": "ChartAreaIcons",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartAreaIcons.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartAreaIcons.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-area",
-    ],
+      "chart-area"
+    ]
   },
   {
-    name: "ChartAreaInteractive",
-    type: "registry:block",
-    files: [
+    "name": "ChartAreaInteractive",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartAreaInteractive.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartAreaInteractive.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
       "card",
-      "select",
+      "select"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-area",
-    ],
+      "chart-area"
+    ]
   },
   {
-    name: "ChartBarDefault",
-    type: "registry:block",
-    files: [
+    "name": "ChartBarDefault",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartBarDefault.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartBarDefault.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-bar",
-    ],
+      "chart-bar"
+    ]
   },
   {
-    name: "ChartBarHorizontal",
-    type: "registry:block",
-    files: [
+    "name": "ChartBarHorizontal",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartBarHorizontal.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartBarHorizontal.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-bar",
-    ],
+      "chart-bar"
+    ]
   },
   {
-    name: "ChartBarInteractive",
-    type: "registry:block",
-    files: [
+    "name": "ChartBarInteractive",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartBarInteractive.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartBarInteractive.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-bar",
-    ],
+      "chart-bar"
+    ]
   },
   {
-    name: "ChartBarMultiple",
-    type: "registry:block",
-    files: [
+    "name": "ChartBarMultiple",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartBarMultiple.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartBarMultiple.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-bar",
-    ],
+      "chart-bar"
+    ]
   },
   {
-    name: "ChartLineDefault",
-    type: "registry:block",
-    files: [
+    "name": "ChartLineDefault",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartLineDefault.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartLineDefault.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-line",
-    ],
+      "chart-line"
+    ]
   },
   {
-    name: "ChartLineInteractive",
-    type: "registry:block",
-    files: [
+    "name": "ChartLineInteractive",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartLineInteractive.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartLineInteractive.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-line",
-    ],
+      "chart-line"
+    ]
   },
   {
-    name: "ChartLineLinear",
-    type: "registry:block",
-    files: [
+    "name": "ChartLineLinear",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartLineLinear.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartLineLinear.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-line",
-    ],
+      "chart-line"
+    ]
   },
   {
-    name: "ChartLineStep",
-    type: "registry:block",
-    files: [
+    "name": "ChartLineStep",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartLineStep.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartLineStep.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-line",
-    ],
+      "chart-line"
+    ]
   },
   {
-    name: "ChartPieDonut",
-    type: "registry:block",
-    files: [
+    "name": "ChartPieDonut",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartPieDonut.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartPieDonut.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-pie",
-    ],
+      "chart-pie"
+    ]
   },
   {
-    name: "ChartPieDonutText",
-    type: "registry:block",
-    files: [
+    "name": "ChartPieDonutText",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartPieDonutText.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartPieDonutText.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-pie",
-    ],
+      "chart-pie"
+    ]
   },
   {
-    name: "ChartPieSimple",
-    type: "registry:block",
-    files: [
+    "name": "ChartPieSimple",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartPieSimple.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartPieSimple.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-pie",
-    ],
+      "chart-pie"
+    ]
   },
   {
-    name: "ChartPieStacked",
-    type: "registry:block",
-    files: [
+    "name": "ChartPieStacked",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartPieStacked.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartPieStacked.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-pie",
-    ],
+      "chart-pie"
+    ]
   },
   {
-    name: "ChartTooltipDefault",
-    type: "registry:block",
-    files: [
+    "name": "ChartTooltipDefault",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartTooltipDefault.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartTooltipDefault.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-tooltip",
-    ],
+      "chart-tooltip"
+    ]
   },
   {
-    name: "ChartTooltipIcons",
-    type: "registry:block",
-    files: [
+    "name": "ChartTooltipIcons",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartTooltipIcons.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartTooltipIcons.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-tooltip",
-    ],
+      "chart-tooltip"
+    ]
   },
   {
-    name: "ChartTooltipIndicatorLine",
-    type: "registry:block",
-    files: [
+    "name": "ChartTooltipIndicatorLine",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartTooltipIndicatorLine.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartTooltipIndicatorLine.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-tooltip",
-    ],
+      "chart-tooltip"
+    ]
   },
   {
-    name: "ChartTooltipIndicatorNone",
-    type: "registry:block",
-    files: [
+    "name": "ChartTooltipIndicatorNone",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartTooltipIndicatorNone.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartTooltipIndicatorNone.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-tooltip",
-    ],
+      "chart-tooltip"
+    ]
   },
   {
-    name: "ChartTooltipLabelCustom",
-    type: "registry:block",
-    files: [
+    "name": "ChartTooltipLabelCustom",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartTooltipLabelCustom.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartTooltipLabelCustom.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-tooltip",
-    ],
+      "chart-tooltip"
+    ]
   },
   {
-    name: "ChartTooltipLabelFormatter",
-    type: "registry:block",
-    files: [
+    "name": "ChartTooltipLabelFormatter",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartTooltipLabelFormatter.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartTooltipLabelFormatter.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-tooltip",
-    ],
+      "chart-tooltip"
+    ]
   },
   {
-    name: "ChartTooltipLabelNone",
-    type: "registry:block",
-    files: [
+    "name": "ChartTooltipLabelNone",
+    "type": "registry:block",
+    "files": [
       {
-        path: "charts/ChartTooltipLabelNone.vue",
-        type: "registry:block",
-      },
+        "path": "charts/ChartTooltipLabelNone.vue",
+        "type": "registry:block"
+      }
     ],
-    registryDependencies: [
+    "registryDependencies": [
       "chart",
-      "card",
+      "card"
     ],
-    dependencies: [
+    "dependencies": [
       "@unovis/vue",
-      "@unovis/ts",
+      "@unovis/ts"
     ],
-    categories: [
+    "categories": [
       "chart",
-      "chart-tooltip",
-    ],
-  },
+      "chart-tooltip"
+    ]
+  }
 ]

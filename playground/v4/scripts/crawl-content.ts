@@ -329,8 +329,11 @@ async function getFileDependencies(filename: string, sourceCode: string) {
     const ast = parseSync(filename, sourceCode, {
       sourceType: 'module',
     })
+    const body = ast?.program?.body
+    if (!Array.isArray(body))
+      return { registryDependencies, dependencies }
 
-    const sources = ast.program.body.filter((i: any) => i.type === 'ImportDeclaration').map((i: any) => i.source)
+    const sources = body.filter((i: any) => i.type === 'ImportDeclaration').map((i: any) => i.source)
     sources.forEach((source: any) => {
       populateDeps(source.value)
     })

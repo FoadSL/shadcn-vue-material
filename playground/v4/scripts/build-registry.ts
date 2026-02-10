@@ -151,24 +151,20 @@ async function buildRegistryJsonFile() {
 }
 
 async function buildRegistry() {
-  return new Promise((resolve, reject) => {
-    // Use local shadcn copy.
-    const process = exec(
-      `node ../../packages/cli/dist/index.js build registry-new-york-v4.json --output public/r/styles/new-york-v4`,
+  const cliPath = path.resolve(process.cwd(), '../../packages/cli/dist/index.js')
+  if (!existsSync(cliPath)) {
+    return
+  }
+  return new Promise<void>((resolve) => {
+    exec(
+      `node "${cliPath}" build registry-new-york-v4.json --output public/r/styles/new-york-v4`,
+      { cwd: process.cwd() },
+      (err, _stdout, stderr) => {
+        if (err)
+          console.warn('CLI build skipped or failed:', stderr || err.message)
+        resolve()
+      },
     )
-
-    // exec(
-    //   `pnpm dlx shadcn build registry.json --output ../www/src/public/r/styles/new-york-v4`
-    // )
-
-    process.on('exit', (code) => {
-      if (code === 0) {
-        resolve(undefined)
-      }
-      else {
-        reject(new Error(`Process exited with code ${code}`))
-      }
-    })
   })
 }
 

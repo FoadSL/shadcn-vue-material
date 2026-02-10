@@ -8,7 +8,6 @@
     "build": "node scripts/build.js",
     "build:js": "node scripts/build.js --js",
     "sync": "node scripts/sync-from-upstream.js",
-    "filter-registry": "node scripts/filter-registry-custom-only.js",
     "convert:source:js": "node scripts/convert-source-to-js.js",
     "detype:vue": "node scripts/detype-vue-sfc.js",
     "serve:public": "node scripts/serve-public.js"

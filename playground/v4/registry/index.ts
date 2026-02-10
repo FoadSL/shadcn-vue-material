@@ -20,7 +20,6 @@ const DEPRECATED_ITEMS = [
   "toast-with-title",
 ]
 
-// Shared between index and style for backward compatibility.
 const NEW_YORK_V4_STYLE = {
   type: "registry:style",
   dependencies: ["class-variance-authority", "lucide-vue-next"],
@@ -35,14 +34,8 @@ export const registry = {
   homepage: "https://shadcn-vue.com",
   items: z.array(registryItemSchema).parse(
     [
-      {
-        name: "index",
-        ...NEW_YORK_V4_STYLE,
-      },
-      {
-        name: "style",
-        ...NEW_YORK_V4_STYLE,
-      },
+      { name: "index", ...NEW_YORK_V4_STYLE },
+      { name: "style", ...NEW_YORK_V4_STYLE },
       ...ui,
       ...blocks,
       ...charts,
@@ -52,20 +45,14 @@ export const registry = {
       ...examples,
       ...internal,
     ]
-      .filter((item) => {
-        return !DEPRECATED_ITEMS.includes(item.name)
-      })
+      .filter((item) => !DEPRECATED_ITEMS.includes(item.name))
       .map((item) => {
-        // Temporary fix for dashboard-01.
         if (item.name === "dashboard-01") {
           item.dependencies?.push("@tabler/icons-vue")
         }
-
         if (item.name === "accordion" && "tailwind" in item) {
-          // we are not deleting tailwind meta
-          // delete item.tailwind
+          // keep tailwind meta if present
         }
-
         return item
       }),
   ),

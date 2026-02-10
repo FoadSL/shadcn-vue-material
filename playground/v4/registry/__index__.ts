@@ -236,6 +236,10 @@ export const Index: Record<string, any> = {
       type: "registry:ui",
       target: ""
     },{
+      path: "registry/new-york-v4/ui/button/index.js",
+      type: "registry:ui",
+      target: ""
+    },{
       path: "registry/new-york-v4/ui/button/index.ts",
       type: "registry:ui",
       target: ""
@@ -262,6 +266,23 @@ export const Index: Record<string, any> = {
       target: ""
     },{
       path: "registry/new-york-v4/ui/button-group/index.ts",
+      type: "registry:ui",
+      target: ""
+    }],
+    categories: undefined,
+    meta: undefined,
+  },
+  "button-material": {
+    name: "button-material",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/new-york-v4/ui/button-material/Button.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/new-york-v4/ui/button-material/index.js",
       type: "registry:ui",
       target: ""
     }],
