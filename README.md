@@ -1,6 +1,6 @@
 # my-shadcn-registry
 
-A JavaScript registry synced with [shadcn-vue](https://github.com/unovue/shadcn-vue). Serves components in JavaScript instead of TypeScript.
+A JavaScript registry synced with [shadcn-vue](https://github.com/unovue/shadcn-vue). Serves components in JavaScript instead of TypeScript, styled with our Material Design 3 design system.
 
 ## Quick start
 
