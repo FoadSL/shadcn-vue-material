@@ -12,7 +12,8 @@
     "deploy": "pnpm build && npx wrangler --cwd .output/ deploy",
     "registry:build": "tsx --tsconfig ./tsconfig.json ./scripts/build-registry.ts",
     "sync:custom-blocks": "tsx --tsconfig ./tsconfig.json ./scripts/sync-custom-blocks.ts",
-    "registry:build:custom": "pnpm sync:custom-blocks && pnpm registry:build"
+    "sync:custom-ui": "tsx --tsconfig ./tsconfig.json ./scripts/sync-custom-ui.ts",
+    "registry:build:custom": "pnpm sync:custom-blocks && pnpm sync:custom-ui && pnpm registry:build"
   },
   "dependencies": {
     "@dnd-kit/abstract": "^0.1.21",

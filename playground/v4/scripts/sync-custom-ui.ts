@@ -1,4 +1,4 @@
-import { cp, readdir, stat } from 'node:fs/promises'
+import { cp, readdir } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { rimraf } from 'rimraf'
@@ -8,34 +8,34 @@ async function main() {
   const __dirname = path.dirname(fileURLToPath(import.meta.url))
   const repoRoot = path.resolve(__dirname, '..', '..', '..')
 
-  const customBlocksRoot = path.join(
+  const customUiRoot = path.join(
     repoRoot,
     'custom',
     'registry',
     'new-york-v4',
-    'blocks',
+    'ui',
   )
 
-  const playgroundBlocksRoot = path.join(
+  const playgroundUiRoot = path.join(
     repoRoot,
     'playground',
     'v4',
     'registry',
     'new-york-v4',
-    'blocks',
+    'ui',
   )
 
-  console.log('🔁 Syncing custom blocks into playground registry...')
-  console.log(`Custom blocks:     ${customBlocksRoot}`)
-  console.log(`Playground blocks: ${playgroundBlocksRoot}`)
+  console.log('🔁 Syncing custom UI into playground registry...')
+  console.log(`Custom UI:        ${customUiRoot}`)
+  console.log(`Playground UI:    ${playgroundUiRoot}`)
 
-  const entries = await readdir(customBlocksRoot, { withFileTypes: true })
+  const entries = await readdir(customUiRoot, { withFileTypes: true })
 
   for (const entry of entries) {
     if (!entry.isDirectory())
       continue
 
-    const src = path.join(customBlocksRoot, entry.name)
+    const src = path.join(customUiRoot, entry.name)
 
     // Skip empty component folders (no .vue files) – these are likely failed conversions.
     const hasVue = (await readdir(src)).some((f) => f.endsWith('.vue'))
@@ -44,17 +44,16 @@ async function main() {
       continue
     }
 
-    const destName = `custom-${entry.name}`
-    const dest = path.join(playgroundBlocksRoot, destName)
+    const dest = path.join(playgroundUiRoot, entry.name)
 
-    console.log(`  • ${entry.name} -> ${destName}`)
+    console.log(`  • ${entry.name}`)
 
     // Remove any previous copy and then copy fresh.
     await rimraf(dest)
     await cp(src, dest, { recursive: true })
   }
 
-  console.log('✅ Custom blocks synced. Run `pnpm registry:build` in playground/v4 next.')
+  console.log('✅ Custom UI synced. Run `pnpm registry:build` in playground/v4 next.')
 }
 
 main().catch((error) => {
