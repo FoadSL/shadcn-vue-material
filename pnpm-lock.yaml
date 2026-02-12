@@ -8,6 +8,18 @@ importers:
 
   .:
     devDependencies:
+      '@babel/generator':
+        specifier: ^7.29.1
+        version: 7.29.1
+      '@babel/parser':
+        specifier: ^7.29.0
+        version: 7.29.0
+      '@babel/traverse':
+        specifier: ^7.29.0
+        version: 7.29.0
+      '@babel/types':
+        specifier: ^7.29.0
+        version: 7.29.0
       '@unovue/detypes':
         specifier: ^0.8.5
         version: 0.8.5
@@ -17,6 +29,9 @@ importers:
       shadcn-vue:
         specifier: latest
         version: 2.4.3(eslint@9.39.2(jiti@2.6.1))(vue@3.5.27(typescript@5.9.3))
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
 packages:
 

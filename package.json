@@ -13,9 +13,14 @@
     "serve:public": "node scripts/serve-public.js"
   },
   "devDependencies": {
+    "@babel/generator": "^7.29.1",
+    "@babel/parser": "^7.29.0",
+    "@babel/traverse": "^7.29.0",
+    "@babel/types": "^7.29.0",
     "@unovue/detypes": "^0.8.5",
     "@vue/compiler-sfc": "^3.5.27",
-    "shadcn-vue": "latest"
+    "shadcn-vue": "latest",
+    "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
 }

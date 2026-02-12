@@ -5,18 +5,20 @@
  * It:
  * - Reads `registry.json`
  * - For every file path starting with `registry/`, copies it into `custom/registry/...`
- * - Uses `@unovue/detypes` to strip TypeScript syntax from .ts/.tsx/.vue files
+ * - Converts Vue SFCs from TypeScript to JavaScript (macro conversion + type stripping)
+ * - Converts .ts files to .js (type stripping, renames to .js)
  * - Leaves other file types as-is
  *
  * IMPORTANT:
  * - This script does NOT modify `registry.json`.
  * - Upstream sync (`pnpm sync`) will continue to manage `registry/` and `registry.json`.
- * - You can gradually point items in `registry.json` to `custom/registry/...` as you customize components.
+ * - You can gradually point items in `registry.json` to `custom/registry/...` as you customize.
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { convertVueSfc, convertTsFile } from './transform-ts-to-js.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.resolve(__dirname, '..')
@@ -29,7 +31,6 @@ async function main() {
     process.exit(1)
   }
 
-  const { transform } = await import('@unovue/detypes')
   const registry = JSON.parse(readFileSync(registryJsonPath, 'utf-8'))
 
   if (!Array.isArray(registry.items)) {
@@ -51,7 +52,13 @@ async function main() {
     }
   }
 
-  console.log('Converting source files to JS in custom/registry ...')
+  const total = filePaths.size
+  let converted = 0
+  let skipped = 0
+  let warnings = 0
+
+  console.log(`Converting ${total} source files to JS in custom/registry ...`)
+  console.log()
 
   for (const relPath of filePaths) {
     const srcPath = path.join(rootDir, relPath)
@@ -67,7 +74,8 @@ async function main() {
     const destPath = path.join(customRoot, destRelPath)
 
     if (!existsSync(srcPath)) {
-      console.warn('  Skipping (not found):', relPath)
+      console.warn(`  SKIP (not found): ${relPath}`)
+      skipped++
       continue
     }
 
@@ -78,32 +86,42 @@ async function main() {
 
     let content = readFileSync(srcPath, 'utf-8')
 
-    // For pure TS/TSX files, use detypes transform to strip types.
-    if (isTs) {
+    // Convert Vue SFCs
+    if (isVue) {
       try {
-        // Call with (code, fileName) so detypes uses its internal defaults
-        content = await transform(content, relPath)
+        content = await convertVueSfc(content, relPath)
       } catch (err) {
-        console.warn(`  Warning: could not convert ${relPath}:`, err.message)
+        console.warn(`  WARN: Vue SFC conversion failed for ${relPath}: ${err.message}`)
+        warnings++
+        // Best-effort: at least strip lang="ts" and generic attributes
+        content = content
+          .replace(/(<script\b[^>]*?)\s+lang=(["'])ts\2([^>]*>)/g, '$1$3')
+          .replace(/(<script\b[^>]*?)\s+generic=(["'])[^"']*\2([^>]*>)/g, '$1$3')
       }
     }
 
-    // For Vue SFCs, we currently copy them as-is (including <script setup lang="ts">),
-    // to avoid accidentally breaking templates. Tooling in v4 fully supports TS in SFCs.
+    // Convert plain TS/TSX files
+    if (isTs) {
+      try {
+        content = await convertTsFile(content, relPath)
+      } catch (err) {
+        console.warn(`  WARN: TS conversion failed for ${relPath}: ${err.message}`)
+        warnings++
+      }
+    }
 
     writeFileSync(destPath, content)
-    console.log(
-      '  Wrote',
-      path.relative(rootDir, destPath),
-      relPath !== destRelPath ? `(from ${relPath})` : '',
-    )
+    const suffix = relPath !== destRelPath ? ` (from ${path.basename(relPath)})` : ''
+    console.log(`  ✓ ${path.relative(rootDir, destPath)}${suffix}`)
+    converted++
   }
 
-  console.log('Done. JS-first sources are in custom/registry/.')
+  console.log()
+  console.log(`Done. ${converted} files converted, ${skipped} skipped, ${warnings} warnings.`)
+  console.log('JS-first sources are in custom/registry/.')
 }
 
 main().catch((err) => {
   console.error(err)
   process.exit(1)
 })
-
