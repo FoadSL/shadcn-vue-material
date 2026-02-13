@@ -10,7 +10,8 @@
     "sync": "node scripts/sync-from-upstream.js",
     "convert:source:js": "node scripts/convert-source-to-js.js",
     "detype:vue": "node scripts/detype-vue-sfc.js",
-    "serve:public": "node scripts/serve-public.js"
+    "serve:public": "node scripts/serve-public.js",
+    "playground:sync": "cd playground/v4 && pnpm sync:custom-ui && pnpm registry:build"
   },
   "devDependencies": {
     "@babel/generator": "^7.29.1",

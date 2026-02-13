@@ -26,6 +26,44 @@ const traverse = _traverse.default || _traverse
 const generate = _generate.default || _generate
 
 // ---------------------------------------------------------------------------
+// Known external type props
+// ---------------------------------------------------------------------------
+// When the converter encounters an external type reference in defineProps
+// that can't be resolved from the local file, it checks this map.
+// This handles types like PrimitiveProps from reka-ui whose props are
+// directly referenced in Vue templates.
+//
+// Format: TypeName → [{ name, type (runtime constructor name or null), optional }]
+const KNOWN_EXTERNAL_PROPS = new Map([
+  ['PrimitiveProps', [
+    { name: 'as', type: null, optional: true },
+    { name: 'asChild', type: 'Boolean', optional: true },
+  ]],
+])
+
+/**
+ * Create a Babel AST ObjectExpression for runtime props from a known external type.
+ * @param {Array<{ name: string, type: string|null, optional: boolean }>} propDefs
+ * @returns {object} Babel AST ObjectExpression
+ */
+function createPropsFromKnownType(propDefs) {
+  const properties = propDefs.map(def => {
+    const propDefProps = []
+    if (def.type) {
+      propDefProps.push(t.objectProperty(t.identifier('type'), t.identifier(def.type)))
+    }
+    propDefProps.push(
+      t.objectProperty(t.identifier('required'), t.booleanLiteral(!def.optional))
+    )
+    const key = t.isValidIdentifier(def.name)
+      ? t.identifier(def.name)
+      : t.stringLiteral(def.name)
+    return t.objectProperty(key, t.objectExpression(propDefProps))
+  })
+  return t.objectExpression(properties)
+}
+
+// ---------------------------------------------------------------------------
 // Internal helpers
 // ---------------------------------------------------------------------------
 
@@ -318,18 +356,42 @@ function convertTypeToRuntimeProps(typeNode, genericParams, localTypes = new Map
     return merged.properties.length > 0 ? merged : null
   }
 
-  // Type reference — try local resolution first, then fall back to null
+  // Type reference — try local resolution, then known external types, then null
   if (t.isTSTypeReference(typeNode)) {
     const name = t.isIdentifier(typeNode.typeName) ? typeNode.typeName.name : null
     if (name && localTypes.has(name)) {
-      const resolved = localTypes.get(name)
-      // TSInterfaceBody from a local interface declaration
-      if (t.isTSInterfaceBody(resolved)) {
-        return convertTypeLiteralToProps(resolved, genericParams, localTypes)
+      const local = localTypes.get(name)
+
+      if (local.kind === 'interface') {
+        // Convert the interface body's own properties
+        const bodyProps = convertTypeLiteralToProps(local.body, genericParams, localTypes)
+
+        // Resolve any `extends` types (e.g. `interface Props extends PrimitiveProps`)
+        // and merge their props into the result
+        for (const ext of local.extends) {
+          const extName = t.isIdentifier(ext.expression) ? ext.expression.name : null
+          if (extName) {
+            const extTypeRef = t.tsTypeReference(t.identifier(extName), ext.typeParameters)
+            const extProps = convertTypeToRuntimeProps(extTypeRef, genericParams, localTypes)
+            if (extProps && t.isObjectExpression(extProps)) {
+              bodyProps.properties.push(...extProps.properties)
+            }
+          }
+        }
+        return bodyProps
       }
-      // Type alias → recurse (it could be a literal, intersection, etc.)
-      return convertTypeToRuntimeProps(resolved, genericParams, localTypes)
+
+      if (local.kind === 'typeAlias') {
+        // Type alias → recurse (it could be a literal, intersection, etc.)
+        return convertTypeToRuntimeProps(local.typeAnnotation, genericParams, localTypes)
+      }
     }
+
+    // Check known external types (e.g. PrimitiveProps from reka-ui)
+    if (name && KNOWN_EXTERNAL_PROPS.has(name)) {
+      return createPropsFromKnownType(KNOWN_EXTERNAL_PROPS.get(name))
+    }
+
     // Unresolvable external type
     return null
   }
@@ -601,16 +663,25 @@ export function convertVueMacrosToRuntime(code, { genericParams = [] } = {}) {
 
   // Collect locally-defined interfaces and type aliases so that
   // defineProps<LocalInterface>() can be resolved to runtime props.
+  // For interfaces we also store the `extends` clause so that
+  // `interface Props extends PrimitiveProps { ... }` can be fully resolved.
   const localTypes = new Map()
   traverse(ast, {
     TSInterfaceDeclaration(path) {
       if (path.node.id && t.isIdentifier(path.node.id)) {
-        localTypes.set(path.node.id.name, path.node.body) // TSInterfaceBody
+        localTypes.set(path.node.id.name, {
+          kind: 'interface',
+          body: path.node.body, // TSInterfaceBody
+          extends: path.node.extends || [], // TSExpressionWithTypeArguments[]
+        })
       }
     },
     TSTypeAliasDeclaration(path) {
       if (path.node.id && t.isIdentifier(path.node.id)) {
-        localTypes.set(path.node.id.name, path.node.typeAnnotation)
+        localTypes.set(path.node.id.name, {
+          kind: 'typeAlias',
+          typeAnnotation: path.node.typeAnnotation,
+        })
       }
     },
   })
