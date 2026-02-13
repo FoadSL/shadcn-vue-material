@@ -5,19 +5,8 @@ export const description = "A sidebar on the right."
 
 <script setup>
 import AppSidebar from "@/registry/new-york-v4/blocks/sidebar-14/components/AppSidebar.vue"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/new-york-v4/ui/breadcrumb"
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/registry/new-york-v4/ui/sidebar"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/registry/new-york-v4/ui/breadcrumb"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/registry/new-york-v4/ui/sidebar"
 </script>
 
 <template>

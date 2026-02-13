@@ -2,7 +2,6 @@
 import { IconGripVertical } from "@tabler/icons-vue"
 import { useSortableContext } from "dnd-kit-vue"
 import { Button } from "@/registry/new-york-v4/ui/button"
-
 const { handleRef, sortable } = useSortableContext()
 </script>
 

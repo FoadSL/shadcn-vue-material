@@ -1,39 +1,9 @@
 <script setup>
-import {
-  ArrowDown,
-  ArrowUp,
-  Bell,
-  Copy,
-  CornerUpLeft,
-  CornerUpRight,
-  FileText,
-  GalleryVerticalEnd,
-  LineChart,
-  Link,
-  MoreHorizontal,
-  Settings2,
-  Star,
-  Trash,
-  Trash2,
-} from "lucide-vue-next"
-
+import { ArrowDown, ArrowUp, Bell, Copy, CornerUpLeft, CornerUpRight, FileText, GalleryVerticalEnd, LineChart, Link, MoreHorizontal, Settings2, Star, Trash, Trash2 } from "lucide-vue-next"
 import { ref } from "vue"
 import { Button } from "@/registry/new-york-v4/ui/button"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/new-york-v4/ui/popover"
+import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar"
 const data = [
   [
     {
@@ -96,7 +66,6 @@ const data = [
     },
   ],
 ]
-
 const isOpen = ref(false)
 </script>
 

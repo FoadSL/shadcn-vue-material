@@ -3,11 +3,12 @@ import { reactiveOmit } from "@vueuse/core"
 import { Minus } from "lucide-vue-next"
 import { NumberFieldDecrement, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwarded = useForwardProps(delegatedProps)
 </script>
 

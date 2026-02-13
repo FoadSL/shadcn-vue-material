@@ -1,35 +1,10 @@
 <script setup>
-import {
-  IconCamera,
-  IconChartBar,
-  IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFolder,
-  IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
-  IconSearch,
-  IconSettings,
-  IconUsers,
-} from "@tabler/icons-vue"
-
+import { IconCamera, IconChartBar, IconDashboard, IconDatabase, IconFileAi, IconFileDescription, IconFolder, IconHelp, IconInnerShadowTop, IconListDetails, IconReport, IconSearch, IconSettings, IconUsers } from "@tabler/icons-vue"
 import NavDocuments from "@/registry/new-york-v4/blocks/dashboard-01/components/NavDocuments.vue"
 import NavMain from "@/registry/new-york-v4/blocks/dashboard-01/components/NavMain.vue"
 import NavSecondary from "@/registry/new-york-v4/blocks/dashboard-01/components/NavSecondary.vue"
 import NavUser from "@/registry/new-york-v4/blocks/dashboard-01/components/NavUser.vue"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar"
 const data = {
   user: {
     name: "shadcn",

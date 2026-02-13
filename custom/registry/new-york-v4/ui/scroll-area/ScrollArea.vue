@@ -1,15 +1,13 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  ScrollAreaCorner,
-  ScrollAreaRoot,
-  ScrollAreaViewport,
-} from "reka-ui"
+import { ScrollAreaCorner, ScrollAreaRoot, ScrollAreaViewport } from "reka-ui"
 import { cn } from "@/lib/utils"
 import ScrollBar from "./ScrollBar.vue"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

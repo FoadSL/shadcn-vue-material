@@ -3,11 +3,12 @@ import { reactiveOmit } from "@vueuse/core"
 import { ChevronUp } from "lucide-vue-next"
 import { SelectScrollUpButton, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

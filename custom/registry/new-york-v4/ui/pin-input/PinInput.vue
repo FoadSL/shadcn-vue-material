@@ -2,24 +2,17 @@
 import { reactiveOmit } from "@vueuse/core"
 import { PinInputRoot, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps({
-  class: {
-    type: [String, Array, Object],
-    required: false,
+const props = defineProps({
+  'class': {
+    required: false
   },
   otp: {
-    type: Boolean,
-    default: true,
-  },
-  // All other PinInputRootProps are forwarded via v-bind / useForwardPropsEmits.
-}), {
-  otp: true,
+    required: false,
+    default: true
+  }
 })
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 

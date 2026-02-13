@@ -1,11 +1,11 @@
 <script setup>
-import {
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
-
-defineProps()
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar"
+defineProps({
+  items: {
+    type: Array,
+    required: true
+  }
+})
 </script>
 
 <template>

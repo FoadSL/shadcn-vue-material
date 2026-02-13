@@ -2,15 +2,11 @@
 import { reactiveOmit } from "@vueuse/core"
 import { RangeCalendarCell, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
 const props = defineProps({
-  class: {
-    type: [String, Array, Object],
-    required: false,
-  },
-  // All other RangeCalendarCellProps are forwarded via v-bind / useForwardProps.
+  'class': {
+    required: false
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class")
 const forwardedProps = useForwardProps(delegatedProps)
 </script>

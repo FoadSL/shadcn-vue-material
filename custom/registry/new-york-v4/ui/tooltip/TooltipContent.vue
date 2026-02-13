@@ -2,17 +2,19 @@
 import { reactiveOmit } from "@vueuse/core"
 import { TooltipArrow, TooltipContent, TooltipPortal, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps(), {
-  sideOffset: 4,
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  sideOffset: {
+    required: false,
+    default: 4
+  }
 })
-
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class")
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

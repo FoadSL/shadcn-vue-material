@@ -3,11 +3,16 @@ import { reactiveOmit } from "@vueuse/core"
 import { ChevronDown } from "lucide-vue-next"
 import { SelectIcon, SelectTrigger, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps(),
-  { size: "default" },
-)
-
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  size: {
+    type: String,
+    required: false,
+    default: "default"
+  }
+})
 const delegatedProps = reactiveOmit(props, "class", "size")
 const forwardedProps = useForwardProps(delegatedProps)
 </script>

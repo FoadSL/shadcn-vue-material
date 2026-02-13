@@ -1,6 +1,5 @@
 <script setup>
 import { DialogTrigger } from "reka-ui"
-
 const props = defineProps()
 </script>
 

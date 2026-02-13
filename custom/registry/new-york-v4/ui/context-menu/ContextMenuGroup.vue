@@ -1,6 +1,5 @@
 <script setup>
 import { ContextMenuGroup } from "reka-ui"
-
 const props = defineProps()
 </script>
 

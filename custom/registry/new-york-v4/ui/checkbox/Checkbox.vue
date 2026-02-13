@@ -3,17 +3,12 @@ import { reactiveOmit } from "@vueuse/core"
 import { Check } from "lucide-vue-next"
 import { CheckboxIndicator, CheckboxRoot, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
-
 const props = defineProps({
-  class: {
-    type: [String, Array, Object],
-    required: false,
-  },
-  // All other CheckboxRootProps are forwarded via v-bind / useForwardPropsEmits.
+  'class': {
+    required: false
+  }
 })
-
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class")
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

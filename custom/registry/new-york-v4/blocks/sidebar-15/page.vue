@@ -6,18 +6,9 @@ export const description = "A left and right sidebar."
 <script setup>
 import SidebarLeft from "@/registry/new-york-v4/blocks/sidebar-15/components/SidebarLeft.vue"
 import SidebarRight from "@/registry/new-york-v4/blocks/sidebar-15/components/SidebarRight.vue"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-} from "@/registry/new-york-v4/ui/breadcrumb"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage } from "@/registry/new-york-v4/ui/breadcrumb"
 import { Separator } from "@/registry/new-york-v4/ui/separator"
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/registry/new-york-v4/ui/sidebar"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/registry/new-york-v4/ui/sidebar"
 </script>
 
 <template>

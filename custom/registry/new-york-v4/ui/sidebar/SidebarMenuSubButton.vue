@@ -1,10 +1,27 @@
 <script setup>
 import { Primitive } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps(), {
-  as: "a",
-  size: "md",
+const props = defineProps({
+  as: {
+    required: false,
+    default: "a"
+  },
+  asChild: {
+    type: Boolean,
+    required: false
+  },
+  size: {
+    type: String,
+    required: false,
+    default: "md"
+  },
+  isActive: {
+    type: Boolean,
+    required: false
+  },
+  'class': {
+    required: false
+  }
 })
 </script>
 

@@ -1,30 +1,13 @@
 <script setup>
-import {
-  Folder,
-  Forward,
-  MoreHorizontal,
-  Trash2,
-} from "lucide-vue-next"
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/new-york-v4/ui/dropdown-menu"
-import {
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  useSidebar,
-} from "@/registry/new-york-v4/ui/sidebar"
-
-defineProps()
-
+import { Folder, Forward, MoreHorizontal, Trash2 } from "lucide-vue-next"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/registry/new-york-v4/ui/dropdown-menu"
+import { SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuAction, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@/registry/new-york-v4/ui/sidebar"
+defineProps({
+  projects: {
+    type: Array,
+    required: true
+  }
+})
 const { isMobile } = useSidebar()
 </script>
 

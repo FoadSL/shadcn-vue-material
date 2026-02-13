@@ -1,13 +1,11 @@
 <script setup>
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
-
-const props = defineProps()
+import { SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar"
+const props = defineProps({
+  items: {
+    type: Array,
+    required: true
+  }
+})
 </script>
 
 <template>

@@ -1,6 +1,5 @@
 <script setup>
 import { SelectItemText } from "reka-ui"
-
 const props = defineProps()
 </script>
 

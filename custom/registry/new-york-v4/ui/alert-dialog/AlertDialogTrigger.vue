@@ -1,6 +1,5 @@
 <script setup>
 import { AlertDialogTrigger } from "reka-ui"
-
 const props = defineProps()
 </script>
 

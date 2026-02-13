@@ -1,9 +1,11 @@
 <script setup>
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const { toggleSidebar } = useSidebar()
 </script>
 

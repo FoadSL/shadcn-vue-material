@@ -1,14 +1,11 @@
 <script setup>
 import { cn } from "@/lib/utils"
 import { useFormField } from "./useFormField"
-
 const props = defineProps({
-  class: {
-    type: [String, Array, Object],
-    required: false,
-  },
+  'class': {
+    required: false
+  }
 })
-
 const { formDescriptionId } = useFormField()
 </script>
 

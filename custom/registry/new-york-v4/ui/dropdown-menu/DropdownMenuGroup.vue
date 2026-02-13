@@ -1,6 +1,5 @@
 <script setup>
 import { DropdownMenuGroup } from "reka-ui"
-
 const props = defineProps()
 </script>
 

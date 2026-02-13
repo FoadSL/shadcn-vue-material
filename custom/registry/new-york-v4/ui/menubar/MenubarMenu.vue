@@ -1,6 +1,5 @@
 <script setup>
 import { MenubarMenu } from "reka-ui"
-
 const props = defineProps()
 </script>
 

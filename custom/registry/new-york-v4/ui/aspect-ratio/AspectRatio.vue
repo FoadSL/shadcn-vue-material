@@ -1,6 +1,5 @@
 <script setup>
 import { AspectRatio } from "reka-ui"
-
 const props = defineProps()
 </script>
 

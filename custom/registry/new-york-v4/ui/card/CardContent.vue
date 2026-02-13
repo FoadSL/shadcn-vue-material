@@ -1,11 +1,9 @@
 <script setup>
 import { cn } from "@/lib/utils"
-
 const props = defineProps({
-  class: {
-    type: [String, Array, Object],
-    required: false,
-  },
+  'class': {
+    required: false
+  }
 })
 </script>
 

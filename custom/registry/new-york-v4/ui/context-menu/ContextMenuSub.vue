@@ -1,12 +1,7 @@
 <script setup>
-import {
-  ContextMenuSub,
-  useForwardPropsEmits,
-} from "reka-ui"
-
+import { ContextMenuSub, useForwardPropsEmits } from "reka-ui"
 const props = defineProps()
 const emits = defineEmits()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

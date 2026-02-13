@@ -1,24 +1,18 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { X } from "lucide-vue-next"
-import {
-  DialogClose,
-  DialogContent,
-  DialogOverlay,
-  DialogPortal,
-  useForwardPropsEmits,
-} from "reka-ui"
+import { DialogClose, DialogContent, DialogOverlay, DialogPortal, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = defineProps()
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
@@ -37,7 +31,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         v-bind="{ ...$attrs, ...forwarded }"
         @pointer-down-outside="(event) => {
           const originalEvent = event.detail.originalEvent;
-          const target = originalEvent.target as HTMLElement;
+          const target = originalEvent.target;
           if (originalEvent.offsetX > target.clientWidth || originalEvent.offsetY > target.clientHeight) {
             event.preventDefault();
           }

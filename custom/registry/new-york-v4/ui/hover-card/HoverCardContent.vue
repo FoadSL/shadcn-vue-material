@@ -1,24 +1,20 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  HoverCardContent,
-  HoverCardPortal,
-  useForwardProps,
-} from "reka-ui"
+import { HoverCardContent, HoverCardPortal, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps(),
-  {
-    sideOffset: 4,
+const props = defineProps({
+  'class': {
+    required: false
   },
-)
-
+  sideOffset: {
+    required: false,
+    default: 4
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

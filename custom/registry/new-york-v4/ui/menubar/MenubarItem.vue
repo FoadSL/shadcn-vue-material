@@ -1,15 +1,21 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  MenubarItem,
-  useForwardPropsEmits,
-} from "reka-ui"
+import { MenubarItem, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  inset: {
+    type: Boolean,
+    required: false
+  },
+  variant: {
+    type: String,
+    required: false
+  }
+})
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class", "inset", "variant")
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>

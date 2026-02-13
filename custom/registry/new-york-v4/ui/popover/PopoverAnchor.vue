@@ -1,6 +1,5 @@
 <script setup>
 import { PopoverAnchor } from "reka-ui"
-
 const props = defineProps()
 </script>
 

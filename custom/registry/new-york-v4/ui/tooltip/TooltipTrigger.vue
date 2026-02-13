@@ -1,6 +1,5 @@
 <script setup>
 import { TooltipTrigger } from "reka-ui"
-
 const props = defineProps()
 </script>
 

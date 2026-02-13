@@ -1,8 +1,11 @@
 <script setup>
 import { SelectLabel } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 </script>
 
 <template>

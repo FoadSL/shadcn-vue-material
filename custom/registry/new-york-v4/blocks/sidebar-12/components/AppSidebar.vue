@@ -2,40 +2,25 @@
 import Calendars from "@/registry/new-york-v4/blocks/sidebar-12/components/Calendars.vue"
 import DatePicker from "@/registry/new-york-v4/blocks/sidebar-12/components/DatePicker.vue"
 import NavUser from "@/registry/new-york-v4/blocks/sidebar-12/components/NavUser.vue"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarRail,
-  SidebarSeparator,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarRail, SidebarSeparator } from "@/registry/new-york-v4/ui/sidebar"
 const props = defineProps()
 // This is sample data.
 const data = {
   user: {
     name: "shadcn",
     email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "/avatars/shadcn.jpg"
   },
-  calendars: [
-    {
+  calendars: [{
       name: "My Calendars",
-      items: ["Personal", "Work", "Family"],
-    },
-    {
+      items: ["Personal", "Work", "Family"]
+    }, {
       name: "Favorites",
-      items: ["Holidays", "Birthdays"],
-    },
-    {
+      items: ["Holidays", "Birthdays"]
+    }, {
       name: "Other",
-      items: ["Travel", "Reminders", "Deadlines"],
-    },
-  ],
+      items: ["Travel", "Reminders", "Deadlines"]
+    }]
 }
 </script>
 

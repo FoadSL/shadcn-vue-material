@@ -2,8 +2,18 @@
 import { reactiveOmit } from "@vueuse/core"
 import { Primitive, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
+const props = defineProps({
+  as: {
+    required: false
+  },
+  asChild: {
+    type: Boolean,
+    required: false
+  },
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
 const forwardedProps = useForwardProps(delegatedProps)
 </script>

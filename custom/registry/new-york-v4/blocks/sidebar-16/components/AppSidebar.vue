@@ -1,155 +1,103 @@
 <script setup>
-import {
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
-} from "lucide-vue-next"
-
+import { BookOpen, Bot, Command, Frame, LifeBuoy, Map, PieChart, Send, Settings2, SquareTerminal } from "lucide-vue-next"
 import NavMain from "@/registry/new-york-v4/blocks/sidebar-16/components/NavMain.vue"
 import NavProjects from "@/registry/new-york-v4/blocks/sidebar-16/components/NavProjects.vue"
 import NavSecondary from "@/registry/new-york-v4/blocks/sidebar-16/components/NavSecondary.vue"
 import NavUser from "@/registry/new-york-v4/blocks/sidebar-16/components/NavUser.vue"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar"
 const props = defineProps()
-
 const data = {
   user: {
     name: "shadcn",
     email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "/avatars/shadcn.jpg"
   },
-  navMain: [
-    {
+  navMain: [{
       title: "Playground",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
-      items: [
-        {
+      items: [{
           title: "History",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Starred",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
+          url: "#"
+        }]
+    }, {
       title: "Models",
       url: "#",
       icon: Bot,
-      items: [
-        {
+      items: [{
           title: "Genesis",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Explorer",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
+          url: "#"
+        }]
+    }, {
       title: "Documentation",
       url: "#",
       icon: BookOpen,
-      items: [
-        {
+      items: [{
           title: "Introduction",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Get Started",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Tutorials",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
+          url: "#"
+        }]
+    }, {
       title: "Settings",
       url: "#",
       icon: Settings2,
-      items: [
-        {
+      items: [{
           title: "General",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Team",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Billing",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Limits",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  navSecondary: [
-    {
+          url: "#"
+        }]
+    }],
+  navSecondary: [{
       title: "Support",
       url: "#",
-      icon: LifeBuoy,
-    },
-    {
+      icon: LifeBuoy
+    }, {
       title: "Feedback",
       url: "#",
-      icon: Send,
-    },
-  ],
-  projects: [
-    {
+      icon: Send
+    }],
+  projects: [{
       name: "Design Engineering",
       url: "#",
-      icon: Frame,
-    },
-    {
+      icon: Frame
+    }, {
       name: "Sales & Marketing",
       url: "#",
-      icon: PieChart,
-    },
-    {
+      icon: PieChart
+    }, {
       name: "Travel",
       url: "#",
-      icon: Map,
-    },
-  ],
+      icon: Map
+    }]
 }
 </script>
 

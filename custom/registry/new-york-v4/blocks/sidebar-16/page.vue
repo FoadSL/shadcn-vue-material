@@ -6,10 +6,7 @@ export const description = "A sidebar with a header and a search form."
 <script setup>
 import AppSidebar from "@/registry/new-york-v4/blocks/sidebar-16/components/AppSidebar.vue"
 import SiteHeader from "@/registry/new-york-v4/blocks/sidebar-16/components/SiteHeader.vue"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/registry/new-york-v4/ui/sidebar"
+import { SidebarInset, SidebarProvider } from "@/registry/new-york-v4/ui/sidebar"
 </script>
 
 <template>

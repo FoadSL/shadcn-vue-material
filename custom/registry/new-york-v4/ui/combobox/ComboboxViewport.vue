@@ -2,11 +2,12 @@
 import { reactiveOmit } from "@vueuse/core"
 import { ComboboxViewport, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwarded = useForwardProps(delegatedProps)
 </script>
 

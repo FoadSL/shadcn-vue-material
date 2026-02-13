@@ -1,15 +1,7 @@
 <script setup>
 import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-vue"
-
 import { Badge } from "@/registry/new-york-v4/ui/badge"
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/new-york-v4/ui/card"
 </script>
 
 <template>

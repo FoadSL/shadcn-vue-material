@@ -1,6 +1,5 @@
 <script setup>
 import { RangeCalendarGridHead } from "reka-ui"
-
 const props = defineProps()
 </script>
 

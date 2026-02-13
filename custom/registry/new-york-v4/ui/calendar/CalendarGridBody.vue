@@ -1,6 +1,5 @@
 <script setup>
 import { CalendarGridBody } from "reka-ui"
-
 const props = defineProps()
 </script>
 

@@ -1,12 +1,12 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  DropdownMenuSeparator,
-} from "reka-ui"
+import { DropdownMenuSeparator } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

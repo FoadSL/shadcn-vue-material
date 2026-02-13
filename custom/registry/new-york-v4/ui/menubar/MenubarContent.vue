@@ -1,26 +1,28 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  MenubarContent,
-  MenubarPortal,
-  useForwardProps,
-} from "reka-ui"
+import { MenubarContent, MenubarPortal, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps(),
-  {
-    align: "start",
-    alignOffset: -4,
-    sideOffset: 8,
+const props = defineProps({
+  'class': {
+    required: false
   },
-)
-
+  align: {
+    required: false,
+    default: "start"
+  },
+  alignOffset: {
+    required: false,
+    default: -4
+  },
+  sideOffset: {
+    required: false,
+    default: 8
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

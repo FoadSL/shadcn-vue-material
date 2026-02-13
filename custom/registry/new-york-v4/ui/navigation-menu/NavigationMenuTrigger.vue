@@ -1,17 +1,15 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { ChevronDown } from "lucide-vue-next"
-import {
-  NavigationMenuTrigger,
-  useForwardProps,
-} from "reka-ui"
+import { NavigationMenuTrigger, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { navigationMenuTriggerStyle } from "."
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

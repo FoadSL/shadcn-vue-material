@@ -1,16 +1,19 @@
 <script setup>
 import { FlexRender } from "@tanstack/vue-table"
 import { useSortable } from "dnd-kit-vue"
-import {
-  TableCell,
-  TableRow,
-} from "@/registry/new-york-v4/ui/table"
-
-const props = defineProps<{ row: Row<z.infer<typeof schema>>, index: number }>()
-
+import { TableCell, TableRow } from "@/registry/new-york-v4/ui/table"
+const props = defineProps({
+  row: {
+    required: true
+  },
+  index: {
+    type: Number,
+    required: true
+  }
+})
 const { elementRef, isDragging } = useSortable({
   id: props.row.original.id,
-  index: props.index,
+  index: props.index
 })
 </script>
 

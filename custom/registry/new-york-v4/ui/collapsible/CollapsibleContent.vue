@@ -1,6 +1,5 @@
 <script setup>
 import { CollapsibleContent } from "reka-ui"
-
 const props = defineProps()
 </script>
 

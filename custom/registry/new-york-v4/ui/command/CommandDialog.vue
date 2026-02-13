@@ -2,13 +2,19 @@
 import { useForwardPropsEmits } from "reka-ui"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/registry/new-york-v4/ui/dialog"
 import Command from "./Command.vue"
-
-const props = withDefaults(defineProps(), {
-  title: "Command Palette",
-  description: "Search for a command to run...",
+const props = defineProps({
+  title: {
+    type: String,
+    required: false,
+    default: "Command Palette"
+  },
+  description: {
+    type: String,
+    required: false,
+    default: "Search for a command to run..."
+  }
 })
 const emits = defineEmits()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

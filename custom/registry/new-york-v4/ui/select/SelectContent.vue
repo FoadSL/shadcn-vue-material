@@ -1,27 +1,22 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  SelectContent,
-  SelectPortal,
-  SelectViewport,
-  useForwardPropsEmits,
-} from "reka-ui"
+import { SelectContent, SelectPortal, SelectViewport, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { SelectScrollDownButton, SelectScrollUpButton } from "."
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps(),
-  {
-    position: "popper",
+const props = defineProps({
+  'class': {
+    required: false
   },
-)
+  position: {
+    required: false,
+    default: "popper"
+  }
+})
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 

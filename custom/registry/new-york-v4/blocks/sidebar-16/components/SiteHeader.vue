@@ -1,19 +1,10 @@
 <script setup>
 import { SidebarIcon } from "lucide-vue-next"
-
 import SearchForm from "@/registry/new-york-v4/blocks/sidebar-16/components/SearchForm.vue"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/new-york-v4/ui/breadcrumb"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/registry/new-york-v4/ui/breadcrumb"
 import { Button } from "@/registry/new-york-v4/ui/button"
 import { Separator } from "@/registry/new-york-v4/ui/separator"
 import { useSidebar } from "@/registry/new-york-v4/ui/sidebar"
-
 const { toggleSidebar } = useSidebar()
 </script>
 

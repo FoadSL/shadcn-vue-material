@@ -1,6 +1,5 @@
 <script setup>
 import { DrawerTrigger } from "vaul-vue"
-
 const props = defineProps()
 </script>
 

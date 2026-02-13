@@ -1,7 +1,10 @@
 <script setup>
 import { CalendarGridHead } from "reka-ui"
-
-const props = defineProps()
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 </script>
 
 <template>

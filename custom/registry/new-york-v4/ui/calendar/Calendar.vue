@@ -7,35 +7,38 @@ import { computed, toRaw } from "vue"
 import { cn } from "@/lib/utils"
 import { NativeSelect, NativeSelectOption } from "@/registry/new-york-v4/ui/native-select"
 import { CalendarCell, CalendarCellTrigger, CalendarGrid, CalendarGridBody, CalendarGridHead, CalendarGridRow, CalendarHeadCell, CalendarHeader, CalendarHeading, CalendarNextButton, CalendarPrevButton } from "."
-
-const props = withDefaults(defineProps(), {
-  modelValue: undefined,
-  layout: undefined,
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  layout: {
+    required: false,
+    default: undefined
+  },
+  yearRange: {
+    type: Array,
+    required: false
+  },
+  modelValue: {
+    required: false,
+    default: undefined
+  }
 })
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class", "layout", "placeholder")
-
 const placeholder = useVModel(props, "placeholder", emits, {
   passive: true,
-  defaultValue: props.defaultPlaceholder ?? today(getLocalTimeZone()),
-}) as Ref<DateValue>
-
+  defaultValue: props.defaultPlaceholder ?? today(getLocalTimeZone())
+})
 const formatter = useDateFormatter(props.locale ?? "en")
-
 const yearRange = computed(() => {
   return props.yearRange ?? createYearRange({
-    start: props?.minValue ?? (toRaw(props.placeholder) ?? props.defaultPlaceholder ?? today(getLocalTimeZone()))
-      .cycle("year", -100),
-
-    end: props?.maxValue ?? (toRaw(props.placeholder) ?? props.defaultPlaceholder ?? today(getLocalTimeZone()))
-      .cycle("year", 10),
+    start: props?.minValue ?? (toRaw(props.placeholder) ?? props.defaultPlaceholder ?? today(getLocalTimeZone())).cycle("year", -100),
+    end: props?.maxValue ?? (toRaw(props.placeholder) ?? props.defaultPlaceholder ?? today(getLocalTimeZone())).cycle("year", 10)
   })
 })
-
-const [DefineMonthTemplate, ReuseMonthTemplate] = createReusableTemplate<{ date: DateValue }>()
-const [DefineYearTemplate, ReuseYearTemplate] = createReusableTemplate<{ date: DateValue }>()
-
+const [DefineMonthTemplate, ReuseMonthTemplate] = createReusableTemplate()
+const [DefineYearTemplate, ReuseYearTemplate] = createReusableTemplate()
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
@@ -48,9 +51,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         </div>
         <NativeSelect
           class="text-xs h-8 pr-6 pl-2 text-transparent relative"
-          @change="(e: Event) => {
+          @change="(e) => {
             placeholder = placeholder.set({
-              month: Number((e?.target as any)?.value),
+              month: Number((e?.target)?.value),
             })
           }"
         >
@@ -70,9 +73,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         </div>
         <NativeSelect
           class="text-xs h-8 pr-6 pl-2 text-transparent relative"
-          @change="(e: Event) => {
+          @change="(e) => {
             placeholder = placeholder.set({
-              year: Number((e?.target as any)?.value),
+              year: Number((e?.target)?.value),
             })
           }"
         >

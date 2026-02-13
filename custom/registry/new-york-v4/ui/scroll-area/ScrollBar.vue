@@ -2,11 +2,15 @@
 import { reactiveOmit } from "@vueuse/core"
 import { ScrollAreaScrollbar, ScrollAreaThumb } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps(), {
-  orientation: "vertical",
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  orientation: {
+    required: false,
+    default: "vertical"
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

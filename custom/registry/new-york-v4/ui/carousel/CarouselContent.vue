@@ -1,13 +1,10 @@
 <script setup>
 import { cn } from "@/lib/utils"
 import { useCarousel } from "./useCarousel"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
 const props = defineProps()
-
 const { carouselRef, orientation } = useCarousel()
 </script>
 

@@ -1,261 +1,189 @@
 <script setup>
-import {
-  AudioWaveform,
-  Blocks,
-  Calendar,
-  Command,
-  Home,
-  Inbox,
-  MessageCircleQuestion,
-  Search,
-  Settings2,
-  Sparkles,
-  Trash2,
-} from "lucide-vue-next"
-
+import { AudioWaveform, Blocks, Calendar, Command, Home, Inbox, MessageCircleQuestion, Search, Settings2, Sparkles, Trash2 } from "lucide-vue-next"
 import NavFavorites from "@/registry/new-york-v4/blocks/sidebar-15/components/NavFavorites.vue"
 import NavMain from "@/registry/new-york-v4/blocks/sidebar-15/components/NavMain.vue"
 import NavSecondary from "@/registry/new-york-v4/blocks/sidebar-15/components/NavSecondary.vue"
 import NavWorkspaces from "@/registry/new-york-v4/blocks/sidebar-15/components/NavWorkspaces.vue"
 import TeamSwitcher from "@/registry/new-york-v4/blocks/sidebar-15/components/TeamSwitcher.vue"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarHeader,
-  SidebarRail,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Sidebar, SidebarContent, SidebarHeader, SidebarRail } from "@/registry/new-york-v4/ui/sidebar"
 const props = defineProps()
-
 // This is sample data.
 const data = {
-  teams: [
-    {
+  teams: [{
       name: "Acme Inc",
       logo: Command,
-      plan: "Enterprise",
-    },
-    {
+      plan: "Enterprise"
+    }, {
       name: "Acme Corp.",
       logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
+      plan: "Startup"
+    }, {
       name: "Evil Corp.",
       logo: Command,
-      plan: "Free",
-    },
-  ],
-  navMain: [
-    {
+      plan: "Free"
+    }],
+  navMain: [{
       title: "Search",
       url: "#",
-      icon: Search,
-    },
-    {
+      icon: Search
+    }, {
       title: "Ask AI",
       url: "#",
-      icon: Sparkles,
-    },
-    {
+      icon: Sparkles
+    }, {
       title: "Home",
       url: "#",
       icon: Home,
-      isActive: true,
-    },
-    {
+      isActive: true
+    }, {
       title: "Inbox",
       url: "#",
       icon: Inbox,
-      badge: "10",
-    },
-  ],
-  navSecondary: [
-    {
+      badge: "10"
+    }],
+  navSecondary: [{
       title: "Calendar",
       url: "#",
-      icon: Calendar,
-    },
-    {
+      icon: Calendar
+    }, {
       title: "Settings",
       url: "#",
-      icon: Settings2,
-    },
-    {
+      icon: Settings2
+    }, {
       title: "Templates",
       url: "#",
-      icon: Blocks,
-    },
-    {
+      icon: Blocks
+    }, {
       title: "Trash",
       url: "#",
-      icon: Trash2,
-    },
-    {
+      icon: Trash2
+    }, {
       title: "Help",
       url: "#",
-      icon: MessageCircleQuestion,
-    },
-  ],
-  favorites: [
-    {
+      icon: MessageCircleQuestion
+    }],
+  favorites: [{
       name: "Project Management & Task Tracking",
       url: "#",
-      emoji: "📊",
-    },
-    {
+      emoji: "📊"
+    }, {
       name: "Family Recipe Collection & Meal Planning",
       url: "#",
-      emoji: "🍳",
-    },
-    {
+      emoji: "🍳"
+    }, {
       name: "Fitness Tracker & Workout Routines",
       url: "#",
-      emoji: "💪",
-    },
-    {
+      emoji: "💪"
+    }, {
       name: "Book Notes & Reading List",
       url: "#",
-      emoji: "📚",
-    },
-    {
+      emoji: "📚"
+    }, {
       name: "Sustainable Gardening Tips & Plant Care",
       url: "#",
-      emoji: "🌱",
-    },
-    {
+      emoji: "🌱"
+    }, {
       name: "Language Learning Progress & Resources",
       url: "#",
-      emoji: "🗣️",
-    },
-    {
+      emoji: "🗣️"
+    }, {
       name: "Home Renovation Ideas & Budget Tracker",
       url: "#",
-      emoji: "🏠",
-    },
-    {
+      emoji: "🏠"
+    }, {
       name: "Personal Finance & Investment Portfolio",
       url: "#",
-      emoji: "💰",
-    },
-    {
+      emoji: "💰"
+    }, {
       name: "Movie & TV Show Watchlist with Reviews",
       url: "#",
-      emoji: "🎬",
-    },
-    {
+      emoji: "🎬"
+    }, {
       name: "Daily Habit Tracker & Goal Setting",
       url: "#",
-      emoji: "✅",
-    },
-  ],
-  workspaces: [
-    {
+      emoji: "✅"
+    }],
+  workspaces: [{
       name: "Personal Life Management",
       emoji: "🏠",
-      pages: [
-        {
+      pages: [{
           name: "Daily Journal & Reflection",
           url: "#",
-          emoji: "📔",
-        },
-        {
+          emoji: "📔"
+        }, {
           name: "Health & Wellness Tracker",
           url: "#",
-          emoji: "🍏",
-        },
-        {
+          emoji: "🍏"
+        }, {
           name: "Personal Growth & Learning Goals",
           url: "#",
-          emoji: "🌟",
-        },
-      ],
-    },
-    {
+          emoji: "🌟"
+        }]
+    }, {
       name: "Professional Development",
       emoji: "💼",
-      pages: [
-        {
+      pages: [{
           name: "Career Objectives & Milestones",
           url: "#",
-          emoji: "🎯",
-        },
-        {
+          emoji: "🎯"
+        }, {
           name: "Skill Acquisition & Training Log",
           url: "#",
-          emoji: "🧠",
-        },
-        {
+          emoji: "🧠"
+        }, {
           name: "Networking Contacts & Events",
           url: "#",
-          emoji: "🤝",
-        },
-      ],
-    },
-    {
+          emoji: "🤝"
+        }]
+    }, {
       name: "Creative Projects",
       emoji: "🎨",
-      pages: [
-        {
+      pages: [{
           name: "Writing Ideas & Story Outlines",
           url: "#",
-          emoji: "✍️",
-        },
-        {
+          emoji: "✍️"
+        }, {
           name: "Art & Design Portfolio",
           url: "#",
-          emoji: "🖼️",
-        },
-        {
+          emoji: "🖼️"
+        }, {
           name: "Music Composition & Practice Log",
           url: "#",
-          emoji: "🎵",
-        },
-      ],
-    },
-    {
+          emoji: "🎵"
+        }]
+    }, {
       name: "Home Management",
       emoji: "🏡",
-      pages: [
-        {
+      pages: [{
           name: "Household Budget & Expense Tracking",
           url: "#",
-          emoji: "💰",
-        },
-        {
+          emoji: "💰"
+        }, {
           name: "Home Maintenance Schedule & Tasks",
           url: "#",
-          emoji: "🔧",
-        },
-        {
+          emoji: "🔧"
+        }, {
           name: "Family Calendar & Event Planning",
           url: "#",
-          emoji: "📅",
-        },
-      ],
-    },
-    {
+          emoji: "📅"
+        }]
+    }, {
       name: "Travel & Adventure",
       emoji: "🧳",
-      pages: [
-        {
+      pages: [{
           name: "Trip Planning & Itineraries",
           url: "#",
-          emoji: "🗺️",
-        },
-        {
+          emoji: "🗺️"
+        }, {
           name: "Travel Bucket List & Inspiration",
           url: "#",
-          emoji: "🌎",
-        },
-        {
+          emoji: "🌎"
+        }, {
           name: "Travel Journal & Photo Gallery",
           url: "#",
-          emoji: "📸",
-        },
-      ],
-    },
-  ],
+          emoji: "📸"
+        }]
+    }]
 }
 </script>
 

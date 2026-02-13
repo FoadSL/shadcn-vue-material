@@ -2,15 +2,13 @@
 import { reactiveOmit } from "@vueuse/core"
 import { CalendarHeading, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
-defineSlots<{
-  default: (props: { headingValue: string }) => any
-}>()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
+defineSlots()
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

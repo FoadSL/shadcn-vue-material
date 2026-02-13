@@ -3,9 +3,11 @@ import { reactiveOmit } from "@vueuse/core"
 import { MoreHorizontal } from "lucide-vue-next"
 import { PaginationEllipsis } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

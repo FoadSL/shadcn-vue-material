@@ -1,63 +1,21 @@
 <script setup>
 import { File } from "lucide-vue-next"
 import Tree from "@/registry/new-york-v4/blocks/sidebar-11/components/Tree.vue"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuBadge,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarRail,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarRail } from "@/registry/new-york-v4/ui/sidebar"
 const props = defineProps()
-
 // This is sample data.
 const data = {
-  changes: [
-    {
+  changes: [{
       file: "README.md",
-      state: "M",
-    },
-    {
+      state: "M"
+    }, {
       file: "api/hello/route.ts",
-      state: "U",
-    },
-    {
+      state: "U"
+    }, {
       file: "app/layout.tsx",
-      state: "M",
-    },
-  ],
-  tree: [
-    [
-      "app",
-      [
-        "api",
-        ["hello", ["route.ts"]],
-        "page.tsx",
-        "layout.tsx",
-        ["blog", ["page.tsx"]],
-      ],
-    ],
-    [
-      "components",
-      ["ui", "button.tsx", "card.tsx"],
-      "header.tsx",
-      "footer.tsx",
-    ],
-    ["lib", ["util.ts"]],
-    ["public", "favicon.ico", "vercel.svg"],
-    ".eslintrc.json",
-    ".gitignore",
-    "next.config.js",
-    "tailwind.config.js",
-    "package.json",
-    "README.md",
-  ],
+      state: "M"
+    }],
+  tree: [["app", ["api", ["hello", ["route.ts"]], "page.tsx", "layout.tsx", ["blog", ["page.tsx"]]]], ["components", ["ui", "button.tsx", "card.tsx"], "header.tsx", "footer.tsx"], ["lib", ["util.ts"]], ["public", "favicon.ico", "vercel.svg"], ".eslintrc.json", ".gitignore", "next.config.js", "tailwind.config.js", "package.json", "README.md"]
 }
 </script>
 

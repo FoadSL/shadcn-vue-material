@@ -1,9 +1,22 @@
 <script setup>
 import { Primitive } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps(), {
-  as: "button",
+const props = defineProps({
+  as: {
+    required: false,
+    default: "button"
+  },
+  asChild: {
+    type: Boolean,
+    required: false
+  },
+  showOnHover: {
+    type: Boolean,
+    required: false
+  },
+  'class': {
+    required: false
+  }
 })
 </script>
 

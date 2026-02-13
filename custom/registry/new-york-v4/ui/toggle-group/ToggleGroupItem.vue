@@ -4,13 +4,18 @@ import { ToggleGroupItem, useForwardProps } from "reka-ui"
 import { inject } from "vue"
 import { cn } from "@/lib/utils"
 import { toggleVariants } from "@/registry/new-york-v4/ui/toggle"
-  spacing?: number
-}
-
-const props = defineProps()
-
-const context = inject<ToggleGroupVariants>("toggleGroup")
-
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  variant: {
+    required: false
+  },
+  size: {
+    required: false
+  }
+})
+const context = inject("toggleGroup")
 const delegatedProps = reactiveOmit(props, "class", "size", "variant")
 const forwardedProps = useForwardProps(delegatedProps)
 </script>

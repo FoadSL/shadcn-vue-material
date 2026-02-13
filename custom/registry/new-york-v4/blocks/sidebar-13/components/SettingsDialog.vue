@@ -1,47 +1,10 @@
 <script setup>
-import {
-  Bell,
-  Check,
-  Globe,
-  Home,
-  Keyboard,
-  Link,
-  Lock,
-  Menu,
-  MessageCircle,
-  Paintbrush,
-  Settings,
-  Video,
-} from "lucide-vue-next"
-
+import { Bell, Check, Globe, Home, Keyboard, Link, Lock, Menu, MessageCircle, Paintbrush, Settings, Video } from "lucide-vue-next"
 import { ref } from "vue"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/registry/new-york-v4/ui/breadcrumb"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/registry/new-york-v4/ui/breadcrumb"
 import { Button } from "@/registry/new-york-v4/ui/button"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/registry/new-york-v4/ui/dialog"
+import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider } from "@/registry/new-york-v4/ui/sidebar"
 const data = {
   nav: [
     { name: "Notifications", icon: Bell },
@@ -58,7 +21,6 @@ const data = {
     { name: "Advanced", icon: Settings },
   ],
 }
-
 const open = ref(true)
 </script>
 

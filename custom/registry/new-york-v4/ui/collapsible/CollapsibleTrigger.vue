@@ -1,6 +1,5 @@
 <script setup>
 import { CollapsibleTrigger } from "reka-ui"
-
 const props = defineProps()
 </script>
 

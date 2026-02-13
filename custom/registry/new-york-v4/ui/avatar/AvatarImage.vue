@@ -1,6 +1,5 @@
 <script setup>
 import { AvatarImage } from "reka-ui"
-
 const props = defineProps()
 </script>
 

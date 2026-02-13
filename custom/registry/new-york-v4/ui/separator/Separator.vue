@@ -2,12 +2,19 @@
 import { reactiveOmit } from "@vueuse/core"
 import { Separator } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps(), {
-  orientation: "horizontal",
-  decorative: true,
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  orientation: {
+    required: false,
+    default: "horizontal"
+  },
+  decorative: {
+    required: false,
+    default: true
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

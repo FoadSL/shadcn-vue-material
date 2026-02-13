@@ -1,16 +1,13 @@
 <script setup>
 import { cn } from "@/registry/new-york-v4/lib/utils"
 import { Button } from "@/registry/new-york-v4/ui/button"
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
-} from "@/registry/new-york-v4/ui/field"
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSeparator } from "@/registry/new-york-v4/ui/field"
 import { Input } from "@/registry/new-york-v4/ui/input"
-
-const props = defineProps()
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 </script>
 
 <template>

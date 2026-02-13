@@ -2,18 +2,30 @@
 import { Primitive } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { sidebarMenuButtonVariants } from "."
-
-export interface SidebarMenuButtonProps extends PrimitiveProps {
-  variant?: SidebarMenuButtonVariants["variant"]
-  size?: SidebarMenuButtonVariants["size"]
-  isActive?: boolean
-  class?: HTMLAttributes["class"]
-}
-
-const props = withDefaults(defineProps(), {
-  as: "button",
-  variant: "default",
-  size: "default",
+const props = defineProps({
+  variant: {
+    required: false,
+    default: "default"
+  },
+  size: {
+    required: false,
+    default: "default"
+  },
+  isActive: {
+    type: Boolean,
+    required: false
+  },
+  'class': {
+    required: false
+  },
+  as: {
+    required: false,
+    default: "button"
+  },
+  asChild: {
+    type: Boolean,
+    required: false
+  }
 })
 </script>
 

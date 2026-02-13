@@ -4,11 +4,15 @@ import { ChevronRightIcon } from "lucide-vue-next"
 import { PaginationLast, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/registry/new-york-v4/ui/button"
-
-const props = withDefaults(defineProps(), {
-  size: "default",
+const props = defineProps({
+  size: {
+    required: false,
+    default: "default"
+  },
+  'class': {
+    required: false
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class", "size")
 const forwarded = useForwardProps(delegatedProps)
 </script>

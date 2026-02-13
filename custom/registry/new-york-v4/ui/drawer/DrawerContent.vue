@@ -3,14 +3,15 @@ import { useForwardPropsEmits } from "reka-ui"
 import { DrawerContent, DrawerPortal } from "vaul-vue"
 import { cn } from "@/lib/utils"
 import DrawerOverlay from "./DrawerOverlay.vue"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = defineProps()
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const emits = defineEmits()
-
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

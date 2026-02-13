@@ -1,31 +1,24 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { X } from "lucide-vue-next"
-import {
-  DialogClose,
-  DialogContent,
-  DialogPortal,
-  useForwardPropsEmits,
-} from "reka-ui"
+import { DialogClose, DialogContent, DialogPortal, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
 import SheetOverlay from "./SheetOverlay.vue"
-
-interface SheetContentProps extends DialogContentProps {
-  class?: HTMLAttributes["class"]
-  side?: "top" | "right" | "bottom" | "left"
-}
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps(), {
-  side: "right",
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  side: {
+    type: String,
+    required: false,
+    default: "right"
+  }
 })
 const emits = defineEmits()
-
 const delegatedProps = reactiveOmit(props, "class", "side")
-
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 

@@ -1,6 +1,5 @@
 <script setup>
 import { DrawerClose } from "vaul-vue"
-
 const props = defineProps()
 </script>
 

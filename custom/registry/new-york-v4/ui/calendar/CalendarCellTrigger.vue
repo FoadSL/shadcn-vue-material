@@ -3,13 +3,16 @@ import { reactiveOmit } from "@vueuse/core"
 import { CalendarCellTrigger, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/registry/new-york-v4/ui/button"
-
-const props = withDefaults(defineProps(), {
-  as: "button",
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  as: {
+    required: false,
+    default: "button"
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

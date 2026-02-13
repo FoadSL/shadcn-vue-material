@@ -1,21 +1,14 @@
 <script setup>
 import { useMediaQuery } from "@vueuse/core"
 import { MoreHorizontal } from "lucide-vue-next"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/registry/new-york-v4/ui/dropdown-menu"
-import {
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
-
-defineProps()
-
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/registry/new-york-v4/ui/dropdown-menu"
+import { SidebarGroup, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar"
+defineProps({
+  items: {
+    type: Array,
+    required: true
+  }
+})
 const isMobile = useMediaQuery("(max-width: 768px)")
 </script>
 

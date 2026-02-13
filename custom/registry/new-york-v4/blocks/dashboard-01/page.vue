@@ -9,11 +9,7 @@ import ChartAreaInteractive from "@/registry/new-york-v4/blocks/dashboard-01/com
 import DataTable from "@/registry/new-york-v4/blocks/dashboard-01/components/DataTable.vue"
 import SectionCards from "@/registry/new-york-v4/blocks/dashboard-01/components/SectionCards.vue"
 import SiteHeader from "@/registry/new-york-v4/blocks/dashboard-01/components/SiteHeader.vue"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { SidebarInset, SidebarProvider } from "@/registry/new-york-v4/ui/sidebar"
 const data = [
   {
     id: 1,

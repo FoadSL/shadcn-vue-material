@@ -1,9 +1,7 @@
 <script setup>
 import { cn } from "@/lib/utils"
 import { useCarousel } from "./useCarousel"
-
 const props = defineProps()
-
 const { orientation } = useCarousel()
 </script>
 

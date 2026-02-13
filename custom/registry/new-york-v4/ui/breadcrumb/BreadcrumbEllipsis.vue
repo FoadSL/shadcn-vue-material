@@ -1,8 +1,11 @@
 <script setup>
 import { MoreHorizontal } from "lucide-vue-next"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 </script>
 
 <template>

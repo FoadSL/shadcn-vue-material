@@ -6,18 +6,9 @@ export const iframeHeight = "800px"
 <script setup>
 import AppSidebar from "@/registry/new-york-v4/blocks/sidebar-10/components/AppSidebar.vue"
 import NavActions from "@/registry/new-york-v4/blocks/sidebar-10/components/NavActions.vue"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-} from "@/registry/new-york-v4/ui/breadcrumb"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage } from "@/registry/new-york-v4/ui/breadcrumb"
 import { Separator } from "@/registry/new-york-v4/ui/separator"
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/registry/new-york-v4/ui/sidebar"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/registry/new-york-v4/ui/sidebar"
 </script>
 
 <template>

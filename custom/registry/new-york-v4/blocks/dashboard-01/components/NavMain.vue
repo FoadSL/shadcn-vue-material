@@ -1,15 +1,13 @@
 <script setup>
 import { IconCirclePlusFilled, IconMail } from "@tabler/icons-vue"
-
 import { Button } from "@/registry/new-york-v4/ui/button"
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
-defineProps()
+import { SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/registry/new-york-v4/ui/sidebar"
+defineProps({
+  items: {
+    type: Array,
+    required: true
+  }
+})
 </script>
 
 <template>

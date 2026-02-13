@@ -1,14 +1,13 @@
 <script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { ChevronDown } from "lucide-vue-next"
-import {
-  AccordionHeader,
-  AccordionTrigger,
-} from "reka-ui"
+import { AccordionHeader, AccordionTrigger } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

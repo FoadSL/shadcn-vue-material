@@ -1,166 +1,111 @@
 <script setup>
 import { GalleryVerticalEnd, Minus, Plus } from "lucide-vue-next"
 import SearchForm from "@/registry/new-york-v4/blocks/sidebar-05/components/SearchForm.vue"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/registry/new-york-v4/ui/collapsible"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
-  SidebarRail,
-} from "@/registry/new-york-v4/ui/sidebar"
-
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/registry/new-york-v4/ui/collapsible"
+import { Sidebar, SidebarContent, SidebarGroup, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarRail } from "@/registry/new-york-v4/ui/sidebar"
 const props = defineProps()
-
 // This is sample data.
 const data = {
-  navMain: [
-    {
+  navMain: [{
       title: "Getting Started",
       url: "#",
-      items: [
-        {
+      items: [{
           title: "Installation",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Project Structure",
-          url: "#",
-        },
-      ],
-    },
-    {
+          url: "#"
+        }]
+    }, {
       title: "Building Your Application",
       url: "#",
-      items: [
-        {
+      items: [{
           title: "Routing",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Data Fetching",
           url: "#",
-          isActive: true,
-        },
-        {
+          isActive: true
+        }, {
           title: "Rendering",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Caching",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Styling",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Optimizing",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Configuring",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Testing",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Authentication",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Deploying",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Upgrading",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Examples",
-          url: "#",
-        },
-      ],
-    },
-    {
+          url: "#"
+        }]
+    }, {
       title: "API Reference",
       url: "#",
-      items: [
-        {
+      items: [{
           title: "Components",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "File Conventions",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Functions",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "next.config.js Options",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "CLI",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Edge Runtime",
-          url: "#",
-        },
-      ],
-    },
-    {
+          url: "#"
+        }]
+    }, {
       title: "Architecture",
       url: "#",
-      items: [
-        {
+      items: [{
           title: "Accessibility",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Fast Refresh",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Next.js Compiler",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Supported Browsers",
-          url: "#",
-        },
-        {
+          url: "#"
+        }, {
           title: "Turbopack",
-          url: "#",
-        },
-      ],
-    },
-    {
+          url: "#"
+        }]
+    }, {
       title: "Community",
       url: "#",
-      items: [
-        {
+      items: [{
           title: "Contribution Guide",
-          url: "#",
-        },
-      ],
-    },
-  ],
+          url: "#"
+        }]
+    }]
 }
 </script>
 

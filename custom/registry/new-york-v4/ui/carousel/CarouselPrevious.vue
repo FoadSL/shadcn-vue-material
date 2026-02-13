@@ -3,12 +3,16 @@ import { ArrowLeft } from "lucide-vue-next"
 import { cn } from "@/lib/utils"
 import { Button } from "@/registry/new-york-v4/ui/button"
 import { useCarousel } from "./useCarousel"
-
-const props = withDefaults(defineProps(), {
-  variant: "outline",
-  size: "icon",
+const props = defineProps({
+  variant: {
+    required: false,
+    default: "outline"
+  },
+  size: {
+    required: false,
+    default: "icon"
+  }
 })
-
 const { orientation, canScrollPrev, scrollPrev } = useCarousel()
 </script>
 

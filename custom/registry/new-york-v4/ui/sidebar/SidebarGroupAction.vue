@@ -1,8 +1,18 @@
 <script setup>
 import { Primitive } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps()
+const props = defineProps({
+  as: {
+    required: false
+  },
+  asChild: {
+    type: Boolean,
+    required: false
+  },
+  'class': {
+    required: false
+  }
+})
 </script>
 
 <template>

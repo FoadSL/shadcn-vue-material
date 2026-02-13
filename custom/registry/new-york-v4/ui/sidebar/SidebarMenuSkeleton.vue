@@ -2,9 +2,15 @@
 import { computed } from "vue"
 import { cn } from "@/lib/utils"
 import { Skeleton } from "@/registry/new-york-v4/ui/skeleton"
-
-const props = defineProps()
-
+const props = defineProps({
+  showIcon: {
+    type: Boolean,
+    required: false
+  },
+  'class': {
+    required: false
+  }
+})
 const width = computed(() => {
   return `${Math.floor(Math.random() * 40) + 50}%`
 })
