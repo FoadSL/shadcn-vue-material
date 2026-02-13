@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import type { MenubarGroupProps } from "reka-ui"
+<script setup>
 import { MenubarGroup } from "reka-ui"
-
-const props = defineProps<MenubarGroupProps>()
+const props = defineProps()
 </script>
 
 <template>

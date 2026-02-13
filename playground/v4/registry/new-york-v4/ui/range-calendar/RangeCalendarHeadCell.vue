@@ -1,14 +1,13 @@
-<script lang="ts" setup>
-import type { RangeCalendarHeadCellProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { RangeCalendarHeadCell, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps<RangeCalendarHeadCellProps & { class?: HTMLAttributes["class"] }>()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

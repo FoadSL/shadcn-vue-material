@@ -1,20 +1,16 @@
-<script setup lang="ts">
-import type { ProgressRootProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  ProgressIndicator,
-  ProgressRoot,
-} from "reka-ui"
+import { ProgressIndicator, ProgressRoot } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(
-  defineProps<ProgressRootProps & { class?: HTMLAttributes["class"] }>(),
-  {
-    modelValue: 0,
+const props = defineProps({
+  'class': {
+    required: false
   },
-)
-
+  modelValue: {
+    required: false,
+    default: 0
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

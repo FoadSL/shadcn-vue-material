@@ -1,14 +1,13 @@
-<script setup lang="ts">
-import type { MenubarTriggerProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { MenubarTrigger, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps<MenubarTriggerProps & { class?: HTMLAttributes["class"] }>()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

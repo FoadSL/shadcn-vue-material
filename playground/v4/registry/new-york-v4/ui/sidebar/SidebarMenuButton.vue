@@ -1,25 +1,30 @@
-<script setup lang="ts">
-import type { Component } from "vue"
-import type { SidebarMenuButtonProps } from "./SidebarMenuButtonChild.vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/new-york-v4/ui/tooltip"
 import SidebarMenuButtonChild from "./SidebarMenuButtonChild.vue"
 import { useSidebar } from "./utils"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps<SidebarMenuButtonProps & {
-  tooltip?: string | Component
-}>(), {
-  as: "button",
-  variant: "default",
-  size: "default",
+const props = defineProps({
+  tooltip: {
+    type: String,
+    required: false
+  },
+  as: {
+    required: false,
+    default: "button"
+  },
+  variant: {
+    required: false,
+    default: "default"
+  },
+  size: {
+    required: false,
+    default: "default"
+  }
 })
-
 const { isMobile, state } = useSidebar()
-
 const delegatedProps = reactiveOmit(props, "tooltip")
 </script>
 

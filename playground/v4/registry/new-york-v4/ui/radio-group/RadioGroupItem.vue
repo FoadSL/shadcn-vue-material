@@ -1,19 +1,14 @@
-<script setup lang="ts">
-import type { RadioGroupItemProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { CircleIcon } from "lucide-vue-next"
-import {
-  RadioGroupIndicator,
-  RadioGroupItem,
-  useForwardProps,
-} from "reka-ui"
+import { RadioGroupIndicator, RadioGroupItem, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps<RadioGroupItemProps & { class?: HTMLAttributes["class"] }>()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 

@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import type { AspectRatioProps } from "reka-ui"
+<script setup>
 import { AspectRatio } from "reka-ui"
-
-const props = defineProps<AspectRatioProps>()
+const props = defineProps()
 </script>
 
 <template>

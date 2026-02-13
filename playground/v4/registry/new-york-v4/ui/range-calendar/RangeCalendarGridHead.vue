@@ -1,8 +1,6 @@
-<script lang="ts" setup>
-import type { RangeCalendarGridHeadProps } from "reka-ui"
+<script setup>
 import { RangeCalendarGridHead } from "reka-ui"
-
-const props = defineProps<RangeCalendarGridHeadProps>()
+const props = defineProps()
 </script>
 
 <template>

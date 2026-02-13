@@ -1,9 +1,6 @@
-<script setup lang="ts">
-import type { ContextMenuTriggerProps } from "reka-ui"
+<script setup>
 import { ContextMenuTrigger, useForwardProps } from "reka-ui"
-
-const props = defineProps<ContextMenuTriggerProps>()
-
+const props = defineProps()
 const forwardedProps = useForwardProps(props)
 </script>
 

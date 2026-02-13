@@ -1,16 +1,12 @@
-<script setup lang="ts">
-import type { DropdownMenuSeparatorProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
-import {
-  DropdownMenuSeparator,
-} from "reka-ui"
+import { DropdownMenuSeparator } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps<DropdownMenuSeparatorProps & {
-  class?: HTMLAttributes["class"]
-}>()
-
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

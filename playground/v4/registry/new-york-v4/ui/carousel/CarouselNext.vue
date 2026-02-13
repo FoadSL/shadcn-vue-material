@@ -1,20 +1,18 @@
-<script setup lang="ts">
-import type { WithClassAsProps } from "./interface"
-import type { ButtonVariants } from "@/registry/new-york-v4/ui/button"
+<script setup>
 import { ArrowRight } from "lucide-vue-next"
 import { cn } from "@/lib/utils"
 import { Button } from "@/registry/new-york-v4/ui/button"
 import { useCarousel } from "./useCarousel"
-
-const props = withDefaults(defineProps<{
-  variant?: ButtonVariants["variant"]
-  size?: ButtonVariants["size"]
-}
-& WithClassAsProps>(), {
-  variant: "outline",
-  size: "icon",
+const props = defineProps({
+  variant: {
+    required: false,
+    default: "outline"
+  },
+  size: {
+    required: false,
+    default: "icon"
+  }
 })
-
 const { orientation, canScrollNext, scrollNext } = useCarousel()
 </script>
 

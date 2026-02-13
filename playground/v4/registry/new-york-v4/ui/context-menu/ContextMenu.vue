@@ -1,10 +1,7 @@
-<script setup lang="ts">
-import type { ContextMenuRootEmits, ContextMenuRootProps } from "reka-ui"
+<script setup>
 import { ContextMenuRoot, useForwardPropsEmits } from "reka-ui"
-
-const props = defineProps<ContextMenuRootProps>()
-const emits = defineEmits<ContextMenuRootEmits>()
-
+const props = defineProps()
+const emits = defineEmits()
 const forwarded = useForwardPropsEmits(props, emits)
 </script>
 

@@ -1,17 +1,18 @@
-<script setup lang="ts">
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { cn } from "@/lib/utils"
 import TableCell from "./TableCell.vue"
 import TableRow from "./TableRow.vue"
-
-const props = withDefaults(defineProps<{
-  class?: HTMLAttributes["class"]
-  colspan?: number
-}>(), {
-  colspan: 1,
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  colspan: {
+    type: Number,
+    required: false,
+    default: 1
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

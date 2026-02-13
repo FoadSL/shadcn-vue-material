@@ -26,7 +26,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/accordion/index.ts",
+        "path": "ui/accordion/index.js",
         "type": "registry:ui"
       }
     ]
@@ -48,7 +48,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/alert/index.ts",
+        "path": "ui/alert/index.js",
         "type": "registry:ui"
       }
     ]
@@ -101,7 +101,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/alert-dialog/index.ts",
+        "path": "ui/alert-dialog/index.js",
         "type": "registry:ui"
       }
     ]
@@ -118,7 +118,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/aspect-ratio/index.ts",
+        "path": "ui/aspect-ratio/index.js",
         "type": "registry:ui"
       }
     ]
@@ -144,7 +144,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/avatar/index.ts",
+        "path": "ui/avatar/index.js",
         "type": "registry:ui"
       }
     ]
@@ -153,8 +153,8 @@ export const ui: Registry["items"] = [
     "name": "badge",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -162,7 +162,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/badge/index.ts",
+        "path": "ui/badge/index.js",
         "type": "registry:ui"
       }
     ]
@@ -203,7 +203,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/breadcrumb/index.ts",
+        "path": "ui/breadcrumb/index.js",
         "type": "registry:ui"
       }
     ]
@@ -221,10 +221,6 @@ export const ui: Registry["items"] = [
       },
       {
         "path": "ui/button/index.js",
-        "type": "registry:ui"
-      },
-      {
-        "path": "ui/button/index.ts",
         "type": "registry:ui"
       }
     ]
@@ -279,8 +275,8 @@ export const ui: Registry["items"] = [
     "name": "calendar",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "registryDependencies": [
       "native-select",
@@ -336,7 +332,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/calendar/index.ts",
+        "path": "ui/calendar/index.js",
         "type": "registry:ui"
       }
     ]
@@ -374,7 +370,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/card/index.ts",
+        "path": "ui/card/index.js",
         "type": "registry:ui"
       }
     ]
@@ -407,15 +403,15 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/carousel/index.ts",
+        "path": "ui/carousel/index.js",
         "type": "registry:ui"
       },
       {
-        "path": "ui/carousel/interface.ts",
+        "path": "ui/carousel/interface.js",
         "type": "registry:ui"
       },
       {
-        "path": "ui/carousel/useCarousel.ts",
+        "path": "ui/carousel/useCarousel.js",
         "type": "registry:ui"
       }
     ]
@@ -457,8 +453,8 @@ export const ui: Registry["items"] = [
     "name": "checkbox",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -466,7 +462,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/checkbox/index.ts",
+        "path": "ui/checkbox/index.js",
         "type": "registry:ui"
       }
     ]
@@ -491,7 +487,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/collapsible/index.ts",
+        "path": "ui/collapsible/index.js",
         "type": "registry:ui"
       }
     ]
@@ -549,7 +545,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/combobox/index.ts",
+        "path": "ui/combobox/index.js",
         "type": "registry:ui"
       }
     ]
@@ -558,8 +554,8 @@ export const ui: Registry["items"] = [
     "name": "command",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "registryDependencies": [
       "dialog"
@@ -602,7 +598,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/command/index.ts",
+        "path": "ui/command/index.js",
         "type": "registry:ui"
       }
     ]
@@ -676,7 +672,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/context-menu/index.ts",
+        "path": "ui/context-menu/index.js",
         "type": "registry:ui"
       }
     ]
@@ -730,7 +726,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/dialog/index.ts",
+        "path": "ui/dialog/index.js",
         "type": "registry:ui"
       }
     ]
@@ -739,8 +735,8 @@ export const ui: Registry["items"] = [
     "name": "drawer",
     "type": "registry:ui",
     "dependencies": [
-      "vaul-vue",
       "reka-ui",
+      "vaul-vue",
       "@vueuse/core"
     ],
     "files": [
@@ -781,7 +777,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/drawer/index.ts",
+        "path": "ui/drawer/index.js",
         "type": "registry:ui"
       }
     ]
@@ -851,7 +847,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/dropdown-menu/index.ts",
+        "path": "ui/dropdown-menu/index.js",
         "type": "registry:ui"
       }
     ]
@@ -978,15 +974,15 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/form/index.ts",
+        "path": "ui/form/index.js",
         "type": "registry:ui"
       },
       {
-        "path": "ui/form/injectionKeys.ts",
+        "path": "ui/form/injectionKeys.js",
         "type": "registry:ui"
       },
       {
-        "path": "ui/form/useFormField.ts",
+        "path": "ui/form/useFormField.js",
         "type": "registry:ui"
       }
     ]
@@ -1012,7 +1008,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/hover-card/index.ts",
+        "path": "ui/hover-card/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1029,7 +1025,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/input/index.ts",
+        "path": "ui/input/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1182,8 +1178,8 @@ export const ui: Registry["items"] = [
     "name": "label",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1191,7 +1187,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/label/index.ts",
+        "path": "ui/label/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1200,8 +1196,8 @@ export const ui: Registry["items"] = [
     "name": "menubar",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1265,7 +1261,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/menubar/index.ts",
+        "path": "ui/menubar/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1300,8 +1296,8 @@ export const ui: Registry["items"] = [
     "name": "navigation-menu",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1337,7 +1333,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/navigation-menu/index.ts",
+        "path": "ui/navigation-menu/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1346,8 +1342,8 @@ export const ui: Registry["items"] = [
     "name": "number-field",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1371,7 +1367,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/number-field/index.ts",
+        "path": "ui/number-field/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1380,8 +1376,8 @@ export const ui: Registry["items"] = [
     "name": "pagination",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "registryDependencies": [
       "button"
@@ -1420,7 +1416,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/pagination/index.ts",
+        "path": "ui/pagination/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1429,8 +1425,8 @@ export const ui: Registry["items"] = [
     "name": "pin-input",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1450,7 +1446,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/pin-input/index.ts",
+        "path": "ui/pin-input/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1480,7 +1476,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/popover/index.ts",
+        "path": "ui/popover/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1489,8 +1485,8 @@ export const ui: Registry["items"] = [
     "name": "progress",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1498,7 +1494,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/progress/index.ts",
+        "path": "ui/progress/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1507,8 +1503,8 @@ export const ui: Registry["items"] = [
     "name": "radio-group",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1520,7 +1516,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/radio-group/index.ts",
+        "path": "ui/radio-group/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1529,8 +1525,8 @@ export const ui: Registry["items"] = [
     "name": "range-calendar",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "registryDependencies": [
       "button"
@@ -1585,7 +1581,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/range-calendar/index.ts",
+        "path": "ui/range-calendar/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1594,8 +1590,8 @@ export const ui: Registry["items"] = [
     "name": "resizable",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1611,7 +1607,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/resizable/index.ts",
+        "path": "ui/resizable/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1620,8 +1616,8 @@ export const ui: Registry["items"] = [
     "name": "scroll-area",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1633,7 +1629,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/scroll-area/index.ts",
+        "path": "ui/scroll-area/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1691,7 +1687,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/select/index.ts",
+        "path": "ui/select/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1700,8 +1696,8 @@ export const ui: Registry["items"] = [
     "name": "separator",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1709,7 +1705,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/separator/index.ts",
+        "path": "ui/separator/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1759,7 +1755,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/sheet/index.ts",
+        "path": "ui/sheet/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1877,11 +1873,11 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/sidebar/index.ts",
+        "path": "ui/sidebar/index.js",
         "type": "registry:ui"
       },
       {
-        "path": "ui/sidebar/utils.ts",
+        "path": "ui/sidebar/utils.js",
         "type": "registry:ui"
       }
     ]
@@ -1895,7 +1891,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/skeleton/index.ts",
+        "path": "ui/skeleton/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1904,8 +1900,8 @@ export const ui: Registry["items"] = [
     "name": "slider",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1913,7 +1909,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/slider/index.ts",
+        "path": "ui/slider/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1930,7 +1926,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/sonner/index.ts",
+        "path": "ui/sonner/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1953,8 +1949,8 @@ export const ui: Registry["items"] = [
     "name": "stepper",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -1986,7 +1982,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/stepper/index.ts",
+        "path": "ui/stepper/index.js",
         "type": "registry:ui"
       }
     ]
@@ -1995,8 +1991,8 @@ export const ui: Registry["items"] = [
     "name": "switch",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -2004,7 +2000,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/switch/index.ts",
+        "path": "ui/switch/index.js",
         "type": "registry:ui"
       }
     ]
@@ -2053,11 +2049,11 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/table/index.ts",
+        "path": "ui/table/index.js",
         "type": "registry:ui"
       },
       {
-        "path": "ui/table/utils.ts",
+        "path": "ui/table/utils.js",
         "type": "registry:ui"
       }
     ]
@@ -2066,8 +2062,8 @@ export const ui: Registry["items"] = [
     "name": "tabs",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -2087,7 +2083,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/tabs/index.ts",
+        "path": "ui/tabs/index.js",
         "type": "registry:ui"
       }
     ]
@@ -2096,8 +2092,8 @@ export const ui: Registry["items"] = [
     "name": "tags-input",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -2121,7 +2117,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/tags-input/index.ts",
+        "path": "ui/tags-input/index.js",
         "type": "registry:ui"
       }
     ]
@@ -2138,7 +2134,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/textarea/index.ts",
+        "path": "ui/textarea/index.js",
         "type": "registry:ui"
       }
     ]
@@ -2147,8 +2143,8 @@ export const ui: Registry["items"] = [
     "name": "toggle",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "files": [
       {
@@ -2156,7 +2152,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/toggle/index.ts",
+        "path": "ui/toggle/index.js",
         "type": "registry:ui"
       }
     ]
@@ -2165,8 +2161,8 @@ export const ui: Registry["items"] = [
     "name": "toggle-group",
     "type": "registry:ui",
     "dependencies": [
-      "reka-ui",
-      "@vueuse/core"
+      "@vueuse/core",
+      "reka-ui"
     ],
     "registryDependencies": [
       "toggle"
@@ -2181,7 +2177,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/toggle-group/index.ts",
+        "path": "ui/toggle-group/index.js",
         "type": "registry:ui"
       }
     ]
@@ -2211,7 +2207,7 @@ export const ui: Registry["items"] = [
         "type": "registry:ui"
       },
       {
-        "path": "ui/tooltip/index.ts",
+        "path": "ui/tooltip/index.js",
         "type": "registry:ui"
       }
     ]

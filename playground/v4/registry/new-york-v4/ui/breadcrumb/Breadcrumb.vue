@@ -1,9 +1,9 @@
-<script lang="ts" setup>
-import type { HTMLAttributes } from "vue"
-
-const props = defineProps<{
-  class?: HTMLAttributes["class"]
-}>()
+<script setup>
+const props = defineProps({
+  'class': {
+    required: false
+  }
+})
 </script>
 
 <template>

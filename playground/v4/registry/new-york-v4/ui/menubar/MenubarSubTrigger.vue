@@ -1,13 +1,17 @@
-<script setup lang="ts">
-import type { MenubarSubTriggerProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { ChevronRight } from "lucide-vue-next"
 import { MenubarSubTrigger, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = defineProps<MenubarSubTriggerProps & { class?: HTMLAttributes["class"], inset?: boolean }>()
-
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  inset: {
+    type: Boolean,
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class", "inset")
 const forwardedProps = useForwardProps(delegatedProps)
 </script>

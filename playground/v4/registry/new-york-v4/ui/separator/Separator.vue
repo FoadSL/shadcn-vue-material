@@ -1,17 +1,20 @@
-<script setup lang="ts">
-import type { SeparatorProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { Separator } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps<
-  SeparatorProps & { class?: HTMLAttributes["class"] }
->(), {
-  orientation: "horizontal",
-  decorative: true,
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  orientation: {
+    required: false,
+    default: "horizontal"
+  },
+  decorative: {
+    required: false,
+    default: true
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

@@ -404,7 +404,6 @@ export const blocks: Registry["items"] = [
       "breadcrumb",
       "separator",
       "sidebar",
-      "collapsible",
       "label",
       "dropdown-menu"
     ],
@@ -490,7 +489,6 @@ export const blocks: Registry["items"] = [
       "breadcrumb",
       "separator",
       "sidebar",
-      "collapsible",
       "label"
     ],
     "files": [
@@ -648,8 +646,6 @@ export const blocks: Registry["items"] = [
       "breadcrumb",
       "separator",
       "sidebar",
-      "label",
-      "switch",
       "avatar",
       "dropdown-menu"
     ],

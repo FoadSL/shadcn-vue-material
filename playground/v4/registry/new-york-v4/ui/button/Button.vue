@@ -1,19 +1,25 @@
-<script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import type { ButtonVariants } from "."
+<script setup>
 import { Primitive } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "."
-
-interface Props extends PrimitiveProps {
-  variant?: ButtonVariants["variant"]
-  size?: ButtonVariants["size"]
-  class?: HTMLAttributes["class"]
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  as: "button",
+const props = defineProps({
+  variant: {
+    required: false
+  },
+  size: {
+    required: false
+  },
+  'class': {
+    required: false
+  },
+  as: {
+    required: false,
+    default: "button"
+  },
+  asChild: {
+    type: Boolean,
+    required: false
+  }
 })
 </script>
 

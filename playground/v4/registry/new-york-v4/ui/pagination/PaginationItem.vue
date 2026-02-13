@@ -1,20 +1,21 @@
-<script setup lang="ts">
-import type { PaginationListItemProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import type { ButtonVariants } from "@/registry/new-york-v4/ui/button"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { PaginationListItem } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/registry/new-york-v4/ui/button"
-
-const props = withDefaults(defineProps<PaginationListItemProps & {
-  size?: ButtonVariants["size"]
-  class?: HTMLAttributes["class"]
-  isActive?: boolean
-}>(), {
-  size: "icon",
+const props = defineProps({
+  size: {
+    required: false,
+    default: "icon"
+  },
+  'class': {
+    required: false
+  },
+  isActive: {
+    type: Boolean,
+    required: false
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class", "size", "isActive")
 </script>
 

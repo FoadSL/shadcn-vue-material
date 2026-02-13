@@ -1,28 +1,24 @@
-<script setup lang="ts">
-import type { DialogContentEmits, DialogContentProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { X } from "lucide-vue-next"
-import {
-  DialogClose,
-  DialogContent,
-  DialogPortal,
-  useForwardPropsEmits,
-} from "reka-ui"
+import { DialogClose, DialogContent, DialogPortal, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
 import DialogOverlay from "./DialogOverlay.vue"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps<DialogContentProps & { class?: HTMLAttributes["class"], showCloseButton?: boolean }>(), {
-  showCloseButton: true,
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  showCloseButton: {
+    type: Boolean,
+    required: false,
+    default: true
+  }
 })
-const emits = defineEmits<DialogContentEmits>()
-
+const emits = defineEmits()
 const delegatedProps = reactiveOmit(props, "class")
-
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 

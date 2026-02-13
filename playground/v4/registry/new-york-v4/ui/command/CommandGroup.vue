@@ -1,25 +1,25 @@
-<script setup lang="ts">
-import type { ListboxGroupProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { ListboxGroup, ListboxGroupLabel, useId } from "reka-ui"
 import { computed, onMounted, onUnmounted } from "vue"
 import { cn } from "@/lib/utils"
 import { provideCommandGroupContext, useCommand } from "."
-
-const props = defineProps<ListboxGroupProps & {
-  class?: HTMLAttributes["class"]
-  heading?: string
-}>()
-
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  heading: {
+    type: String,
+    required: false
+  }
+})
 const delegatedProps = reactiveOmit(props, "class")
-
 const { allGroups, filterState } = useCommand()
 const id = useId()
-
 const isRender = computed(() => !filterState.search ? true : filterState.filtered.groups.has(id))
-
-provideCommandGroupContext({ id })
+provideCommandGroupContext({
+  id
+})
 onMounted(() => {
   if (!allGroups.value.has(id))
     allGroups.value.set(id, new Set())

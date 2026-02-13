@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import type { DialogCloseProps } from "reka-ui"
+<script setup>
 import { DialogClose } from "reka-ui"
-
-const props = defineProps<DialogCloseProps>()
+const props = defineProps()
 </script>
 
 <template>

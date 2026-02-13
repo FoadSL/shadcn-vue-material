@@ -1,14 +1,16 @@
-<script setup lang="ts">
-import type { ScrollAreaScrollbarProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
+<script setup>
 import { reactiveOmit } from "@vueuse/core"
 import { ScrollAreaScrollbar, ScrollAreaThumb } from "reka-ui"
 import { cn } from "@/lib/utils"
-
-const props = withDefaults(defineProps<ScrollAreaScrollbarProps & { class?: HTMLAttributes["class"] }>(), {
-  orientation: "vertical",
+const props = defineProps({
+  'class': {
+    required: false
+  },
+  orientation: {
+    required: false,
+    default: "vertical"
+  }
 })
-
 const delegatedProps = reactiveOmit(props, "class")
 </script>
 

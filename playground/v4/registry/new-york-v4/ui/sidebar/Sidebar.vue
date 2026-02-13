@@ -1,22 +1,27 @@
-<script setup lang="ts">
-import type { SidebarProps } from "."
+<script setup>
 import { cn } from "@/lib/utils"
 import { Sheet, SheetContent } from "@/registry/new-york-v4/ui/sheet"
 import SheetDescription from "@/registry/new-york-v4/ui/sheet/SheetDescription.vue"
 import SheetHeader from "@/registry/new-york-v4/ui/sheet/SheetHeader.vue"
 import SheetTitle from "@/registry/new-york-v4/ui/sheet/SheetTitle.vue"
 import { SIDEBAR_WIDTH_MOBILE, useSidebar } from "./utils"
-
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-
-const props = withDefaults(defineProps<SidebarProps>(), {
-  side: "left",
-  variant: "sidebar",
-  collapsible: "offcanvas",
+const props = defineProps({
+  side: {
+    required: false,
+    default: "left"
+  },
+  variant: {
+    required: false,
+    default: "sidebar"
+  },
+  collapsible: {
+    required: false,
+    default: "offcanvas"
+  }
 })
-
 const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 </script>
 
