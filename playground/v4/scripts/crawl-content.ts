@@ -241,7 +241,7 @@ async function buildUIRegistry(componentPath: string, componentName: string) {
     files.push({ path: relativePath, type })
 
     // only grab deps from the vue files
-    if (dirent.name === 'index.ts')
+    if (dirent.name === 'index.ts' || dirent.name === 'index.js')
       continue
 
     const deps = await getFileDependencies(filepath, source)
@@ -325,7 +325,7 @@ async function getFileDependencies(filename: string, sourceCode: string) {
     }
   }
 
-  if (filename.endsWith('.ts')) {
+  if (filename.endsWith('.ts') || filename.endsWith('.js')) {
     const ast = parseSync(filename, sourceCode, {
       sourceType: 'module',
     })
@@ -341,11 +341,26 @@ async function getFileDependencies(filename: string, sourceCode: string) {
   else {
     const parsed = parse(sourceCode, { filename })
     if (parsed.descriptor.script?.content || parsed.descriptor.scriptSetup?.content) {
-      const compiled = compileScript(parsed.descriptor, { id: 'id' })
-
-      Object.values(compiled.imports!).forEach((value) => {
-        populateDeps(value.source)
-      })
+      try {
+        const compiled = compileScript(parsed.descriptor, { id: 'id' })
+        Object.values(compiled.imports!).forEach((value) => {
+          populateDeps(value.source)
+        })
+      }
+      catch {
+        // compileScript may fail when types can't be resolved (e.g. TS blocks
+        // importing from JS components). Fall back to oxc-parser on raw script.
+        const scriptContent = parsed.descriptor.scriptSetup?.content || parsed.descriptor.script?.content || ''
+        const scriptLang = parsed.descriptor.scriptSetup?.lang || parsed.descriptor.script?.lang || 'ts'
+        const pseudoFilename = filename.replace(/\.vue$/, `.${scriptLang}`)
+        const ast = parseSync(pseudoFilename, scriptContent, { sourceType: 'module' })
+        const body = ast?.program?.body
+        if (Array.isArray(body)) {
+          body.filter((i: any) => i.type === 'ImportDeclaration').forEach((i: any) => {
+            populateDeps(i.source.value)
+          })
+        }
+      }
     }
   }
 
@@ -362,20 +377,25 @@ export async function getBlockMetadata(filename: string, sourceCode: string) {
   if (filename.endsWith('.vue')) {
     const { descriptor } = parse(sourceCode, { filename })
     if (descriptor.script?.content) {
-      const ast = compileScript(descriptor, { id: 'id' })
-      walk(ast.scriptAst, {
-        enter(node: any) {
-          const declaration = node.declaration
-          // Check if the declaration is a variable declaration
-          if (declaration?.type === 'VariableDeclaration') {
-            // Extract variable names and their values
-            declaration.declarations.forEach((decl: any) => {
-              // @ts-expect-error ignore missing type
-              metadata[decl.id.name] = decl.init ? decl.init.value : null
-            })
-          }
-        },
-      })
+      try {
+        const ast = compileScript(descriptor, { id: 'id' })
+        walk(ast.scriptAst, {
+          enter(node: any) {
+            const declaration = node.declaration
+            // Check if the declaration is a variable declaration
+            if (declaration?.type === 'VariableDeclaration') {
+              // Extract variable names and their values
+              declaration.declarations.forEach((decl: any) => {
+                // @ts-expect-error ignore missing type
+                metadata[decl.id.name] = decl.init ? decl.init.value : null
+              })
+            }
+          },
+        })
+      }
+      catch {
+        // compileScript may fail on type resolution; metadata extraction is best-effort
+      }
     }
   }
 
