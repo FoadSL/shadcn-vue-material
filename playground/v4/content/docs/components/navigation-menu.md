@@ -18,28 +18,11 @@ class: '[&_.preview]:!items-start [&_.preview]:p-4 [&_.preview]:pt-8 md:[&_.prev
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add navigation-menu
 ```
-
-::
-
-::tabs-content{value="manual"}
+#manual
   ::steps
     ::step
     Install the following dependencies:
@@ -58,7 +41,6 @@ npx shadcn-vue@latest add navigation-menu
     ::
   ::
 ::
-
 ::
 
 ## Usage

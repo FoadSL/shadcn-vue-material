@@ -23,28 +23,11 @@ If you're looking for a range calendar, check out the [Range Calendar](./range-c
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add calendar
 ```
-
-::
-
-::tabs-content{value="manual"}
+#manual
   ::steps
     ::step
     Install the following dependencies:
@@ -63,7 +46,6 @@ npx shadcn-vue@latest add calendar
     ::
   ::
 ::
-
 ::
 
 ## Usage

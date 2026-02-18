@@ -21,28 +21,11 @@ If you're looking for a normal calendar, check out the [Calendar](./calendar.md)
 
 ## Installation
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add range-calendar
 ```
-
-::
-
-::tabs-content{value="manual"}
+#manual
   ::steps
     ::step
     Install the following dependencies:
@@ -61,7 +44,6 @@ npx shadcn-vue@latest add range-calendar
     ::
   ::
 ::
-
 ::
 
 ## Usage

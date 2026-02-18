@@ -47,29 +47,11 @@ We do not wrap Unovis. This means you're not locked into an abstraction. When a 
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add chart
 ```
-
-::
-
-::tabs-content{value="manual"}
-
+#manual
   ::steps
     ::step
     Install the following dependencies
@@ -111,9 +93,7 @@ npx shadcn-vue@latest add chart
     }
     ```
   ::
-
 ::
-
 ::
 
 ## Usage

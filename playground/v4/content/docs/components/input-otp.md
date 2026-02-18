@@ -16,28 +16,11 @@ description: An input OTP component.
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add input-otp
 ```
-
-::
-
-::tabs-content{value="manual"}
+#manual
   ::steps
     ::step
     Install the following dependencies:
@@ -56,7 +39,6 @@ npx shadcn-vue@latest add input-otp
     ::
   ::
 ::
-
 ::
 
 ## Usage

@@ -15,28 +15,11 @@ class: '[&_.preview]:p-4'
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add input-group
 ```
-
-::
-
-::tabs-content{value="manual"}
+#manual
   ::steps
     ::step
     Install the following dependencies:
@@ -55,7 +38,6 @@ npx shadcn-vue@latest add input-group
     ::
   ::
 ::
-
 ::
 
 ## Usage

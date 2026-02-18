@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { Tabs } from '@/registry/new-york-v4/ui/tabs'
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+} from '@/registry/new-york-v4/ui/tabs'
 
 const { config } = useConfig()
 </script>
@@ -9,6 +14,19 @@ const { config } = useConfig()
     v-model="config.installationType"
     class="relative mt-6 w-full"
   >
-    <slot />
+    <TabsList>
+      <TabsTrigger value="cli">
+        CLI
+      </TabsTrigger>
+      <TabsTrigger value="manual">
+        Manual
+      </TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli">
+      <slot name="cli" mdc-unwrap="p" />
+    </TabsContent>
+    <TabsContent value="manual">
+      <slot name="manual" mdc-unwrap="p" />
+    </TabsContent>
   </Tabs>
 </template>

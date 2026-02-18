@@ -18,28 +18,11 @@ description: An avatar with a fallback.
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add avatar
 ```
-
-::
-
-::tabs-content{value="manual"}
+#manual
   ::steps
     ::step
     Install the following dependencies:
@@ -58,7 +41,6 @@ npx shadcn-vue@latest add avatar
     ::
   ::
 ::
-
 ::
 
 ## Usage

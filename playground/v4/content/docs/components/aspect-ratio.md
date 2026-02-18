@@ -17,28 +17,11 @@ description: A component that displays an image with a 16:9 aspect ratio.
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add aspect-ratio
 ```
-
-::
-
-::tabs-content{value="manual"}
+#manual
   ::steps
     ::step
     Install the following dependencies:
@@ -57,7 +40,6 @@ npx shadcn-vue@latest add aspect-ratio
     ::
   ::
 ::
-
 ::
 
 ## Usage

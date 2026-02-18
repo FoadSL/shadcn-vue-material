@@ -30,29 +30,11 @@ Customizable.
 ## Installation
 
 ::code-tabs
-
-::tabs-list
-
-  ::tabs-trigger{value="cli"}
-  CLI
-  ::
-
-  ::tabs-trigger{value="manual"}
-  Manual
-  ::
-
-::
-
-::tabs-content{value="cli"}
-
+#cli
 ```bash
 npx shadcn-vue@latest add sidebar
 ```
-
-::
-
-::tabs-content{value="manual"}
-
+#manual
   ::steps
     ::step
     Install this component
@@ -94,9 +76,7 @@ npx shadcn-vue@latest add sidebar
     }
     ```
   ::
-
 ::
-
 ::
 
 ## Structure
